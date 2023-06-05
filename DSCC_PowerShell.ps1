@@ -22,38 +22,100 @@ winget install --id Microsoft.Powershell.Preview --source winget
 
 Import-Module .\HPEDSCC.psd1 -SkipEditionCheck
 
+
 # and connect to the DSCC 
 
-$ClientID = Read-Host "Enter the DSCC Client ID: " -AsSecureString
-$ClientSecret = Read-Host "Enter the DSCC Client Secret: " -AsSecureString
+$Client_ID = 'caba96ba-52c9-49e5-8ae7-eec301e3000a'   # Read-Host "Enter the DSCC Client ID: " -AsSecureString
+$Client_Secret = '6a4525e2cd3111edaced4a452722384f' # Read-Host "Enter the DSCC Client Secret: " -AsSecureString
+$AuthToken = Connect-DSCC -Client_Id $Client_ID -Client_Secret $Client_Secret -GreenlakeType EU -Verbose -Autorenew
 
 
-$AuthToken = Connect-DSCC -Client_Id $Client_ID -Client_Secret $Client_Secret -GreenlakeType EU -Verbose #-Autorenew
+$P650 = Get-DSCCStorageSystem | Where-Object {$_.name -eq "Primera650"}
+$P650 | Format-List
 
-$AuthToken | Format-List
-
-$Response = Get-DSCCStorageSystem
-$Response | Format-List
+#$Response | Format-List
+#$P650 = Where-Object { $Response.name -eq 'Primera650'}
 
 <#
-$AuthUri = "https://sso.common.cloud.hpe.com/as/token.oauth2"
-$AuthHeaders =  @{  'Content-Type' = 'application/x-www-form-urlencoded'
-}
-$AuthBody    = [ordered]@{   'grant_type' = 'client_credentials'
-                                                'client_id' = $Client_Id
-                                                'client_secret' = $Client_Secret
-                        }
+$Response = Invoke-ConvertHost
+$Response | Format-List
 
-$AccessToken = ( Invoke-RestMethod -uri $AuthURI -Method Post -headers $AuthHeaders -body $AuthBody ).access_token
+$Response = Get-DSCCHost
+$hosts = $Response | ConvertTo-Json
+$hosts | Format-List
 
-#$AccessToken = "eyJhbGciOiJSUzI1NiIsImtpZCI6ImhscU5ySGxEUEVfRlZDaEt2NmZvd2N0dkhSdyIsInBpLmF0bSI6ImRlejAifQ.eyJjbGllbnRfaWQiOiJjYWJhOTZiYS01MmM5LTQ5ZTUtOGFlNy1lZWMzMDFlMzAwMGEiLCJpc3MiOiJodHRwczovL3Nzby5jb21tb24uY2xvdWQuaHBlLmNvbSIsImF1ZCI6ImV4dGVybmFsX2FwaSIsInN1YiI6InRob21hcy5iZWhhQGhwZS5jb20iLCJ1c2VyX2N0eCI6ImIyYTIwMjZjMzdlOTExZWNiYWE2NjIzMTY4YjJjODFkIiwiYXV0aF9zb3VyY2UiOiJjY3NfdG9rZW5fbWFuYWdlbWVudCIsInBsYXRmb3JtX2N1c3RvbWVyX2lkIjoiMGMyMzc5YjAzN2U1MTFlY2EzYjdkMjg1NDAyYzRmYWEiLCJpYXQiOjE2ODU1MTYyOTgsImFwcGxpY2F0aW9uX2luc3RhbmNlX2lkIjoiZWY4N2YzOWMtNDMwZC00MDc3LWJkZWQtOGE2N2YxYTk0MTdiIiwiZXhwIjoxNjg1NTIzNDk4fQ.NqQ5fMCy1RVIqX0xTIoiZU_PL69XXaVHzMxjGbRp1ePCpR33bpibYZ2hk69JIPrL7vunfrCvOWtbL8jkFs7QN4pjsZWjyemgUKD1PDU-_VWvrkC0XMez226NFs3NvBWz-LVaLnu26eThd-fvYCkBoZv92zzLzLz0ViKUK6N89_JtemQUgLManxG-25rV-T3hgI8RWFjI2IfRrCaHjgNMHiOT2kgwn3Nf9igaCbp_frwJGDOu7_1R-4CfVRppAKqxH_LDGxN6s9aiC4dXbONSWRA3Z2Zze9BKgZA2MZFUDVQBiQMU4Xg2M4RjQwyzyYDNeNVh4M8tdaOcZ8cQ5AIaIw"
-$MyHeaders   =  @{  Authorization = 'Bearer '+ $AccessToken
-                            }
-$BaseUri =   "https://eu1.data.cloud.hpe.com/api/v1/"  
+$Response = Get-DSCCHostGroup
+$hostgroups = $Response | ConvertTo-Json
+$hostgroups | Format-List
 
-$Uri = $BaseUri + 'storage-systems'
 
-$Response =  Invoke-RestMethod -uri $Uri -Method Get -Headers $MyHeaders 
+# Create a volume on Primera650
+
+$Volume = New-DSCCVolume -comments $comment -name "DSCC_Rest_API_Test_TB" -count 1 -sizeMib 61440 -userCpg 'SSD_r6' -snapCPG 'SSD_r6' -SystemId $P650.id 
+$Volume | Format-List
+
+# Create the host
+$name = "SYI5HE21B5"
+$comment = "DSCC API Created - Thomas Beha"
+$initiator1 =  @{address="10:00:be:d8:0d:50:01:ca";name="syi5he21b5p1"; protocol="FC"}
+$initiator2 =  @{address="10:00:be:d8:0d:50:01:cc";name="syi5he21b5p2"; protocol="FC"}
+$initiatorsToCreate = @($initiator1, $initiator2)
+
+$Response = New-DSCCHost -comment $comment  -contact "thomas.beha@hpe.com" -fqdn "syi5he21b5.demo.local" `
+		-ipAddress "10.1.40.21" -subnet "255.255.255.0" -model "SY480Gen10" -name $name -operatingSystem "VMware (ESXi)" `
+		-persona "VMware" -protocol "FC" -location "CTC BBN" -userCreated $true -initiatorsToCreate $initiatorsToCreate
 
 $Response | Format-List
+
+# Get the HostId of the new host
+$HostId = Get-DSCCHost | Where-Object{$_.name -eq $name}
+
+$Response = Get-DSCCHost 
+for($i=0; $i -lt $Response.Count; $i++){
+	if( ($Response[$i]).name -eq $name){ 
+		$HostId = $Response[$i].id
+	}
+}
+
+
+# Add the host to a hostgroup
+
+$HostGroup = New-DSCCHostGroup -comment $comment -name $name -hostIds $HostId -Verbose
+$HostGroup | Format-List
+
+
+
+# Assign the volume to the host group
+
+
+
+
+# The clean up
+
+$Response = Remove-DSCCVolume -VolumeId $Volume.id -force
+$Response
+
+$Response = Remove-DSCCHostGroup -HostGroupID $HostGroup.id -Force
+$Response
+
+$Response = Remove-DSCCHost -HostID $HostId -Force
+$Response 
+
+
+$Response = Get-DSCCInitiator
+for($i=0; $i -lt $Response.Count; $i++){
+	if( ($Response[$i]).address -eq"10:00:be:d8:0d:50:01:ca"){ 
+		$init1 = $Response[$i]
+	}
+	if( ($Response[$i]).address -eq"10:00:be:d8:0d:50:01:cc"){ 
+		$init2 = $Response[$i]
+	}
+}
+$init1 
+$init2
+
+$Response = Remove-DSCCInitiator -InitiatorId $init1.id -Force
+$Response 
+$Response = Remove-DSCCInitiator -InitiatorId $init2.id -Force
+$Response
 #>

@@ -1,0 +1,265 @@
+
+NAME
+    New-DSCCHostGroup
+    
+SYNOPSIS
+    Creates a HPE DSSC DOM Host Group Record.
+    
+    
+SYNTAX
+    New-DSCCHostGroup [-DeviceType1] -name <String> [-comment <String>] [-hostIds <Array>] [-hostsToCreate <Array>] [-userCreated <Boolean>] [-WhatIf <Boolean>] [<CommonParameters>]
+    
+    New-DSCCHostGroup [-DeviceType2] -name <String> -SystemId <String> -access_protocol_fc [-app_uuid <String>] [-description <String>] [-fc_initiator_alias <String>] -fc_initiator_wwpn <String> [-fc_tdz_ports <Object>] [-host_type <String>] [-WhatIf <Boolean>] [<CommonParameters>]
+    
+    New-DSCCHostGroup [-DeviceType2] -name <String> -SystemId <String> -access_protocol_fc [-app_uuid <String>] [-description <String>] -fc_initiator_id <String> [-fc_tdz_ports <Object>] [-host_type <String>] [-WhatIf <Boolean>] [<CommonParameters>]
+    
+    New-DSCCHostGroup [-DeviceType2] -name <String> -SystemId <String> -access_protocol_iscsi [-app_uuid <String>] [-description <String>] [-iscsi_initiator_iqn <String>] [-iscsi_initiator_ip <String>] [-iscsi_initiator_label <String>] [-host_type <String>] [-target_subnets <Object>] [-WhatIf <Boolean>] [<CommonParameters>]
+    
+    New-DSCCHostGroup [-DeviceType2] -name <String> -SystemId <String> -access_protocol_iscsi [-app_uuid <String>] [-description <String>] -iscsi_initiator_id <String> [-host_type <String>] [-target_subnets <Object>] [-WhatIf <Boolean>] [<CommonParameters>]
+    
+    
+DESCRIPTION
+    Creates a HPE Data Services Cloud Console Data Operations Manager Host Group Record;
+    
+
+PARAMETERS
+    -DeviceType1 [<SwitchParameter>]
+        This switch is used to tell the command that the end device is the specific device type, and to only allow the correct
+        parameter set that matches this device type.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -DeviceType2 [<SwitchParameter>]
+        This switch is used to tell the command that the end device is the specific device type, and to only allow the correct
+        parameter set that matches this device type.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -name <String>
+        A required String that represents the name of the host.
+        
+        Required?                    true
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -SystemId <String>
+        
+        Required?                    true
+        Position?                    named
+        Default value                
+        Accept pipeline input?       true (ByPropertyName)
+        Accept wildcard characters?  false
+        
+    -comment <String>
+        Address of the initiator and is required.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -hostIds <Array>
+        Either a single or multiple strings of the host Ids for this host group.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -hostsToCreate <Array>
+        A Complex object that represents the hosts to be created. Either a HASH or a Array of HASHes
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -userCreated <Boolean>
+        This value will always be set to true to user submitted hosts.
+        
+        Required?                    false
+        Position?                    named
+        Default value                True
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -access_protocol_iscsi [<SwitchParameter>]
+        
+        Required?                    true
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -access_protocol_fc [<SwitchParameter>]
+        
+        Required?                    true
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -app_uuid <String>
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -description <String>
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -fc_initiator_id <String>
+        
+        Required?                    true
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -fc_initiator_alias <String>
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -fc_initiator_wwpn <String>
+        
+        Required?                    true
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -iscsi_initiator_id <String>
+        
+        Required?                    true
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -iscsi_initiator_iqn <String>
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -iscsi_initiator_ip <String>
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -iscsi_initiator_label <String>
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -fc_tdz_ports <Object>
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -host_type <String>
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -target_subnets <Object>
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -WhatIf <Boolean>
+        The WhatIf directive will show you the RAW RestAPI call that would be made to DSCC instead of actually sending the request.
+        This option is very helpful when trying to understand the inner workings of the native RestAPI calls that DSCC uses.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+INPUTS
+    
+OUTPUTS
+    
+    -------------------------- EXAMPLE 1 --------------------------
+    
+    PS:>New-DSCCHostServiceInitiator -Address 100008F1EABFE61C -name Host1InitA -protocol FC
+    
+    {   "associatedLinks":  [   {   "resourceUri": "string",
+                                    "type": "string"
+                                }
+                            ],
+        "associatedSystems":[   "string"
+                            ],
+        "comment": "host-group-comment",
+        "consoleUri": "/data-ops-manager/host-initiator-groups/a8c087fa6e95dd22cdf402c64e4bbe61",
+        "customerId": "string",
+        "editStatus": "Delete_Failed",
+        "generation": 0,
+        "host":     [   {   "id": "6848ef683c27403e96caa51816ddc72c",
+                            "ipAddress": "15.212.100.100",
+                            "name": "host1"
+                        }
+                    ],
+        "id": "d548ef683c27403e96caa51816ddc72c",
+        "name": "host-group1",
+        "systems":  [   "string"
+                    ],
+        "type": "string",
+        "userCreated": true
+    }
+    
+    
+    
+    
+    
+RELATED LINKS
+
+

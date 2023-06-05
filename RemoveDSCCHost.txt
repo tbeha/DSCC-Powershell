@@ -1,0 +1,70 @@
+
+NAME
+    Remove-DSCCHost
+    
+SYNOPSIS
+    Removes a HPE DSSC DOM Host.
+    
+    
+SYNTAX
+    Remove-DSCCHost [-HostID] <String> [-Force] [-WhatIf] [<CommonParameters>]
+    
+    
+DESCRIPTION
+    Removes a HPE Data Services Cloud Console Data Operations Manager Host specified by ID;
+    
+
+PARAMETERS
+    -HostID <String>
+        
+    -Force [<SwitchParameter>]
+        Will implement an API forcefull remove option instead of the default normal removal mechanism.
+        
+    -WhatIf [<SwitchParameter>]
+        The WhatIf directive will show you the RAW RestAPI call that would be made to DSCC instead of actually sending the request.
+        This option is very helpful when trying to understand the inner workings of the native RestAPI calls that DSCC uses.
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    -------------------------- EXAMPLE 1 --------------------------
+    
+    PS:>Remove-HPEDSCCDOMHostServiceHostGroup -HostId e987ef683c27403e96caa51816ddc72c
+    
+    taskUri                              status    message
+    -------                              ------    -------
+    2899825b-0ac9-4145-9c6a-e1860db615b4 SUBMITTED
+    
+    
+    
+    
+    -------------------------- EXAMPLE 2 --------------------------
+    
+    PS > WARNING: You have selected the What-IF option, so the call will note be made to the array,
+    instead you will see a preview of the RestAPI call
+    
+    The URI for this call will be
+        https://fleetscale-app.qa.cds.hpe.com/api/v1/host-initiators/b0a2e29f7f384b5181cabb262afa8c16
+    The Method of this call will be
+        Delete
+    The Header for this call will be :
+        {   "Authorization":  "Bearer eyJhbGciOiJ-wuFoaq8XP9gcnvSSgwKnTJ_g318BZMk7KXcgWaskk2go93DKPZtl_30wn5B6UIDGwHKqrcuD8V4Mbw"
+        }
+    The Content-Type is set to
+        application/json
+    The Body of this call will be:
+        "{\r\n    \"force\":  true\r\n}"
+    
+    
+    
+    
+REMARKS
+    To see the examples, type: "Get-Help Remove-DSCCHost -Examples"
+    For more information, type: "Get-Help Remove-DSCCHost -Detailed"
+    For technical information, type: "Get-Help Remove-DSCCHost -Full"
+    For online help, type: "Get-Help Remove-DSCCHost -Online"
+
+

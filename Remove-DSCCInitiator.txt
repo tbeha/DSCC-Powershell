@@ -1,0 +1,53 @@
+
+NAME
+    Remove-DSCCInitiator
+    
+SYNOPSIS
+    Removes a HPE DSSC Initiator.
+    
+    
+SYNTAX
+    Remove-DSCCInitiator [-InitiatorId] <String> [-Force] [[-WhatIf] <Boolean>] [<CommonParameters>]
+    
+    
+DESCRIPTION
+    Removes a HPE Data Services Cloud Console Host specified by Initiator ID; If the 
+    initiator is a Device-Type2, then it will read the initiator to determine which system to delete the initiator from, 
+    otherwise it will send the command to the DSCC console, which works for initiators not assigned to individual storage
+    systems, or those assigned to Device-Type1
+    
+
+PARAMETERS
+    -InitiatorId <String>
+        A single Initiator ID must be specified.
+        
+    -Force [<SwitchParameter>]
+        Will implement an API forcefull remove option instead of the default normal removal mechanism.
+        
+    -WhatIf <Boolean>
+        The WhatIf directive will show you the RAW RestAPI call that would be made to DSCC instead of actually sending the request.
+        This option is very helpful when trying to understand the inner workings of the native RestAPI calls that DSCC uses.
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    -------------------------- EXAMPLE 1 --------------------------
+    
+    PS:>Remove-DSCCHostServiceInitiator -InitiatorID d548ef683c27403e96caa51816ddc72c
+    
+    {   "deleteInitiator": true
+    }
+    
+    
+    
+    
+REMARKS
+    To see the examples, type: "Get-Help Remove-DSCCInitiator -Examples"
+    For more information, type: "Get-Help Remove-DSCCInitiator -Detailed"
+    For technical information, type: "Get-Help Remove-DSCCInitiator -Full"
+    For online help, type: "Get-Help Remove-DSCCInitiator -Online"
+
+

@@ -109,7 +109,7 @@ Process
                     }
         }
     write-Verbose "Successfully gathered new AccessToken : $AccessToken"
-    switch( $GreenlakeType )    {   'Dev1'  {   $CloudAddr = 'scalpha-app.qa.cds.hpe.com'    }
+    switch( $GreenlakeType )    {   'Dev1'  {   $CloudAddr = 'scint-app.qa.cds.hpe.com'    }
                                     'Dev2'  {   $CloudAddr = 'fleetscale-app.qa.cds.hpe.com' }
                                     'Dev3'  {   $CloudAddr = 'fleetpoc3-app.qa.cds.hpe.com'  }
 									'Dev4'  {   $CloudAddr = 'fleetpoc3-app.qa.cds.hpe.com'  }
@@ -143,13 +143,23 @@ Process
     $Global:BaseUri     = $Base+$CloudRoot
     $Global:MyHeaders   =  @{  Authorization = 'Bearer '+ $AccessToken
                             }
+    $ReturnData =  @{   Access_Token    = $AccessToken 
+                        Token_Creation  = $( Get-Date ).datetime
+                        Token_CreationEpoch = $( (New-TimeSpan -Start (Get-Date "01/01/1970") -End (Get-Date)).TotalSeconds ) 
+                        Auto_Renew      = $( if ($AutoRenew) { $true } else { $false } )
+                    }
+    $ReturnData2 = $ReturnData | convertto-json | convertfrom-json               
+    $Global:AuthToken = Invoke-RepackageObjectWithType -RawObject $ReturnData2 -ObjectName 'AccessToken'
+    return $AuthToken
+    
+    <#
     if ( $AccessToken -or $whatifGreenLakeType )
             {   Try     {   if ( $WhatifGreenLakeType )
-                                    {   $ReturnData = invoke-restmethodwhatif -uri ( $BaseUri + 'storage-systems') -Headers $MyHeaders 
+                                    {   $ReturnData = invoke-restmethodwhatif -uri ( $BaseUri + 'audit-events') -Headers $MyHeaders 
                                     } 
                                 else 
                                     {   Write-Verbose 'This operation will run a Get-DSCCAuditEvent to test if the Cloud Type is set right'
-                                        $ReturnData = invoke-restmethod -uri ( $BaseUri + 'storage-systems') -Headers $MyHeaders
+                                        $ReturnData = invoke-restmethod -uri ( $BaseUri + 'audit-events') -Headers $MyHeaders
                                     }
                         }
                 Catch   {   $_
@@ -176,6 +186,7 @@ Process
         else
             {   Write-warning "The request for a Token was not successful using the supplied Client-ID and CLient-Secret."            
             }
+    #>        
 }
 }
 function Find-DSCCDeviceTypeFromStorageSystemID
@@ -259,6 +270,7 @@ Param   (   $UriAdd,
 Process
 {   Invoke-DSCCAutoReconnect
     $MyURI = $BaseURI + $UriAdd
+	Log-Message "DSCC REST URI: $MyURI"
     Clear-Variable -Name InvokeReturnData -ErrorAction SilentlyContinue
     if ( $WhatIfBoolean )
                 {   invoke-RestMethodWhatIf -Uri $MyUri -Method $Method -Headers $MyHeaders -Body $Body -ContentType 'application/json'
@@ -271,13 +283,14 @@ Process
 									$InvokeReturnData = invoke-restmethod -Uri $MyUri -Method $Method -Headers $MyHeaders -ContentType 'application/json'
 							    } else 
 								{
+									Log-Message "Payload Body: $Body" 
 									$InvokeReturnData = invoke-restmethod -Uri $MyUri -Method $Method -Headers $MyHeaders -Body $Body -ContentType 'application/json'
                                 }
 					}
                     catch   {   ThrowHTTPError -ErrorResponse $_ 
 					             # Note that value__ is not a typo.
-								Write-Host "StatusCode:" $_.Exception.Response.StatusCode.value__ 
-								Write-Host "StatusDescription:" $_.Exception.Response.StatusDescription
+								Log-Message "StatusCode:" $_.Exception.Response.StatusCode.value__ 
+								Log-Message "StatusDescription:" $_.Exception.Response.StatusDescription
                                 return
                             }
                     if (($InvokeReturnData).items)

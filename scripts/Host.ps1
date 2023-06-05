@@ -138,9 +138,9 @@ param(  [Parameter(Mandatory)]  [string]    $HostID,
 process
     {   $MyAdd = 'host-initiators/' + $HostID
         if ($Force)
-            {   $MyBody = ( @{force=$true} | convertto-json )
+            {   $MyAdd += '?force=true' 
             }
-        return ( Invoke-DSCCRestMethod -UriAdd $MyAdd -Method 'Delete' -body $MyBody -WhatIfBoolean $WhatIf )
+        return ( Invoke-DSCCRestMethod -UriAdd $MyAdd -Method 'Delete' -WhatIfBoolean $WhatIf )
     }       
 }   
 function Get-DSCCHostVolume

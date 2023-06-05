@@ -1,0 +1,27 @@
+id                : d2b026f174f5486cbae0594726b84a5b
+name              : SYI5HE21B5
+ipAddress         : 10.1.40.21
+fqdn              : syi5he21b5.demo.local
+operatingSystem   : VMware (ESXi)
+systems           : 
+associatedSystems : 
+userCreated       : True
+hostGroups        : {}
+comment           : DSCC API Created - Thomas Beha
+protocol          : FC
+customerId        : b2a2026c37e911ecbaa6623168b2c81d
+type              : host-initiator
+generation        : 1685965712
+consoleUri        : /data-ops-manager/host-initiators/d2b026f174f5486cbae0594726b84a5b
+initiators        : {@{id=a13fbe3338ae4ea383bb9e02af5455b9; ipAddress=; address=10:00:be:d8:0d:50:01:ca; name=syi5he21b5p1; protocol=FC;
+                    customerId=b2a2026c37e911ecbaa6623168b2c81d; type=initiator; generation=1685965712}, @{id=4bb6412b2f524962941a25e8d6bac5bf;        
+                    ipAddress=; address=10:00:be:d8:0d:50:01:cc; name=syi5he21b5p2; protocol=FC; customerId=b2a2026c37e911ecbaa6623168b2c81d;
+                    type=initiator; generation=1685965712}}
+location          : CTC BBN
+persona           : VMware
+subnet            : 255.255.255.0
+markedForDelete   : False
+editStatus        : Not_Applicable
+associatedLinks   : 
+model             : SY480Gen10
+contact           : thomas.beha@hpe.com

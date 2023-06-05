@@ -1,0 +1,190 @@
+
+NAME
+    New-DSCCHost
+    
+SYNOPSIS
+    Creates a HPE DSSC DOM Host Record.
+    
+    
+SYNTAX
+    New-DSCCHost [[-comment] <String>] [[-contact] <String>] [[-fqdn] <String>] [[-hostGroupIds] <Array>] [[-initiatorIds] <Array>] [[-initiatorsToCreate] <Array>] [[-ipAddress] 
+    <String>] [[-location] <String>] [[-model] <String>] [-name] <String> [-operatingSystem] <String> [[-persona] <String>] [[-protocol] <String>] [[-subnet] <String>] 
+    [[-userCreated] <Boolean>] [-WhatIf] [<CommonParameters>]
+    
+    
+DESCRIPTION
+    Creates a HPE Data Services Cloud Console Data Operations Manager Host Record;
+    
+
+PARAMETERS
+    -comment <String>
+        Address of the initiator and is required.
+        
+        Required?                    false
+        Position?                    1
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -contact <String>
+        A string representing the contact
+        
+        Required?                    false
+        Position?                    2
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -fqdn <String>
+        The Fully Qualified Domain Name of the host.
+        
+        Required?                    false
+        Position?                    3
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -hostGroupIds <Array>
+        Either a single or multiple strings of the host Group Ids for this host.
+        
+        Required?                    false
+        Position?                    4
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -initiatorIds <Array>
+        Either a single or multiple strings of the initiator Ids for this host.
+        
+        Required?                    false
+        Position?                    5
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -initiatorsToCreate <Array>
+        A Complex object that represents the initiators to be created. Either a HASH or a Array of HASHes
+        
+        Required?                    false
+        Position?                    6
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -ipAddress <String>
+        IP Address of the Host.
+        
+        Required?                    false
+        Position?                    7
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -location <String>
+        A String that represents the location of the host.
+        
+        Required?                    false
+        Position?                    8
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -model <String>
+        A String that represents the model of the host.
+        
+        Required?                    false
+        Position?                    9
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -name <String>
+        A required String that represents the name of the host.
+        
+        Required?                    true
+        Position?                    10
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -operatingSystem <String>
+        
+        Required?                    true
+        Position?                    11
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -persona <String>
+        The string representing the persona of the host.
+        
+        Required?                    false
+        Position?                    12
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -protocol <String>
+        THe protocol the host is employing.
+        
+        Required?                    false
+        Position?                    13
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -subnet <String>
+        THe subnet for the host.
+        
+        Required?                    false
+        Position?                    14
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -userCreated <Boolean>
+        This value will always be set to true to user submitted hosts.
+        
+        Required?                    false
+        Position?                    15
+        Default value                True
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -WhatIf [<SwitchParameter>]
+        The WhatIf directive will show you the RAW RestAPI call that would be made to DSCC instead of actually sending the request.
+        This option is very helpful when trying to understand the inner workings of the native RestAPI calls that DSCC uses.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+INPUTS
+    
+OUTPUTS
+    
+    -------------------------- EXAMPLE 1 --------------------------
+    
+    PS:>New-DSCCHostServiceInitiator -Address 100008F1EABFE61C -name Host1InitA -protocol FC
+    
+    {   "message": "Successfully submitted",
+        "status": "SUBMITTED",
+        "taskUri": "/rest/vega/v1/tasks/4969a568-6fed-4915-bcd5-e4566a75e00c"
+    }
+    
+    
+    
+    
+    
+RELATED LINKS
+
+
+

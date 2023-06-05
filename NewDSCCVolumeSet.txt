@@ -1,0 +1,256 @@
+
+NAME
+    New-DSCCVolumeSet
+    
+SYNOPSIS
+    Creates a HPE DSSC Volume Collection or Application Set
+    
+    
+SYNTAX
+    New-DSCCVolumeSet -SystemId <String> [-DeviceType2] [-description <String>] -name <String> [-agentHostname <String>] [-agentUsername <String>] [-appClusterName <String>] [-appId <String>] [-appServer <String>] [-appServiceName <String>] [-appSync <String>] [-isStandaloneVolColl <Boolean>] [-prottmplId <String>] [-replicationType <String>] [-vcenterHostname <String>] [-vcenterUsername <String>] [-WhatIf] [<CommonParameters>]
+    
+    New-DSCCVolumeSet -SystemId <String> [-DeviceType1] [-appSetBuisnessUnit <String>] [-description <String>] -name <String> -appSetType <String> [-appSetImportance <String>] [-members <String[]>] [-WhatIf] [<CommonParameters>]
+    
+    
+DESCRIPTION
+    Creates a HPE Data Services Cloud Console Data Operations Manager Volume Collection or Application Set.
+    
+
+PARAMETERS
+    -SystemId <String>
+        A single System ID is specified and required.
+        
+        Required?                    true
+        Position?                    named
+        Default value                
+        Accept pipeline input?       true (ByPropertyName)
+        Accept wildcard characters?  false
+        
+    -DeviceType1 [<SwitchParameter>]
+        This switch is used to tell the command that the end device is the specific device type, and to only allow the correct
+        parameter set that matches this device type.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -DeviceType2 [<SwitchParameter>]
+        This switch is used to tell the command that the end device is the specific device type, and to only allow the correct
+        parameter set that matches this device type.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -appSetBuisnessUnit <String>
+        This paramentere is only valid for device-type1 type storage systems.  App set business unit
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -description <String>
+        This paramentere is only valid for device-type2 type storage systems. Text description of volume 
+        collection. String of up to 255 printable ASCII characters.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -name <String>
+        This paramentere is only valid for device-type2 type storage systems.
+        
+        Required?                    true
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -appSetType <String>
+        This paramentere is only valid for device-type1 type storage systems.
+        
+        Required?                    true
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -appSetImportance <String>
+        This paramentere is only valid for device-type1 type storage systems.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -members <String[]>
+        This paramentere is only valid for device-type1 type storage systems. volumes list
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -agentHostname <String>
+        This paramentere is only valid for device-type2 type storage systems. Generic backup agent hostname. 
+        Custom port number can be specified with agent hostname using \":\". String of up to 64 alphanumeric 
+        characters, - and . and : are allowed after first character.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -agentUsername <String>
+        This paramentere is only valid for device-type2 type storage systems. If the application is running 
+        within a Windows cluster environment, this is the cluster name. String of up to 64 alphanumeric 
+        characters, - and . and : are allowed after first character.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -appClusterName <String>
+        This paramentere is only valid for device-type2 type storage systems. Application ID running on the server. 
+        Application ID can only be specified if application synchronization is \"vss\". Possible values: 'inval',
+        'exchange','exchange_dag','hyperv','sql2005','sql2005','sql2012','sql2014','sql2016','sql2017'.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -appId <String>
+        This paramentere is only valid for device-type1 type storage systems. If the application is running 
+        within a Windows cluster environment, this is the cluster name. String of up to 64 alphanumeric 
+        characters, - and . and : are allowed after first character.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -appServer <String>
+        This paramentere is only valid for device-type2 type storage systems. Application server hostname. 
+        String of up to 64 alphanumeric characters, - and . and : are allowed after first character.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -appServiceName <String>
+        This paramentere is only valid for device-type2 type storage systems. If the application is running
+         within a Windows cluster environment then this is the instance name of the service running within the 
+         cluster environment. String of up to 64 alphanumeric characters, - and . and : are allowed after first character.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -appSync <String>
+        This paramentere is only valid for device-type2 type storage systems. Application Synchronization. 
+        Possible values: 'none','vss','vmware','generic'
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -isStandaloneVolColl <Boolean>
+        This paramentere is only valid for device-type1 type storage systems. boolean Indicates whether this 
+        is a standalone volume collection. Possible values: 'true', 'false'.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -prottmplId <String>
+        This paramentere is only valid for device-type1 type storage systems. Identifier of the protection 
+        template whose attributes will be used to create this volume collection. This attribute is only used 
+        for input when creating a volume collection and is not outputed. A 42 digit hexadecimal number.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -replicationType <String>
+        This paramentere is only valid for device-type1 type storage systems. Type of replication configured 
+        for the volume collection. Default value is periodic_snapshot. Possible values are 'periodic_snapshot' and 'synchronous'.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -vcenterHostname <String>
+        This paramentere is only valid for device-type1 type storage systems. VMware vCenter hostname. Custom 
+        port number can be specified with vCenter hostname using \":\". String of up to 64 alphanumeric 
+        characters, - and . and : are allowed after first character.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -vcenterUsername <String>
+        This paramentere is only valid for device-type1 type storage systems. Application VMware vCenter username. 
+        String of up to 80 alphanumeric characters, beginning with a letter. It can include ampersand (@), 
+        backslash (), dash (-), period (.), and underscore (_).
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -WhatIf [<SwitchParameter>]
+        The WhatIf directive will show you the RAW RestAPI call that would be made to DSCC instead of actually sending the request.
+        This option is very helpful when trying to understand the inner workings of the native RestAPI calls that DSCC uses.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+INPUTS
+    
+OUTPUTS
+    
+    
+RELATED LINKS
+    The API call for this operation is file:///api/v1/storage-systems/{systemid}/device-type1/access-control-records 
+
+

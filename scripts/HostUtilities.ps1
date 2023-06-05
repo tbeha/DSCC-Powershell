@@ -1,176 +1,129 @@
 function Invoke-ConvertHost
 {
-<#
-.SYNOPSIS
-    Returns the HPE DSSC DOM Hosts Collection    
-.DESCRIPTION
-    Returns the HPE Data Services Cloud Console Data Operations Manager Host Collections;
-.PARAMETER WhatIf
-    The WhatIf directive will show you the RAW RestAPI call that would be made to DSCC instead of actually sending the request.
-    This option is very helpful when trying to understand the inner workings of the native RestAPI calls that DSCC uses.
-.EXAMPLE
-    PS:> Get-DSCCHost | convertTo-Json
-
-    {
-    "id":  "733b0e0808c3469d8a8650974cac8847",
-    "name":  "TestHostInitiator1",
-    "ipAddress":  null,
-    "fqdn":  null,
-    "operatingSystem":  "Windows Server",
-    "systems":  [
-                    "0006b878a5a008ec63000000000000000000000001",
-                    "2M202205GF"
-                ],
-    "associatedSystems":[
-                            "0006b878a5a008ec63000000000000000000000001"
-                        ],
-    "userCreated":  true,
-    "hostGroups":  [
-                        {
-                            "id":  "3ea6d00cb589489c94d928f41ca5ad28",
-                            "name":  "TestHostGroup1",
-                            "userCreated":  true,
-                            "systems":  "0006b878a5a008ec63000000000000000000000001 2M202205GF",
-                            "markedForDelete":  false
-                        }
-                    ],
-    "comment":  null,
-    "protocol":  null,
-    "customerId":  "ffc311463d8711ecbdd5428607ee1704",
-    "type":  "host-initiator",
-    "generation":  1638468553,
-    "consoleUri":  "/data-ops-manager/host-initiators/733b0e0808c3469d8a8650974cac8847",
-    "initiators":  [
-                        {
-                            "id":  "00bace011e774445b208858e2545a048",
-                            "ipAddress":  null,
-                            "address":  "c0:77:2f:58:5f:19:00:50",
-                            "name":  "Host Path C0772F585F190050 (1:3:1)",
-                            "protocol":  "FC",
-                            "systems":  "0006b878a5a008ec63000000000000000000000001 2M202205GF"
-                        }
-                    ],
-    "location":  null,
-    "persona":  null,
-    "subnet":  null,
-    "markedForDelete":  false,
-    "editStatus":  "Not_Applicable",
-    "associatedLinks":  [
-                            {
-                                "type":  "initiators",
-                                "resourceUri":  "/api/v1/initiators?filter=hostId in (733b0e0808c3469d8a8650974cac8847)"
-                            },
-                            {
-                                "type":  "host-groups",
-                                "resourceUri":  "/api/v1/host-initiator-groups?filter=hostId in (733b0e0808c3469d8a8650974cac8847)"
-                            }
-                        ],
-    "model":  null,
-    "contact":  null
-}
-.EXAMPLE
-    PS:> Get-DSCCHost
-
-    id                               name               operatingSystem protocol type
-    --                               ----               --------------- -------- ----
-    733b0e0808c3469d8a8650974cac8847 TestHostInitiator1 Windows Server           host-initiator
-.EXAMPLE
-    PS:> Get-DSCCHostServiceHost | where { $_.id -like 'f0b1edd8f8984c8db9e596f25de0bdf4' )
-
-    id                               name               operatingSystem protocol type
-    --                               ----               --------------- -------- ----
-    f0b1edd8f8984c8db9e596f25de0bdf4 TestHostInitiator1 Windows Server           host-initiator
-.LINK
-    The API call for this operation is file:///api/v1/host-initiator-groups
-#>   
 [CmdletBinding()]
 param(
     )
 process
     {   
+
+        Log-Message "-----------------------------------------------------------------------------------------" $True
+        Log-Message "                            Staring Host Migration Job                                   " $True
+        Log-Message "-----------------------------------------------------------------------------------------" $True
+
+        <# Make DSCC public REST API 'api/v1/storage-systems' call to get all storage systems. DSCC REST APIs specification can be 
+        found here - 'https://console-us1.data.cloud.hpe.com/doc/api/v1/' #>
         $MyAdd = 'storage-systems'   
         $Sys = Invoke-DSCCrestmethod -UriAdd $MyAdd -method Get -whatifBoolean $WhatIf
         $Sys = $Sys | measure
-        Write-Host $Sys.Count
+        Log-Message $Sys.Count
         If ( $Sys.Count -eq 0 ) 
         {   
             Write-Warning "No system found. Ensure that you have connected to a HPE Data Storage Cloud Services using Connect-DSCC command."
             return
         } 
 
+        Log-Message "Identify hosts discovered from onboarded systems and migrate them to DSCC hosts." $True
+        Log-Message "Identify multiple discovered hosts for host migration."
         $HostToUpdate1 = $false
         $HostToUpdate2 = $false
         $InitList = Get-CommonHosts
-
-        Write-Host "Total number of items is: "+ $InitList.Count
-       
+        
 
         if ($InitList.Count -eq 0) 
         { 
-            Write-Information "No host found to perform merge operation."
+           Log-Message "No multiple discovered hosts found for host migration." $true
         } else {
-            $HostToUpdate1 = Get-Choice
+            $HostToUpdate1 = Get-Choice1
+
+            if ($HostToUpdate1 -ne $true)
+            {
+                Log-Message "------------------------------------------------------------------------------------------" $True
+                Log-Message "                       Multiple Discovered Host PreMerge Summary" $True 
+                Log-Message "------------------------------------------------------------------------------------------" $True
+                $line = "{0,-20} {1,-25}  {2,-20}" -f "Host Name" , "Operating System", "Initiators Ids"
+                Log-Message $line $True
+                Log-Message "------------------------------------------------------------------------------------------" $True              
+            } else {
+                Log-Message "Starting the migration tasks..." $True 
+            }
 	        foreach ($intiator in $InitList) 
             {
                   $hostName, $os, $initiatorList = Get-HostDetailsByInitiatorId $intiator
+
                   if ($initiatorList.Count -gt 0)
-                  {
-                        Write-Host "Host $hostName to be merged for initiator id $intiator"  
+                  {    if ($HostToUpdate1 -ne $true) 
+                       {
+                           $initStrList = ""
+                           foreach ($initStr in $initiatorList) {
+                              $initStrList = $initStrList + " "+ $initStr
+                           }
+                            $line = "{0,-20} {1,-25} {2,-20}" -f $hostName, $os, $initStrList
+                            Log-Message $line $true 
+                        }
                         if ($HostToUpdate1 -eq $true)
-                        {
-                            Write-Host "Creating host $hostName" 
-                            Create-NewHost $hostName $os $InitList
+                        {   Log-Message "Creating host $hostName with initiators $initiatorList"  
+                            Create-NewHost $hostName $os $initiatorList
                         }
                   } 
                   else
                   {
-                      Write-Host "No host to be merged for initiator id $intiator"
+                     Log-Message "No host to be migrated as initiator count is 0."
                   } 
-            }
-
-            if ($HostToUpdate1 -eq $true) 
-            {
-		       Write-Host "Submitted requests to create DSCC hosts successfully. Verify if the hosts are created from DSCC UI"
             }
         }
 	
-     	Write-Host "Convert Hosts to DSSC Hosts from connected Alletra Systems"
+     	Log-Message "Identify single discovered hosts for host migration."
 
         $InitList = Get-SingleDisoveredHost
-
+        
         if ($InitList.Count -eq 0) 
         { 
-            Write-Information "No system host found to covert to DSCC host."
+            Log-Message "No single discovered hosts found for host migration."
         } else {
 
-            $HostToUpdate2 = Get-Choice
-        
+            
+
+            if ($HostToUpdate1 -ne $true) 
+            {
+                Log-Message "------------------------------------------------------------------------------------------" $True
+                Log-Message "                       Single Discovered Host PreMerge Summary" $True 
+                Log-Message "------------------------------------------------------------------------------------------" $True
+                $line = "{0,-20} {1,-25}  {2,-20}" -f "Host Name" , "Operating System", "Initiators Ids"
+                Log-Message $line $True
+                Log-Message "------------------------------------------------------------------------------------------" $True
+            }
+
 	        foreach ($intiator in $InitList) 
             {
                  $hostName, $os, $initiatorList = Get-SingleHostDetailsByInitiatorId $intiator
-
+                 if ($HostToUpdate1 -ne $true) 
+                 {
+                      $initStrList = ""
+                      foreach ($initStr in $initiatorList) {
+                         $initStrList = $initStrList + " "+ $initStr
+                      }
+                     $line = "{0,-20} {1,-25} {2,-20}" -f $hostName, $os, $initStrList 
+                     Log-Message $line $true 
+                }
                 if ($HostToUpdate2 -eq $true)
                 {
-                    Write-Host "Creating host $hostName" 
-                    Create-NewHost $hostName $os $InitList
+                    Log-Message  "Creating host $hostName with initiators $initiatorList" 
+                    Create-NewHost $hostName $os $initiatorList
                 }
-            }
-
-            if ($HostToUpdate2 -eq $true) 
-            {
-		       Write-Host "Submitted requests to create DSCC hosts successfully. Verify if the hosts are created from DSCC UI"
             }
         }
 
         if ($HostToUpdate1 -or $HostToUpdate2) 
-        {       
+        {    
+             Log-Message "Waiting for edit host operations to complete..." $true    
              $hostIdList, $hostNameList = Get-HostDetailsByName
-             Write-Host "No of Hosts which needs to be Updated Back to original HostName is " + ($hostIdList).Count
+             $log = "No of Hosts which needs to be Updated Back to original HostName is " + ($hostIdList).Count
+             Log-Message $log
               For ($i=0; $i -lt $hostIdList.Count; $i++) {
                 Set-HostDetails $hostIdList[$i] $hostNameList[$i]
              }
-              Write-Host "Task for all the Hosts which has HostName -DSSC is submitted successfully"
-             
+              Log-Message "Task for all the Hosts which has HostName -DSSC is submitted successfully"
+            Log-Message "Submitted requests to migrate DSCC hosts successfully. Verify if the hosts are created from DSCC UI" $true     
         }
     }
 }   
@@ -194,29 +147,29 @@ process
           $HostCount = (($intiator).hosts | measure).Count
           if ($HostCount -gt 1)
           {    $hosts =  ($intiator).hosts
-               Write-Host "For the intiator found more than two hosts"
+               Log-Message "For the intiator found more than two hosts"
                $userCreatedHostFound = $false
                foreach ($host in ($intiator).hosts)
                {
-                  Write-Host "Individual Host $host"
+                  Log-Message "Individual Host $host"
                   $UserCreated = ($host).UserCreated
                   $InitId = ($intiator).id
                   $hostName = ($host).Name
                   if ( $UserCreated -eq $false ) 
                   {
-					Write-Host "Initiator Found $InitId associated with $hostName which is Discovered Host"
+					Log-Message "Initiator Found $InitId associated with $hostName which is Discovered Host"
 					$userCreatedHostFound = $true
 				  } 
                   else 
                   {
-					Write-Host "Initiator Found $InitId associated with $hostName which is User Created Host"
+					Log-Message "Initiator Found $InitId associated with $hostName which is User Created Host"
 					$userCreatedHostFound = $false
 					break
 				  }
                }
                if ($userCreatedHostFound -eq $true)
                {
-                    Write-Host "Adding initiator $InitId in the list."
+                    Log-Message "Adding initiator $InitId in the list."
                     $InitiatorsList += $InitId
                }
             }
@@ -225,13 +178,13 @@ process
 
          if ($InitiatorsList.Count -eq 0) 
          {
-		    Write-Host "initiator with merged host not found on the Array"
+		    Log-Message "initiator with merged host not found on the Array"
 	     }
          return $InitiatorsList    
      }
  }
 
-function Get-Choice
+function Get-Choice1
 {
 
 [CmdletBinding()]
@@ -240,7 +193,29 @@ param(
 process
     {
 
-        $title    = 'Do you want to update the Host Definition?'
+        $title    = 'Do you want to update the Host Definition for multiple discovered host?'
+        $question = 'Yes to update the Host Definitions, No for the dry run only'
+        $choices  = '&Yes', '&No'
+
+        $decision = $Host.UI.PromptForChoice($title, $question, $choices, 1)
+        if ($decision -eq 0) {
+            return $true
+        } else {
+            return $false
+        }
+    }
+}
+
+function Get-Choice2
+{
+
+[CmdletBinding()]
+param(
+    )
+process
+    {
+
+        $title    = 'Do you want to update the Host Definition for single discovered host?'
         $question = 'Yes to update the Host Definitions, No for the dry run only'
         $choices  = '&Yes', '&No'
 
@@ -264,20 +239,20 @@ Param
     )
     process
     {
-       Write-Host "Getting host detail from initiator Id $InitId"
+       Log-Message "Getting host detail from initiator Id $InitId"
        $MyAdd = 'host-initiators?filter=initiatorId%20eq%20' + $InitId   
        $hosts = Invoke-DSCCrestmethod -UriAdd $MyAdd -method Get -whatifBoolean $WhatIf
        $hostCount = ($hosts | measure).Count
        if ($hostCount -eq 0) 
        {
-		 Write-Host "No host found"
+		 Log-Message "No host found"
 		 return "", "", @()
 	  }
    
       $matchedOperatingSystem = ""
       
       foreach ($host1 in $hosts)
-      {    Write-Host $host 
+      {    Log-Message $host 
            $InitiatorsList1 = @() 
            foreach ($Initiator in ($host1).Initiators) {
             $InitId = ($Initiator).id
@@ -307,9 +282,9 @@ Param
             }
 
             <# Complare the host operating system list #>
-            if (($host1).operatingSystem -ne ($host1).operatingSystem)
+            if (($host1).operatingSystem -ne ($host2).operatingSystem)
             {
-                Write-Host "host operating system is not matching"
+                Log-Message "host operating system is not matching"
                 continue
             }
 
@@ -317,34 +292,28 @@ Param
             $host1InitCount = (($host1).Initiators | measure).Count
             $host2InitCount = (($host2).Initiators | measure).Count
 
-            Write-Host "Number of initiator in host1 $host1InitCount and number of initiator in host2 $host2InitCount"
+            Log-Message "Number of initiator in host1 $host1InitCount and number of initiator in host2 $host2InitCount"
 
             <# Complare the initiator list #>
             if ($host1InitCount -ne $host2InitCount)
             {
-                Write-Host "host initiator count is not matching"
+                Log-Message "host initiator count is not matching"
                 continue
             }
 
-             $initListMatched = $true
-             foreach ($Initiator1 in  $InitiatorsList1)
-             {
-                foreach ($Initiator2 in  $InitiatorsList2)
-                {
-                    $Init1Id = ($Initiator1).id
-                    $Init2Id = ($Initiator2).id
+            $initListMatched = $false
+            $diff = (Compare-Object $InitiatorsList1 $InitiatorsList2).InputObject
+            $diffCount = ($diff | measure).Count
+            if ($diffCount -eq 0) {
+                $initListMatched = $true
+                Log-Message "host initiators list is matching"
 
-                    if ($Init1Id -ne $Init2Id) {
-                       $initListMatched = $false
-                       Write-Host "host initiators list is not matching"
-                       break
-
-                    }
-                }
+            } else {
+                Log-Message "host initiators list is not matching" 
             }
 
             if ($initListMatched -eq $true) {
-               Write-Host "host initiator count matched"   
+               Log-Message "host initiator count matched"   
 
                if ($matchedOperatingSystem -eq "")
                {
@@ -354,10 +323,7 @@ Param
                return $host1Name, $matchedOperatingSystem, $InitiatorsList1 
 
             }
-            
-
           }
-         
       }
        return "", "", @()
     }
@@ -389,12 +355,17 @@ Param
         $hostCount = ($host | measure).Count
         if ($hostCount -eq 0) 
         {
-		     Write-Host "Failed to create the Host with name $hostName"
+		     Log-Message "Failed to create the Host with name $hostName"
+             Log-Message "Error: Unable to migrate the host $hostName." $True
 		     return
 	    }
         else
         {
-          Write-Host "Host with HostName $newHostName is created successfully."
+          Log-Message "Host with HostName $newHostName is created successfully."
+          $initStrList = ""
+          foreach ($initStr in $initiatorList) {
+               $initStrList = $initStrList + " "+ $initStr
+           }
         }
     }
 }
@@ -412,35 +383,35 @@ Param
      $intiators = Invoke-DSCCrestmethod -UriAdd $MyAdd -method Get -whatifBoolean $WhatIf
      $InitiatorsList = @()
 
-     Write-Host "Getting discovered/system hosts"
+     Log-Message "Getting discovered/system hosts"
      foreach ($intiator in $intiators)
      {
           $HostCount = (($intiator).hosts | measure).Count
           if ($HostCount -eq 1)
           {    $hosts =  ($intiator).hosts
-               Write-Host "Found single discovered Host for the initiator"
+               Log-Message "Found single discovered Host for the initiator"
                $userCreatedHostFound = $false
                foreach ($host in ($intiator).hosts)
                {
-                  Write-Host "Individual Host $host"
+                  Log-Message "Individual Host $host"
                   $UserCreated = ($host).UserCreated
                   $InitId = ($intiator).id
                   $hostName = ($host).Name
                   if ( $UserCreated -eq $false ) 
                   {
-					Write-Host "Initiator found $InitId associated with $hostName which is Discovered Host"
+					Log-Message "Initiator found $InitId associated with $hostName which is Discovered Host"
 					$userCreatedHostFound = $false
 				  } 
                   else 
                   {
-					Write-Host "Initiator found $InitId associated with $hostName which is User Created Host"
+					Log-Message "Initiator found $InitId associated with $hostName which is User Created Host"
 					$userCreatedHostFound = $true
 					break
 				  }
                }
                if ($userCreatedHostFound -eq $false)
                {
-                    Write-Host "Adding initiator $InitId in the list."
+                    Log-Message "Adding initiator $InitId in the list."
                     $InitiatorsList += $InitId
                }
             }
@@ -449,10 +420,11 @@ Param
 
          if ($InitiatorsList.Count -eq 0) 
          {
-		    Write-Host "initiator with single discovered host not found on the Array!!"
+		    Log-Message "initiator with single discovered host not found on the Array!!"
 	     }
          
-         Write-Host "Initiator with single discovered host found on the Array: " + $InitiatorsList.Count
+         $log = "Initiator with single discovered host found on the Array: " + $InitiatorsList.Count
+         Log-Message $log
          return $InitiatorsList    
     }
  }
@@ -468,23 +440,22 @@ Param
     )
     process
     {
-       Write-Host "Getting host detail from initiator Id $InitId"
+       Log-Message "Getting host detail from initiator Id $InitId"
        $MyAdd = 'host-initiators?filter=initiatorId%20eq%20' + $InitId   
        $hosts = Invoke-DSCCrestmethod -UriAdd $MyAdd -method Get -whatifBoolean $WhatIf
        $hostCount = ($hosts | measure).Count
        if ($hostCount -eq 0) 
        {
-		 Write-Host "No host found"
+		 Log-Message "No host found"
          return "", "", $InitiatorsList
 	  }
       if ($hostCount -gt 1) 
       {
-	 	  Write-Host "Initiator is common for more than one host, so skipping"
+	 	  Log-Message "Initiator is common for more than one host, so skipping"
           return "", "", $InitiatorsList
   	  }
 
       $host = $hosts[0]
-      Write-Host $host 
       $InitiatorsList = @()
       foreach ($Initiator in ($host).Initiators) {
          $InitId = ($Initiator).id
@@ -492,20 +463,26 @@ Param
       }
 
      $hostId = ($host).id
-     Write-Host "Host Id: $hostId"
+
+     if ($hostId -eq "") {
+         Log-Message "No host found."
+         return "", "", @()
+     }
+
+     Log-Message "Host Id: $hostId"
 
      $os = ($host).OperatingSystem
-     Write-Host "Operating System: $os"
+     Log-Message "Operating System: $os"
 
      $name = ($host).Name
-     Write-Host "Host Name: $name"
+     Log-Message "Host Name: $name"
           
     if ($os -eq "")
     {
 	   $os = "VMware (ESXi)"
 	}
 
-    Write-Host "Initiator List: $InitiatorsList"
+    Log-Message "Initiator List: $InitiatorsList"
     return $name, $os, $InitiatorsList
 
     }
@@ -521,13 +498,13 @@ Param
     )
     process
     {
-       Write-Host "Getting host detail"
+       Log-Message "Getting host detail"
        $MyAdd = 'host-initiators'   
        $hosts = Invoke-DSCCrestmethod -UriAdd $MyAdd -method Get -whatifBoolean $WhatIf
        $hostCount = ($hosts | measure).Count
        if ($hostCount -eq 0) 
        {
-		 Write-Host "No host found"
+		 Log-Message "No host found"
 		 return
 	   }
        $HostNameList = @()
@@ -536,7 +513,7 @@ Param
        {  
           $hostId = ($host).id
           $name = ($host).Name
-          Write-Host "Host Name: $name"
+          Log-Message "Host Name: $name"
           $index = $name.IndexOf("-DSSC") 
           if ( $index -gt -1)
           { 
@@ -546,7 +523,7 @@ Param
 
           if ($HostIdList.Count -eq 0) 
           {
-		    Write-Host "No Host Initiators with -DSSC in hostName found on the array!!"
+		    Log-Message "No Host Initiators with -DSSC in hostName found on the array!!"
 	      }
          
        }
@@ -568,19 +545,85 @@ Param
     )
     process
     {
-       Write-Host "Editing host detail of host Id $hostId"
+       Log-Message "Editing host detail of host Id $hostId"
        $MyAdd = 'host-initiators/' + $hostId
        $newHostName = $hostName.Trim("-DSCC")
-       Write-Host "Updating the host name to $newHostName with URL $MyAdd"
+       Log-Message "Updating the host name to $newHostName with URL $MyAdd"
        $MyBody = @{name=$newHostName}  
        $response = Invoke-DSCCrestmethod -UriAdd $MyAdd -method PUT -Body ( $MyBody | convertto-json ) -whatifBoolean $WhatIf
-       Write-Host " Response: $response"
+       Log-Message " Response: $response"
        $responseCount = ($response | measure).Count
        if ($responseCount -eq 0) 
        {
-		 Write-Host "host $hostName Could not be updated"
+		 Log-Message "host $hostName Could not be updated"
 		 return
-	   }
+	   } else {
+          $taskId = ($response).taskUri 
+          Log-Message "Task Id of the edit host operaton is $taskId"
+          WaitForTaskToComplete $taskId      
+       } 
+ 
     }
 
  }
+
+
+Function WaitForTaskToComplete()
+{
+ param
+    (
+    [Parameter(Mandatory=$true, Position=0)]
+    [string] $taskId
+    )
+    process
+    {
+        Log-Message "Getting task status of task $taskId and waiting for task to complete"
+        $maxRetryCount = 5
+        $retryCount = 0
+        do {
+           Start-Sleep 5 
+           $MyAdd = 'tasks/' + $taskId
+           $tast = Invoke-DSCCrestmethod -UriAdd $MyAdd -method Get -whatifBoolean $WhatIf
+           $resposeCount = ($tast | measure).Count
+           if ($resposeCount -eq 0)  {
+               Log-Message "Unable to get task status"
+               return
+           }
+           $taskStatus = ($tast).State
+           Log-Message "The task status is $taskStatus"
+           $retryCount++
+
+       } while ($taskStatus -eq 'RUNNING' -and $retryCount -lt $maxRetryCount)
+    }
+}
+
+Function Log-Message()
+{
+ param
+    (
+    [Parameter(Mandatory=$true, Position=0)]
+    [string] $message,
+    [Parameter(Mandatory=$false, Position=1)]
+    [string] $writeToConsole=$false
+    )
+ 
+    Try {
+        #Get the current date
+        $LogDate = (Get-Date).tostring("yyyyMMdd")
+
+        #Frame Log File with Current Directory and date
+        $CurrentDir = (pwd).Path
+        $LogFile = $CurrentDir + "\logs\HostMigration_" + $LogDate + ".log"
+ 
+        #Add Content to the Log File
+        $TimeStamp = (Get-Date).toString("dd/MM/yyyy HH:mm:ss:fff tt")
+        $Line = "$TimeStamp - $message"
+        if ($writeToConsole -eq $true)
+        {
+            Write-Host $message
+        }
+        Add-content -Path $Logfile -Value $Line
+     }
+    Catch {
+    }
+}

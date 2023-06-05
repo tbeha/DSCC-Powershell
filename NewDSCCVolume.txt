@@ -1,0 +1,446 @@
+
+NAME
+    New-DSCCVolume
+    
+SYNOPSIS
+    Creates a new Volume on the specified Storage System.
+    
+    
+SYNTAX
+    New-DSCCVolume -SystemId <String> [-DeviceType2] -name <String> -size <String> [-pool_id <String>] [-agent_type <String>] [-app_uid <String>] [-base_snap_id <String>] [-block_size <Int32>] [-cache_pinned] [-clone] [-dedupe_enabled] [-description <String>] [-dest_pool_id <String>] [-encryption_cipher <String>] [-folder_id <String>] [-limit <Int32>] [-limit_iops <Int32>] [-limit_mbps <Int32>] [-multi_initiator] [-online] [-owned_by_group_id <String>] [-perfpolicy_id <String>] [-read_only] [-reserve <Int32>] [-snap_reserve <Int32>] [-snap_warn_level <Int32>] [-warn_level <Int32>] [-WhatIf] [<CommonParameters>]
+    
+    New-DSCCVolume -SystemId <String> [-DeviceType1] -name <String> -sizeMib <String> -userCpg <String> [-comments <String>] [-count <Int32>] [-dataReduction <Boolean>] [-snapCpg <String>] [-snapshotAllocWarning <String>] [-userAllocWarning <String>] [-WhatIf] [<CommonParameters>]
+    
+    
+DESCRIPTION
+    Creates a new Volume on the Specified Storage System with the supplied parameters. Depending on the target storage system, the command will 
+    accept either 1 of 2 sets of parameters; device-type1 or device-type2.
+    
+
+PARAMETERS
+    -SystemId <String>
+        
+        Required?                    true
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -DeviceType1 [<SwitchParameter>]
+        This switch is used to tell the command that the end device is the specific device type, and to only allow the correct
+        parameter set that matches this device type.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -DeviceType2 [<SwitchParameter>]
+        This switch is used to tell the command that the end device is the specific device type, and to only allow the correct
+        parameter set that matches this device type.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -name <String>
+        A single name is specified and required, and is required for both parameter sets.
+        
+        Required?                    true
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -sizeMib <String>
+        Volume size in megabytes. Size is required for creating a volume but not for cloning an existing volume.When creating a 
+            new volume, size is required. When cloning an existing volume, size defaults to that of the parent volume. 
+            This parameter is only valid for device-type1 which represents Alletra 9K and Primera or 3PAR targets.
+        
+        Required?                    true
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -userCpg <String>
+        User CPG. This parameter is only valid for device-type1 which represents Alletra 9K and Primera or 3PAR targets.
+        
+        Required?                    true
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -comments <String>
+        The detailed description of the volume.This parameter is only valid for device-type1 which represents 
+        Alletra 9K and Primera or 3PAR targets.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -count <Int32>
+        How many Volumes to create using the given parameters. This parameter is only valid for device-type1 which 
+        represents Alletra 9K and Primera or 3PAR targets.
+        
+        Required?                    false
+        Position?                    named
+        Default value                0
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -dataReduction <Boolean>
+        If data reduction technologies such as compression or deduplication should be turned on. This parameter is only valid 
+        for device-type1 which represents Alletra 9K and Primera or 3PAR targets.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -snapCpg <String>
+        The CPG that will be used to store the snapshot data. This parameter is only valid 
+        for device-type1 which represents Alletra 9K and Primera or 3PAR targets.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -snapshotAllocWarning <String>
+        Snapshot Alloc Warning. This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -userAllocWarning <String>
+        User Alloc Warning. This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -size <String>
+        Volume size in megabytes. Size is required for creating a volume but not for cloning an existing volume.When creating a 
+        new volume, size is required. When cloning an existing volume, size defaults to that of the parent volume.
+        This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    true
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -pool_id <String>
+        Identifier associated with the pool in the storage pool table. A 42 digit hexadecimal int64. Defaults to the ID of the 'default' pool.
+        This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -agent_type <String>
+        External management agent type. Defaults to 'none'. Possible values: 'none', 'smis', 'vvol', 'openstack', 'openstackv2'.
+        This parameter is only valid for device-type1 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -app_uid <String>
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -base_snap_id <String>
+        Base snapshot ID. This attribute is required together with name and clone when cloning a volume with the create operation. A 42 
+        digit hexadecimal int64. Defaults to the empty string. This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -block_size <Int32>
+        Size in bytes of blocks in the volume. Defaults to 4096, but may also be set to 8192, 16388, 32786, and 65536, representing 4K, 8K, 16K, 32K, or 64K.
+        This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                0
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -cache_pinned [<SwitchParameter>]
+        If set to true, all the contents of this volume are kept in flash cache. This provides for consistent performance guarantees for all types of workloads. 
+           The amount of flash needed to pin the volume is equal to the limit for the volume. Defaults to 'false'. 
+           This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -clone [<SwitchParameter>]
+        Whether this volume is a clone. Use this attribute in combination with name and base_snap_id to create a clone by setting clone = true. Defaults to 'false'.
+        This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -dedupe_enabled [<SwitchParameter>]
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -description <String>
+        Text description of volume. String of up to 255 printable ASCII characters. Defaults to the empty string. 
+        This parameter is only valid for device-type1 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -dest_pool_id <String>
+        ID of the destination pool where the volume is moving to. A 42 digit hexadecimal int64. Defaults to the empty string.
+        This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -encryption_cipher <String>
+        The encryption cipher of the volume. Defaults to 'none'. Possible values: 'none', 'aes_256_xts'.
+        This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -folder_id <String>
+        ID of the folder holding this volume. An optional NsObjectID. A 42 digit hexadecimal int64 or the empty string. 
+        Defaults to the empty string. 
+        This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -limit <Int32>
+        Limit for the volume as a percentage of volume size. Percentage as integer from 0 to 100. Defaults to the default 
+        volume limit set on group, typically 100. 
+        This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                0
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -limit_iops <Int32>
+        IOPS limit for this volume. If limit_iops is not specified when a volume is created, or if limit_iops is set to -1, 
+        then the volume has no IOPS limit. If limit_iops is not specified while creating a clone, IOPS limit of parent volume 
+        will be used as limit. IOPS limit should be in range [256, 4294967294] or -1 for unlimited. If both limit_iops and 
+        limit_mbps are specified, limit_mbps must not be hit before limit_iops. In other words, IOPS and MBPS limits should honor 
+        limit_iops _ampersand_amp;lt;= ((limit_mbps MB/s * 2^20 B/MB) / block_size B). By default the volume is created with unlimited iops.
+        This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                0
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -limit_mbps <Int32>
+        
+        Required?                    false
+        Position?                    named
+        Default value                0
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -multi_initiator [<SwitchParameter>]
+        This indicates whether volume and its snapshots are multi-initiator accessible. This attribute applies only to volumes and 
+        snapshots available to iSCSI initiators. Defaults to 'false'. 
+        This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -online [<SwitchParameter>]
+        Online state of volume, available for host initiators to establish connections. Defaults to 'true'.
+        This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -owned_by_group_id <String>
+        ID of group that currently owns the volume. A 42 digit hexadecimal int64. Defaults to the ID of the group that created the volume.
+        This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -perfpolicy_id <String>
+        Identifier of the performance policy. After creating a volume, performance policy for the volume can only be changed to another 
+        performance policy with same block size. A 42 digit hexadecimal int64. Defaults to ID of the 'default' performance policy.
+        This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -read_only [<SwitchParameter>]
+        Volume is read-only. Defaults to 'false'. 
+        This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -reserve <Int32>
+        Amount of space to reserve for this volume as a percentage of volume size. Percentage as integer from 0 to 100. 
+        Defaults to the default volume reservation set on the group, typically 0. 
+        This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                0
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -snap_reserve <Int32>
+        Amount of space to reserve for snapshots of this volume as a percentage of volume size. Defaults to the default snapshot 
+        reserve set on the group, typically 0. 
+        This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                0
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -snap_warn_level <Int32>
+        Threshold for available space as a percentage of volume size below which an alert is raised. Defaults to the default 
+        snapshot warning level set on the group, typically 0. 
+        This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                0
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -warn_level <Int32>
+        Threshold for available space as a percentage of volume size below which an alert is raised. If this option is not specified, 
+        array default volume warn level setting is used to decide the warning level for this volume. Percentage as integer from 0 to 100. 
+        Defaults to the default volume warning level set on the group, typically 80.
+        This parameter is only valid for device-type2 which represents Alletra 6K and Nimble Storage.
+        
+        Required?                    false
+        Position?                    named
+        Default value                0
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -WhatIf [<SwitchParameter>]
+        The WhatIf directive will show you the RAW RestAPI call that would be made to DSCC instead of actually sending the request.
+        This option is very helpful when trying to understand the inner workings of the native RestAPI calls that DSCC uses.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+INPUTS
+    
+OUTPUTS
+    
+    -------------------------- EXAMPLE 1 --------------------------
+    
+    PS > Creating a Device-Type1 type Volume on a Alletra6K or Nimble Storage device.
+    
+    PS:> New-DSCCVolume -SystemId 003a78e8778c204dc2000000000000000000000001 -name 'test2' -size 10240 -description 'tst2'
+    
+        taskUri                              status    message
+        -------                              ------    -------
+        dd9e6b68-db1c-4f86-90b4-9ce31d65abfa SUBMITTED
+    
+    
+    
+    
+    -------------------------- EXAMPLE 2 --------------------------
+    
+    PS > Creating a Device-Type1 type Volume on a Alletra6K or Nimble Storage device.
+    
+    PS:> New-DSCCVolume -SystemId MXN5442108 -name 'MyVol' -userCpg e190f017de995e836626b8d92fe832d4 -sizeMiB 10240 -comments 'test'
+    
+        taskUri                              status    message
+        -------                              ------    -------
+        dd9e6b68-db1c-4f86-90b4-9ceffd65fbfa SUBMITTED
+    
+    PS:>
+    
+    
+    
+    
+    
+RELATED LINKS
+
+

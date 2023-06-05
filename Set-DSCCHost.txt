@@ -1,0 +1,57 @@
+
+NAME
+    Set-DSCCHost
+    
+SYNOPSIS
+    Updates a HPE DSSC DOM Host Initiator Record.
+    
+    
+SYNTAX
+    Set-DSCCHost [-hostID] <String> [[-name] <String>] [[-initiatorsToCreate] <Array>] [[-updatedInitiators] <Array>] [-WhatIf] [<CommonParameters>]
+    
+    
+DESCRIPTION
+    Updates a HPE Data Services Cloud Console Data Operations Manager Host Initiator Record;
+    
+
+PARAMETERS
+    -hostID <String>
+        The host initiator record to be modified.
+        
+    -name <String>
+        Name of the Host.
+        
+    -initiatorsToCreate <Array>
+        A hash table of the Initiators to create, or an array of hash tables of initiators to create.
+        
+    -updatedInitiators <Array>
+        An InitiatorId of initiators to replace, or an array InitiatorIds of hosts to replace.
+        
+    -WhatIf [<SwitchParameter>]
+        The WhatIf directive will show you the RAW RestAPI call that would be made to DSCC instead of actually sending the request.
+        This option is very helpful when trying to understand the inner workings of the native RestAPI calls that DSCC uses.
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+    -------------------------- EXAMPLE 1 --------------------------
+    
+    PS:>New-DSCCHostServiceInitiator -Address 100008F1EABFE61C -name Host1InitA -protocol FC
+    
+    {   "message": "Successfully submitted",
+        "status": "SUBMITTED",
+        "taskUri": "/rest/vega/v1/tasks/4969a568-6fed-4915-bcd5-e4566a75e00c"
+    }
+    
+    
+    
+    
+REMARKS
+    To see the examples, type: "Get-Help Set-DSCCHost -Examples"
+    For more information, type: "Get-Help Set-DSCCHost -Detailed"
+    For technical information, type: "Get-Help Set-DSCCHost -Full"
+
+
