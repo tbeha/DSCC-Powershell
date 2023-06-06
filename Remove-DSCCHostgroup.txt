@@ -1,0 +1,91 @@
+
+NAME
+    Remove-DSCCHostGroup
+    
+SYNOPSIS
+    Removes a HPE DSSC DOM Host Group.
+    
+    
+SYNTAX
+    Remove-DSCCHostGroup [-HostGroupID] <String> [-Force] [[-WhatIf] <Boolean>] [<CommonParameters>]
+    
+    
+DESCRIPTION
+    Removes a HPE Data Services Cloud Console Data Operations Manager Host Group specified by ID;
+    
+
+PARAMETERS
+    -HostGroupID <String>
+        A single Host Group ID must be specified.
+        
+        Required?                    true
+        Position?                    1
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -Force [<SwitchParameter>]
+        Will implement an API forcefull remove option instead of the default normal removal mechanism.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -WhatIf <Boolean>
+        The WhatIf directive will show you the RAW RestAPI call that would be made to DSCC instead of actually sending the request.
+        This option is very helpful when trying to understand the inner workings of the native RestAPI calls that DSCC uses.
+        
+        Required?                    false
+        Position?                    2
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+INPUTS
+    
+OUTPUTS
+    
+    -------------------------- EXAMPLE 1 --------------------------
+    
+    PS:>Remove-DSCCHostServiceHostGroup -HostGroupId e987ef683c27403e96caa51816ddc72c
+    
+    {   "message": "Successfully submitted",
+        "status": "SUBMITTED",
+        "taskUri": "/rest/vega/v1/tasks/4969a568-6fed-4915-bcd5-e4566a75e00c"
+    }
+    
+    
+    
+    
+    -------------------------- EXAMPLE 2 --------------------------
+    
+    PS:>Remove-DSCCHostServiceHostGroup -HostGroupID dafd3078fceb43f0bb5c3b8119e70cd6 -whatif
+    
+    WARNING: You have selected the What-IF option, so the call will note be made to the array,
+        instead you will see a preview of the RestAPI call
+    The URI for this call will be
+        https://scalpha-app.qa.cds.hpe.com/api/v1/Data-Ops-Manager-ProductType1-Volumes/host-initiator-groups/dafd3078fceb43f0bb5c3b8119e70cd6
+    The Method of this call will be
+        Delete
+    The Header for this call will be :
+        {   "Authorization":  "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Iko3Tmtmc3M4eDNEaGN3NWtQcnRNVVp5R0g2TSIsInBpLmF0bSI6ImRlejAifQ.eyJjbGllbnRfaWQiOiIzZjIwODU4NS0zZGE2LTRiZjctOTRjYS00ZjMxMGQwOTYzYjUiLCJpc3MiOiJodHRwczovL3Nzby5jb21tb24uY2xvdWQuaHBlLmNvbSIsImF1ZCI6ImV4dGVybmFsX2FwaSIsInN1YiI6ImNocmlzLmxpb25ldHRpQGhwZS5jb20iLCJ1c2VyX2N0eCI6IjAwNTZiNzFlZWZjNDExZWJhMjY4NjJhZGI4NzdjMmQ4IiwiYXV0aF9zb3VyY2UiOiJjY3NfdG9rZW5fbWFuYWdlbWVudCIsInBsYXRmb3JtX2N1c3RvbWVyX2lkIjoiOGZmYzRiN2VlOWQyMTFlYjhjZWU2ZTEzYzA3MWVhMzciLCJpYXQiOjE2MzU5NTM2NzYsImFwcGxpY2F0aW9uX2luc3RhbmNlX2lkIjoiM2MxOGJkMDMtODMwNi00YzdjLTk0MmUtYzcwNGE0Yjg3NDRjIiwiZXhwIjoxNjM1OTYwODc2fQ.Yp7WTVGc0vU6sE3r8KPL4R0_sW4dB9ZvGijqwGwMpDBZ4SEz5688s-C2al1HLFnpZygPnQfSm1NWjxQgLeKSbf54gvxz7kMlhsRWtRW4vWIIPw5XHmKGVjqnGsVjdkcs8QmlBAg7eR5FcrU_b4HAIicmNV07U5rtC2LoUytT85JM20_6SEV1uZwGTWSlSs26JKNOeOEepW5BdmWrIX7DQibwzq_HUz2COF_hdVZCYCNt-pzigb8c6POr9s3RD-ZSal9naLDz0gCfVds-CKOZ5WHxijtnqG-qZ5KBvcXk22_JcfXAoA02u2o9xZ2z6UZh71yLlH9dXQ1KAahJ26k5lw"
+        }
+    The Body of this call will be:
+        "No Body"
+    
+    
+    
+    
+    
+RELATED LINKS
+    
+
+

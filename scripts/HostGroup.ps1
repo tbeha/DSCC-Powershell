@@ -163,11 +163,9 @@ param(  [Parameter(Mandatory)]  [string]    $HostGroupID,
     )
 process
     {   $MyAdd = 'host-initiator-groups/' + $HostGroupID
-        $MyBody = ''
         if ( $Force )
-                {   $MyBody += ( @{ force = $true } | convertTo-json )
-                }
-        return ( Invoke-DSCCRestMethod -UriAdd $MyAdd -Method 'Delete' -body ( $MyBody | convertto-json ) -WhatIfBoolean $WhatIf )
+                {   $MyAdd += '?force=true'}
+        return ( Invoke-DSCCRestMethod -UriAdd $MyAdd -Method 'Delete' -WhatIfBoolean $WhatIf )
     }       
 }   
 Function New-DSCCHostGroup
