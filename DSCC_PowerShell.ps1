@@ -18,6 +18,10 @@ winget install --id Microsoft.Powershell --source winget
 winget install --id Microsoft.Powershell.Preview --source winget
 
 #>
+
+$Client_ID = 'caba96ba-52c9-49e5-8ae7-eec301e3000a'  
+$Client_Secret = '6a4525e2cd3111edaced4a452722384f'
+
 # import the module
 
 Import-Module .\HPEDSCC.psd1 -SkipEditionCheck
@@ -27,13 +31,15 @@ function Get-DSCCTask{
 .SYNOPSIS
     Returns the HPE DSSC DOM Tasks Collection    
 .DESCRIPTION
-    Returns the HPE Data Services Cloud Console Data Operations Manager Task Collections;
+    Returns the HPE Data Services Cloud Console Data Operations Manager Task Collections 
+	or the details of a task if the TaskId is used as a parameter.
 	
 	Parameter: 
 	$TaskId  - ID of a specific task
 #>
 [CmdletBinding()]
-param(  [string]    $TaskId
+param(  
+	[string]    $TaskId
     )
 process
     {   
@@ -46,9 +52,9 @@ process
 function Wait-DSCCTaskCompletion{
 <#
 .SYNOPSIS
-    Waits for completion of  the HPE DSSC DOM Task    
+    Waits for completion of  the HPE DSSC DOM Task with the $TaskId    
 .DESCRIPTION
-    Returns ...
+    Returns the final task completion information
 	
 	Parameter: 
 	$TaskId  - ID of a specific task
@@ -73,9 +79,13 @@ function DSCCVolumeExport{
 .SYNOPSIS
     Exports a volume to a host group    
 .DESCRIPTION
-    Export vlun for volume identified by {volumeId} from Primera / Alletra 9K 
+    Export vlun for volume identified by {volumeId} 
+	Parameter:
+		$volumeId		Volume Id of the volume that should be exported
+		$ArrayUri		StorageArray URI as given by the Array details
+		$HostGroupIds	array of hosst group ids that the volume should be exported to
 
-        body:
+        body parameter:
             autoLun         boolean     Auto Lun
             hostGroupIds    [string]    HostGroups
             maxAutoLun      int64       Number of volumes
@@ -84,7 +94,6 @@ function DSCCVolumeExport{
             position        string      Position
             proximity       enum        Host proximity setting for Active Peer Persistence configuration.
                                         Allowed: PRIMARY, SECONDARY, ALL
-            
             Example:
             {
                 "autoLun": true,
@@ -112,7 +121,7 @@ param(
     )
 process
     {   
-		$MyURI = "https://eu1.data.cloud.hpe.com" + $ArrayUri + '/volumes/' + $volumeId + '/export'
+		$MyURI = $Base + $ArrayUri + '/volumes/' + $volumeId + '/export'
 		$MyBody += @{}
 		$MyBody += @{ hostGroupIds = $HostGroupIds}
 		if($AutoLun){	$MyBody += @{	autoLun = $AutoLun}}
@@ -151,7 +160,7 @@ param(
     )
 process
     {   
-		$MyURI = "https://eu1.data.cloud.hpe.com" + $ArrayUri + '/volumes/' + $volumeId + '/unexport'
+		$MyURI = $Base + $ArrayUri + '/volumes/' + $volumeId + '/un-export'
 		$MyBody += @{}
 		$MyBody += @{ hostGroupIds = $HostGroupIds}
 
@@ -162,11 +171,12 @@ process
 $Debug = $true
 
 # and connect to the DSCC 
-
-$Client_ID = 'caba96ba-52c9-49e5-8ae7-eec301e3000a'  
-$Client_Secret = '6a4525e2cd3111edaced4a452722384f' 
+$name = "SYI5HE21B5"
+$volname = "DSCC_Rest_API_Test_TB"
+ 
 #$Client_ID = Read-Host "Enter the DSCC Client ID: " 
 #$Client_Secret = Read-Host "Enter the DSCC Client Secret: " 
+
 Connect-DSCC -Client_Id $Client_ID -Client_Secret $Client_Secret -GreenlakeType EU
 
 $P650 = Get-DSCCStorageSystem | Where-Object {$_.name -eq "Primera650"}
@@ -178,12 +188,12 @@ $Response | Format-List
 #>
 
 # Create a volume on Primera650
-$volname = "DSCC_Rest_API_Test_TB"
+
 $Response = New-DSCCVolume -comments $comment -name $volname -count 1 -sizeMib 61440 -userCpg 'SSD_r6' -snapCPG 'SSD_r6' -SystemId $P650.id 
 $Status = Wait-DSCCTaskCompletion -TaskId $Response.taskURI
 if($Debug){ $Status | Format-List }
 
-# Get the volume Information
+<# Get the volume Information
 $x = Get-DSCCVolume -SystemId $P650.id
 for($i=0; $i -lt $x.Count; $i++){
 	$y = $x[$i]
@@ -193,10 +203,12 @@ for($i=0; $i -lt $x.Count; $i++){
 		$i = $x.Count
 	}
 }
+#>
+$Volume = Get-DSCCVolume -SystemId $P650.id | Where-Object{$_.name -eq $volname}
 if($Debug){ $Volume | Format-List }
 
 # Create the host
-$name = "SYI5HE21B5"
+
 $comment = "DSCC API Created - Thomas Beha"
 $initiator1 =  @{address="10:00:be:d8:0d:50:01:ca";name="syi5he21b5p1"; protocol="FC"}
 $initiator2 =  @{address="10:00:be:d8:0d:50:01:cc";name="syi5he21b5p2"; protocol="FC"}
@@ -221,24 +233,29 @@ $Response = DSCCVolumeExport -volumeId $Volume.id -HostGroupIds $HostGroup.id -A
 $Status = Wait-DSCCTaskCompletion -TaskId $Response.taskURI
 if($Debug){ $Status | Format-List }
 
+
 # The clean up
+
+$Volume = Get-DSCCVolume -SystemId $P650.id | Where-Object{$_.name -eq $volname}
+$HostGroup = Get-DSCCHostGroup | Where-Object{$_.name -eq $name}
+$DSCCHost = Get-DSCCHost | Where-Object{$_.name -eq $name}
+
 $Response = DSCCVolumeUnexport -volumeId $Volume.id -HostGroupIds $HostGroup.id -ArrayUri $P650.resourceUri
-$Status = Wait-DSCCTaskCompletion -TaskId $Response.taskURI
+if($Response){$Status = Wait-DSCCTaskCompletion -TaskId $Response.taskURI}
 if($Debug){ $Status | Format-List }
 
 
 $Response = Remove-DSCCVolume -SystemId $P650.id -VolumeId $VolId -Force
-$Status = Wait-DSCCTaskCompletion -TaskId $Response.taskURI
+if($Response){$Status = Wait-DSCCTaskCompletion -TaskId $Response.taskURI}
 if($Debug){ $Status | Format-List }
 
 $Response = Remove-DSCCHostGroup -HostGroupID  $HostGroup.ID -Force
-$Status = Wait-DSCCTaskCompletion -TaskId $Response.taskURI
+if($Response){$Status = Wait-DSCCTaskCompletion -TaskId $Response.taskURI}
 if($Debug){ $Status | Format-List }
 
 $Response = Remove-DSCCHost -HostID $DSCCHost.id -Force
-$Status = Wait-DSCCTaskCompletion -TaskId $Response.taskURI
+if($Response){$Status = Wait-DSCCTaskCompletion -TaskId $Response.taskURI}
 if($Debug){ $Status | Format-List }
-
 
 $Response = Get-DSCCInitiator
 for($i=0; $i -lt $Response.Count; $i++){
@@ -251,7 +268,11 @@ for($i=0; $i -lt $Response.Count; $i++){
 		$init2
 	}
 }
-$Response = Remove-DSCCInitiator -InitiatorId $init1.id -Force
-if($Debug){ $Response | Format-List }
-$Response = Remove-DSCCInitiator -InitiatorId $init2.id -Force
-if($Debug){ $Response | Format-List }
+if($init1){
+	$Response = Remove-DSCCInitiator -InitiatorId $init1.id -Force
+	if($Debug){ $Response | Format-List }
+}
+if($init2){
+	$Response = Remove-DSCCInitiator -InitiatorId $init2.id -Force
+	if($Debug){ $Response | Format-List }
+}
