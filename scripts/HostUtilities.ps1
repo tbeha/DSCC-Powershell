@@ -76,12 +76,13 @@ process
 
         $InitList = Get-SingleDisoveredHost
         
+
         if ($InitList.Count -eq 0) 
         { 
             Log-Message "No single discovered hosts found for host migration."
         } else {
 
-            
+            $HostToUpdate2 = Get-Choice1
 
             if ($HostToUpdate1 -ne $true) 
             {

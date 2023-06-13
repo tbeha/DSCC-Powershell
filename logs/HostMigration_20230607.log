@@ -1,0 +1,1656 @@
+07/06/2023 14:12:51:029 PM - -----------------------------------------------------------------------------------------
+07/06/2023 14:12:51:952 PM -                             Staring Host Migration Job                                   
+07/06/2023 14:12:53:924 PM - -----------------------------------------------------------------------------------------
+07/06/2023 14:13:01:091 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems
+07/06/2023 14:13:50:082 PM - 3
+07/06/2023 14:14:01:689 PM - Identify hosts discovered from onboarded systems and migrate them to DSCC hosts.
+07/06/2023 14:14:03:862 PM - Identify multiple discovered hosts for host migration.
+07/06/2023 14:14:09:885 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/initiators
+07/06/2023 14:14:14:170 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:172 PM - Individual Host @{id=4ed0f30ddf529275bc56483e34db35ed; name=SUO04CTCESX3001; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:176 PM - Initiator Found 057682e54828484fb2034f928080f4fd associated with SUO04CTCESX3001 which is Discovered Host
+07/06/2023 14:14:14:177 PM - Individual Host @{id=5ef3410d1efe45be8bac72c60cf37729; name=EsxHost-suo04ctcesx3001.demo.local; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:178 PM - Initiator Found 057682e54828484fb2034f928080f4fd associated with EsxHost-suo04ctcesx3001.demo.local which is Discovered Host
+07/06/2023 14:14:14:179 PM - Individual Host @{id=9ee6a9a81f028540c15e23ba11c3a061; name=SUO04CTCESX3001; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:181 PM - Initiator Found 057682e54828484fb2034f928080f4fd associated with SUO04CTCESX3001 which is Discovered Host
+07/06/2023 14:14:14:182 PM - Adding initiator 057682e54828484fb2034f928080f4fd in the list.
+07/06/2023 14:14:14:185 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:187 PM - Individual Host @{id=a0be130af8e4a23f779a3713d4b288f2; name=10.1.36.102-Container-ESX2; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:189 PM - Initiator Found 1ce9b46d4ccb98e30f98839d85de23af associated with 10.1.36.102-Container-ESX2 which is Discovered Host
+07/06/2023 14:14:14:192 PM - Individual Host @{id=e55dcd7a702cc46cdaaf57217664006f; name=10.1.36.102-Container-ESX2; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:196 PM - Initiator Found 1ce9b46d4ccb98e30f98839d85de23af associated with 10.1.36.102-Container-ESX2 which is Discovered Host
+07/06/2023 14:14:14:199 PM - Adding initiator 1ce9b46d4ccb98e30f98839d85de23af in the list.
+07/06/2023 14:14:14:204 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:205 PM - Individual Host @{id=34c089fc357e4d6d4d9e332d19d6a1c8; name=suo04ctcplay3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:207 PM - Initiator Found 1f5785754cd64db1a931893ecae394ee associated with suo04ctcplay3 which is Discovered Host
+07/06/2023 14:14:14:209 PM - Individual Host @{id=e636c476fa35829d46ddcc03bed291ba; name=suo04ctcplay3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:211 PM - Initiator Found 1f5785754cd64db1a931893ecae394ee associated with suo04ctcplay3 which is Discovered Host
+07/06/2023 14:14:14:212 PM - Adding initiator 1f5785754cd64db1a931893ecae394ee in the list.
+07/06/2023 14:14:14:215 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:216 PM - Individual Host @{id=61b46e657249666049468791e3f22510; name=10.1.35.106-Container-ESX5; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:218 PM - Initiator Found 3a9369f9ca2c3f071c01304c3fbdf441 associated with 10.1.35.106-Container-ESX5 which is Discovered Host
+07/06/2023 14:14:14:220 PM - Individual Host @{id=c21924ef7641f3727cc074003f3adcec; name=10.1.35.106-Container-ESX5; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:224 PM - Initiator Found 3a9369f9ca2c3f071c01304c3fbdf441 associated with 10.1.35.106-Container-ESX5 which is Discovered Host
+07/06/2023 14:14:14:228 PM - Adding initiator 3a9369f9ca2c3f071c01304c3fbdf441 in the list.
+07/06/2023 14:14:14:230 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:232 PM - Individual Host @{id=996893580a442d7f602cb9964f42b8c1; name=10.1.35.106-Container-ESX6; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:236 PM - Initiator Found 42c9aaffb058df294ba30db525cc2089 associated with 10.1.35.106-Container-ESX6 which is Discovered Host
+07/06/2023 14:14:14:239 PM - Individual Host @{id=ad59aeddcca3af74502f164c80c03eea; name=10.1.35.106-Container-ESX6; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:249 PM - Initiator Found 42c9aaffb058df294ba30db525cc2089 associated with 10.1.35.106-Container-ESX6 which is Discovered Host
+07/06/2023 14:14:14:251 PM - Adding initiator 42c9aaffb058df294ba30db525cc2089 in the list.
+07/06/2023 14:14:14:253 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:255 PM - Individual Host @{id=996893580a442d7f602cb9964f42b8c1; name=10.1.35.106-Container-ESX6; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:258 PM - Initiator Found 4ac473ef68be967dfe2ef67a96308378 associated with 10.1.35.106-Container-ESX6 which is Discovered Host
+07/06/2023 14:14:14:260 PM - Individual Host @{id=ad59aeddcca3af74502f164c80c03eea; name=10.1.35.106-Container-ESX6; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:263 PM - Initiator Found 4ac473ef68be967dfe2ef67a96308378 associated with 10.1.35.106-Container-ESX6 which is Discovered Host
+07/06/2023 14:14:14:265 PM - Adding initiator 4ac473ef68be967dfe2ef67a96308378 in the list.
+07/06/2023 14:14:14:267 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:270 PM - Individual Host @{id=3b749af7fa542ccb01a0d6917519d8bb; name=suo04ctcplay1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:272 PM - Initiator Found 4e804d918f2445ecb9efe70c546dcf23 associated with suo04ctcplay1 which is Discovered Host
+07/06/2023 14:14:14:274 PM - Individual Host @{id=416f669ee4afc9dad485099b966398b4; name=suo04ctcplay1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:276 PM - Initiator Found 4e804d918f2445ecb9efe70c546dcf23 associated with suo04ctcplay1 which is Discovered Host
+07/06/2023 14:14:14:277 PM - Adding initiator 4e804d918f2445ecb9efe70c546dcf23 in the list.
+07/06/2023 14:14:14:279 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:281 PM - Individual Host @{id=22ea6d9b2026f099f3abee0b277a4fa5; name=10.1.36.103-Container-ESX3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:283 PM - Initiator Found 5328f8f63307953009c19eae6e39c3f0 associated with 10.1.36.103-Container-ESX3 which is Discovered Host
+07/06/2023 14:14:14:284 PM - Individual Host @{id=ba2835a8191e12577827c56a72fb4363; name=10.1.36.103-Container-ESX3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:286 PM - Initiator Found 5328f8f63307953009c19eae6e39c3f0 associated with 10.1.36.103-Container-ESX3 which is Discovered Host
+07/06/2023 14:14:14:288 PM - Adding initiator 5328f8f63307953009c19eae6e39c3f0 in the list.
+07/06/2023 14:14:14:291 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:294 PM - Individual Host @{id=2a131c91a8469875b8646d9e697c92cc; name=10.1.36.101-Container-ESX1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:296 PM - Initiator Found 59c4d89ad5529997a24eb7a9f37b1799 associated with 10.1.36.101-Container-ESX1 which is Discovered Host
+07/06/2023 14:14:14:299 PM - Individual Host @{id=bee773e82d5896c75ca5a1ecec41280f; name=10.1.36.101-Container-ESX1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:301 PM - Initiator Found 59c4d89ad5529997a24eb7a9f37b1799 associated with 10.1.36.101-Container-ESX1 which is Discovered Host
+07/06/2023 14:14:14:303 PM - Adding initiator 59c4d89ad5529997a24eb7a9f37b1799 in the list.
+07/06/2023 14:14:14:305 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:307 PM - Individual Host @{id=31345562b50f8a7ee6b8674ef25595ea; name=10.1.36.104-Contain_1838E07EDD1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:309 PM - Initiator Found 5df97a864c626eba415bbf6fc54d6e70 associated with 10.1.36.104-Contain_1838E07EDD1 which is Discovered Host
+07/06/2023 14:14:14:310 PM - Individual Host @{id=659f6d06ec278b6aaacf5f94a37c950f; name=10.1.36.104-Contain_1838E07ECC8; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:312 PM - Initiator Found 5df97a864c626eba415bbf6fc54d6e70 associated with 10.1.36.104-Contain_1838E07ECC8 which is Discovered Host
+07/06/2023 14:14:14:314 PM - Adding initiator 5df97a864c626eba415bbf6fc54d6e70 in the list.
+07/06/2023 14:14:14:317 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:319 PM - Individual Host @{id=34c089fc357e4d6d4d9e332d19d6a1c8; name=suo04ctcplay3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:321 PM - Initiator Found 6a063c53f870434dab455e98ff26d997 associated with suo04ctcplay3 which is Discovered Host
+07/06/2023 14:14:14:323 PM - Individual Host @{id=e636c476fa35829d46ddcc03bed291ba; name=suo04ctcplay3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:325 PM - Initiator Found 6a063c53f870434dab455e98ff26d997 associated with suo04ctcplay3 which is Discovered Host
+07/06/2023 14:14:14:327 PM - Adding initiator 6a063c53f870434dab455e98ff26d997 in the list.
+07/06/2023 14:14:14:330 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:332 PM - Individual Host @{id=3b749af7fa542ccb01a0d6917519d8bb; name=suo04ctcplay1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:334 PM - Initiator Found a1c9a016eb5a45e38eda9e79f43e45bd associated with suo04ctcplay1 which is Discovered Host
+07/06/2023 14:14:14:337 PM - Individual Host @{id=416f669ee4afc9dad485099b966398b4; name=suo04ctcplay1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:339 PM - Initiator Found a1c9a016eb5a45e38eda9e79f43e45bd associated with suo04ctcplay1 which is Discovered Host
+07/06/2023 14:14:14:341 PM - Adding initiator a1c9a016eb5a45e38eda9e79f43e45bd in the list.
+07/06/2023 14:14:14:344 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:346 PM - Individual Host @{id=61b46e657249666049468791e3f22510; name=10.1.35.106-Container-ESX5; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:349 PM - Initiator Found a89069965139570b049e1df590a1bf9e associated with 10.1.35.106-Container-ESX5 which is Discovered Host
+07/06/2023 14:14:14:351 PM - Individual Host @{id=c21924ef7641f3727cc074003f3adcec; name=10.1.35.106-Container-ESX5; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:353 PM - Initiator Found a89069965139570b049e1df590a1bf9e associated with 10.1.35.106-Container-ESX5 which is Discovered Host
+07/06/2023 14:14:14:356 PM - Adding initiator a89069965139570b049e1df590a1bf9e in the list.
+07/06/2023 14:14:14:358 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:362 PM - Individual Host @{id=4ed0f30ddf529275bc56483e34db35ed; name=SUO04CTCESX3001; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:364 PM - Initiator Found a8bce73889ae44ed8a84c5fc02e2e513 associated with SUO04CTCESX3001 which is Discovered Host
+07/06/2023 14:14:14:366 PM - Individual Host @{id=5ef3410d1efe45be8bac72c60cf37729; name=EsxHost-suo04ctcesx3001.demo.local; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:368 PM - Initiator Found a8bce73889ae44ed8a84c5fc02e2e513 associated with EsxHost-suo04ctcesx3001.demo.local which is Discovered Host
+07/06/2023 14:14:14:372 PM - Individual Host @{id=9ee6a9a81f028540c15e23ba11c3a061; name=SUO04CTCESX3001; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:373 PM - Initiator Found a8bce73889ae44ed8a84c5fc02e2e513 associated with SUO04CTCESX3001 which is Discovered Host
+07/06/2023 14:14:14:375 PM - Adding initiator a8bce73889ae44ed8a84c5fc02e2e513 in the list.
+07/06/2023 14:14:14:377 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:380 PM - Individual Host @{id=a0be130af8e4a23f779a3713d4b288f2; name=10.1.36.102-Container-ESX2; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:382 PM - Initiator Found b08f0c428770c3bfbc324ce3543869e9 associated with 10.1.36.102-Container-ESX2 which is Discovered Host
+07/06/2023 14:14:14:384 PM - Individual Host @{id=e55dcd7a702cc46cdaaf57217664006f; name=10.1.36.102-Container-ESX2; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:387 PM - Initiator Found b08f0c428770c3bfbc324ce3543869e9 associated with 10.1.36.102-Container-ESX2 which is Discovered Host
+07/06/2023 14:14:14:389 PM - Adding initiator b08f0c428770c3bfbc324ce3543869e9 in the list.
+07/06/2023 14:14:14:391 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:393 PM - Individual Host @{id=003bfff9fe6bca09dfe4e7869e2e66f2; name=suo04ctcplay4; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:395 PM - Initiator Found b46dcd4fe35046898dce3b14485d2ebc associated with suo04ctcplay4 which is Discovered Host
+07/06/2023 14:14:14:408 PM - Individual Host @{id=0d12438ba70cb93f65b8ce2a7545e3d5; name=suo04ctcplay4; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:410 PM - Initiator Found b46dcd4fe35046898dce3b14485d2ebc associated with suo04ctcplay4 which is Discovered Host
+07/06/2023 14:14:14:412 PM - Adding initiator b46dcd4fe35046898dce3b14485d2ebc in the list.
+07/06/2023 14:14:14:415 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:418 PM - Individual Host @{id=183f2f60f164262b3adc6fcddee00fb9; name=SUO04CTCSTOWIN; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:422 PM - Initiator Found b5ea036efa9e42709bae293a4d3ef2fe associated with SUO04CTCSTOWIN which is Discovered Host
+07/06/2023 14:14:14:426 PM - Individual Host @{id=3e60c8d23a3dc69a74e1081b1c5b7ddc; name=SUO04CTCSTOWIN; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:429 PM - Initiator Found b5ea036efa9e42709bae293a4d3ef2fe associated with SUO04CTCSTOWIN which is Discovered Host
+07/06/2023 14:14:14:432 PM - Adding initiator b5ea036efa9e42709bae293a4d3ef2fe in the list.
+07/06/2023 14:14:14:437 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:441 PM - Individual Host @{id=183f2f60f164262b3adc6fcddee00fb9; name=SUO04CTCSTOWIN; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:444 PM - Initiator Found c848e9f1b96646cdbcda3361b5c7ff6a associated with SUO04CTCSTOWIN which is Discovered Host
+07/06/2023 14:14:14:448 PM - Individual Host @{id=3e60c8d23a3dc69a74e1081b1c5b7ddc; name=SUO04CTCSTOWIN; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:454 PM - Initiator Found c848e9f1b96646cdbcda3361b5c7ff6a associated with SUO04CTCSTOWIN which is Discovered Host
+07/06/2023 14:14:14:461 PM - Adding initiator c848e9f1b96646cdbcda3361b5c7ff6a in the list.
+07/06/2023 14:14:14:463 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:466 PM - Individual Host @{id=2a131c91a8469875b8646d9e697c92cc; name=10.1.36.101-Container-ESX1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:470 PM - Initiator Found d368941328dbd11dec5195c44c685cd6 associated with 10.1.36.101-Container-ESX1 which is Discovered Host
+07/06/2023 14:14:14:472 PM - Individual Host @{id=bee773e82d5896c75ca5a1ecec41280f; name=10.1.36.101-Container-ESX1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:476 PM - Initiator Found d368941328dbd11dec5195c44c685cd6 associated with 10.1.36.101-Container-ESX1 which is Discovered Host
+07/06/2023 14:14:14:481 PM - Adding initiator d368941328dbd11dec5195c44c685cd6 in the list.
+07/06/2023 14:14:14:485 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:488 PM - Individual Host @{id=003bfff9fe6bca09dfe4e7869e2e66f2; name=suo04ctcplay4; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:492 PM - Initiator Found d3fb2def5baa4c768ffdd678e1849128 associated with suo04ctcplay4 which is Discovered Host
+07/06/2023 14:14:14:496 PM - Individual Host @{id=0d12438ba70cb93f65b8ce2a7545e3d5; name=suo04ctcplay4; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:500 PM - Initiator Found d3fb2def5baa4c768ffdd678e1849128 associated with suo04ctcplay4 which is Discovered Host
+07/06/2023 14:14:14:504 PM - Adding initiator d3fb2def5baa4c768ffdd678e1849128 in the list.
+07/06/2023 14:14:14:506 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:509 PM - Individual Host @{id=22ea6d9b2026f099f3abee0b277a4fa5; name=10.1.36.103-Container-ESX3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:511 PM - Initiator Found d554c5c3e6ed4e182aea84cdee5417be associated with 10.1.36.103-Container-ESX3 which is Discovered Host
+07/06/2023 14:14:14:514 PM - Individual Host @{id=ba2835a8191e12577827c56a72fb4363; name=10.1.36.103-Container-ESX3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:516 PM - Initiator Found d554c5c3e6ed4e182aea84cdee5417be associated with 10.1.36.103-Container-ESX3 which is Discovered Host
+07/06/2023 14:14:14:518 PM - Adding initiator d554c5c3e6ed4e182aea84cdee5417be in the list.
+07/06/2023 14:14:14:521 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:524 PM - Individual Host @{id=31345562b50f8a7ee6b8674ef25595ea; name=10.1.36.104-Contain_1838E07EDD1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:527 PM - Initiator Found db4a092565f0e892c09751957c14843c associated with 10.1.36.104-Contain_1838E07EDD1 which is Discovered Host
+07/06/2023 14:14:14:529 PM - Individual Host @{id=659f6d06ec278b6aaacf5f94a37c950f; name=10.1.36.104-Contain_1838E07ECC8; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:532 PM - Initiator Found db4a092565f0e892c09751957c14843c associated with 10.1.36.104-Contain_1838E07ECC8 which is Discovered Host
+07/06/2023 14:14:14:537 PM - Adding initiator db4a092565f0e892c09751957c14843c in the list.
+07/06/2023 14:14:14:539 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:542 PM - Individual Host @{id=20f27e64b25c397ebe2343b1372445a7; name=suo04ctcplay2; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:545 PM - Initiator Found e28f903a53884800b45abc3c43368f1b associated with suo04ctcplay2 which is Discovered Host
+07/06/2023 14:14:14:548 PM - Individual Host @{id=61cebc63c7e45cfba6341442bf80cdda; name=suo04ctcplay2; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:550 PM - Initiator Found e28f903a53884800b45abc3c43368f1b associated with suo04ctcplay2 which is Discovered Host
+07/06/2023 14:14:14:552 PM - Adding initiator e28f903a53884800b45abc3c43368f1b in the list.
+07/06/2023 14:14:14:555 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:559 PM - Individual Host @{id=0bf663c860e8aae22959ada4c565c6ad; name=SUO04CTCESX3002; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:561 PM - Initiator Found f4792bd473214eba9885ea71c6d14d9b associated with SUO04CTCESX3002 which is Discovered Host
+07/06/2023 14:14:14:564 PM - Individual Host @{id=5e0c93b2a300460381aa9f7e3cb53952; name=EsxHost-suo04ctcesx3002.demo.local; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:567 PM - Initiator Found f4792bd473214eba9885ea71c6d14d9b associated with EsxHost-suo04ctcesx3002.demo.local which is Discovered Host
+07/06/2023 14:14:14:571 PM - Individual Host @{id=c9e3732189ba4c6f7e2f39b99f210565; name=SUO04CTCESX3002; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:573 PM - Initiator Found f4792bd473214eba9885ea71c6d14d9b associated with SUO04CTCESX3002 which is Discovered Host
+07/06/2023 14:14:14:576 PM - Adding initiator f4792bd473214eba9885ea71c6d14d9b in the list.
+07/06/2023 14:14:14:579 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:582 PM - Individual Host @{id=20f27e64b25c397ebe2343b1372445a7; name=suo04ctcplay2; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:584 PM - Initiator Found f765e2e65e694789822c4ca9b0cc083c associated with suo04ctcplay2 which is Discovered Host
+07/06/2023 14:14:14:588 PM - Individual Host @{id=61cebc63c7e45cfba6341442bf80cdda; name=suo04ctcplay2; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:590 PM - Initiator Found f765e2e65e694789822c4ca9b0cc083c associated with suo04ctcplay2 which is Discovered Host
+07/06/2023 14:14:14:593 PM - Adding initiator f765e2e65e694789822c4ca9b0cc083c in the list.
+07/06/2023 14:14:14:596 PM - For the intiator found more than two hosts
+07/06/2023 14:14:14:599 PM - Individual Host @{id=0bf663c860e8aae22959ada4c565c6ad; name=SUO04CTCESX3002; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:605 PM - Initiator Found fe8fdb81b2e9413eac72a27279cc5633 associated with SUO04CTCESX3002 which is Discovered Host
+07/06/2023 14:14:14:608 PM - Individual Host @{id=5e0c93b2a300460381aa9f7e3cb53952; name=EsxHost-suo04ctcesx3002.demo.local; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:611 PM - Initiator Found fe8fdb81b2e9413eac72a27279cc5633 associated with EsxHost-suo04ctcesx3002.demo.local which is Discovered Host
+07/06/2023 14:14:14:613 PM - Individual Host @{id=c9e3732189ba4c6f7e2f39b99f210565; name=SUO04CTCESX3002; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:14:14:616 PM - Initiator Found fe8fdb81b2e9413eac72a27279cc5633 associated with SUO04CTCESX3002 which is Discovered Host
+07/06/2023 14:14:14:619 PM - Adding initiator fe8fdb81b2e9413eac72a27279cc5633 in the list.
+07/06/2023 14:18:19:346 PM - ------------------------------------------------------------------------------------------
+07/06/2023 14:18:20:505 PM -                        Multiple Discovered Host PreMerge Summary
+07/06/2023 14:18:21:521 PM - ------------------------------------------------------------------------------------------
+07/06/2023 14:18:23:125 PM - Host Name            Operating System           Initiators Ids      
+07/06/2023 14:18:25:491 PM - ------------------------------------------------------------------------------------------
+07/06/2023 14:19:05:952 PM - Getting host detail from initiator Id 057682e54828484fb2034f928080f4fd
+07/06/2023 14:19:05:956 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20057682e54828484fb2034f928080f4fd
+07/06/2023 14:19:06:604 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:19:06:616 PM - host operating system is not matching
+07/06/2023 14:19:06:620 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:19:06:637 PM - host initiators list is matching
+07/06/2023 14:19:06:641 PM - host initiator count matched
+07/06/2023 14:19:25:962 PM - SUO04CTCESX3001      VMware (ESXi)              057682e54828484fb2034f928080f4fd a8bce73889ae44ed8a84c5fc02e2e513
+07/06/2023 14:20:03:514 PM - Getting host detail from initiator Id 1ce9b46d4ccb98e30f98839d85de23af
+07/06/2023 14:20:03:518 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%201ce9b46d4ccb98e30f98839d85de23af
+07/06/2023 14:20:05:518 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:05:522 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:05:527 PM - host initiators list is matching
+07/06/2023 14:20:05:531 PM - host initiator count matched
+07/06/2023 14:20:05:536 PM - 10.1.36.102-Container-ESX2 VMware (ESXi)              1ce9b46d4ccb98e30f98839d85de23af b08f0c428770c3bfbc324ce3543869e9
+07/06/2023 14:20:05:544 PM - Getting host detail from initiator Id 1f5785754cd64db1a931893ecae394ee
+07/06/2023 14:20:05:548 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%201f5785754cd64db1a931893ecae394ee
+07/06/2023 14:20:06:460 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:06:466 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:06:475 PM - host initiators list is matching
+07/06/2023 14:20:06:479 PM - host initiator count matched
+07/06/2023 14:20:06:483 PM - suo04ctcplay3        VMware (ESXi)              1f5785754cd64db1a931893ecae394ee 6a063c53f870434dab455e98ff26d997
+07/06/2023 14:20:06:488 PM - Getting host detail from initiator Id 3a9369f9ca2c3f071c01304c3fbdf441
+07/06/2023 14:20:06:493 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%203a9369f9ca2c3f071c01304c3fbdf441
+07/06/2023 14:20:07:436 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:07:442 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:07:446 PM - host initiators list is matching
+07/06/2023 14:20:07:449 PM - host initiator count matched
+07/06/2023 14:20:07:452 PM - 10.1.35.106-Container-ESX5 VMware (ESXi)              3a9369f9ca2c3f071c01304c3fbdf441 a89069965139570b049e1df590a1bf9e
+07/06/2023 14:20:07:459 PM - Getting host detail from initiator Id 42c9aaffb058df294ba30db525cc2089
+07/06/2023 14:20:07:463 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%2042c9aaffb058df294ba30db525cc2089
+07/06/2023 14:20:08:059 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:08:063 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:08:074 PM - host initiators list is matching
+07/06/2023 14:20:08:084 PM - host initiator count matched
+07/06/2023 14:20:08:087 PM - 10.1.35.106-Container-ESX6 VMware (ESXi)              42c9aaffb058df294ba30db525cc2089 4ac473ef68be967dfe2ef67a96308378
+07/06/2023 14:20:08:096 PM - Getting host detail from initiator Id 4ac473ef68be967dfe2ef67a96308378
+07/06/2023 14:20:08:101 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%204ac473ef68be967dfe2ef67a96308378
+07/06/2023 14:20:08:821 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:08:826 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:08:831 PM - host initiators list is matching
+07/06/2023 14:20:08:836 PM - host initiator count matched
+07/06/2023 14:20:08:841 PM - 10.1.35.106-Container-ESX6 VMware (ESXi)              42c9aaffb058df294ba30db525cc2089 4ac473ef68be967dfe2ef67a96308378
+07/06/2023 14:20:08:848 PM - Getting host detail from initiator Id 4e804d918f2445ecb9efe70c546dcf23
+07/06/2023 14:20:08:851 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%204e804d918f2445ecb9efe70c546dcf23
+07/06/2023 14:20:09:298 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:09:306 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:09:312 PM - host initiators list is matching
+07/06/2023 14:20:09:316 PM - host initiator count matched
+07/06/2023 14:20:09:320 PM - suo04ctcplay1        VMware (ESXi)              4e804d918f2445ecb9efe70c546dcf23 a1c9a016eb5a45e38eda9e79f43e45bd
+07/06/2023 14:20:09:326 PM - Getting host detail from initiator Id 5328f8f63307953009c19eae6e39c3f0
+07/06/2023 14:20:09:331 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%205328f8f63307953009c19eae6e39c3f0
+07/06/2023 14:20:10:127 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:10:131 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:10:139 PM - host initiators list is matching
+07/06/2023 14:20:10:143 PM - host initiator count matched
+07/06/2023 14:20:10:147 PM - 10.1.36.103-Container-ESX3 VMware (ESXi)              5328f8f63307953009c19eae6e39c3f0 d554c5c3e6ed4e182aea84cdee5417be
+07/06/2023 14:20:10:154 PM - Getting host detail from initiator Id 59c4d89ad5529997a24eb7a9f37b1799
+07/06/2023 14:20:10:161 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%2059c4d89ad5529997a24eb7a9f37b1799
+07/06/2023 14:20:10:704 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:10:710 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:10:717 PM - host initiators list is matching
+07/06/2023 14:20:10:721 PM - host initiator count matched
+07/06/2023 14:20:10:726 PM - 10.1.36.101-Container-ESX1 VMware (ESXi)              59c4d89ad5529997a24eb7a9f37b1799 d368941328dbd11dec5195c44c685cd6
+07/06/2023 14:20:10:732 PM - Getting host detail from initiator Id 5df97a864c626eba415bbf6fc54d6e70
+07/06/2023 14:20:10:739 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%205df97a864c626eba415bbf6fc54d6e70
+07/06/2023 14:20:11:391 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:11:396 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:11:402 PM - host initiators list is matching
+07/06/2023 14:20:11:408 PM - host initiator count matched
+07/06/2023 14:20:11:411 PM - 10.1.36.104-Contain_1838E07EDD1 VMware (ESXi)              5df97a864c626eba415bbf6fc54d6e70 db4a092565f0e892c09751957c14843c
+07/06/2023 14:20:11:417 PM - Getting host detail from initiator Id 6a063c53f870434dab455e98ff26d997
+07/06/2023 14:20:11:421 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%206a063c53f870434dab455e98ff26d997
+07/06/2023 14:20:11:982 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:11:985 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:11:989 PM - host initiators list is matching
+07/06/2023 14:20:11:992 PM - host initiator count matched
+07/06/2023 14:20:11:995 PM - suo04ctcplay3        VMware (ESXi)              1f5785754cd64db1a931893ecae394ee 6a063c53f870434dab455e98ff26d997
+07/06/2023 14:20:12:000 PM - Getting host detail from initiator Id a1c9a016eb5a45e38eda9e79f43e45bd
+07/06/2023 14:20:12:008 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20a1c9a016eb5a45e38eda9e79f43e45bd
+07/06/2023 14:20:12:780 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:12:785 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:12:790 PM - host initiators list is matching
+07/06/2023 14:20:12:794 PM - host initiator count matched
+07/06/2023 14:20:12:798 PM - suo04ctcplay1        VMware (ESXi)              4e804d918f2445ecb9efe70c546dcf23 a1c9a016eb5a45e38eda9e79f43e45bd
+07/06/2023 14:20:12:806 PM - Getting host detail from initiator Id a89069965139570b049e1df590a1bf9e
+07/06/2023 14:20:12:812 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20a89069965139570b049e1df590a1bf9e
+07/06/2023 14:20:13:331 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:13:338 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:13:344 PM - host initiators list is matching
+07/06/2023 14:20:13:348 PM - host initiator count matched
+07/06/2023 14:20:13:351 PM - 10.1.35.106-Container-ESX5 VMware (ESXi)              3a9369f9ca2c3f071c01304c3fbdf441 a89069965139570b049e1df590a1bf9e
+07/06/2023 14:20:13:358 PM - Getting host detail from initiator Id a8bce73889ae44ed8a84c5fc02e2e513
+07/06/2023 14:20:13:365 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20a8bce73889ae44ed8a84c5fc02e2e513
+07/06/2023 14:20:13:987 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:13:990 PM - host operating system is not matching
+07/06/2023 14:20:13:994 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:13:997 PM - host initiators list is matching
+07/06/2023 14:20:14:000 PM - host initiator count matched
+07/06/2023 14:20:14:005 PM - SUO04CTCESX3001      VMware (ESXi)              057682e54828484fb2034f928080f4fd a8bce73889ae44ed8a84c5fc02e2e513
+07/06/2023 14:20:14:011 PM - Getting host detail from initiator Id b08f0c428770c3bfbc324ce3543869e9
+07/06/2023 14:20:14:018 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20b08f0c428770c3bfbc324ce3543869e9
+07/06/2023 14:20:14:573 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:14:576 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:14:580 PM - host initiators list is matching
+07/06/2023 14:20:14:593 PM - host initiator count matched
+07/06/2023 14:20:14:596 PM - 10.1.36.102-Container-ESX2 VMware (ESXi)              1ce9b46d4ccb98e30f98839d85de23af b08f0c428770c3bfbc324ce3543869e9
+07/06/2023 14:20:14:603 PM - Getting host detail from initiator Id b46dcd4fe35046898dce3b14485d2ebc
+07/06/2023 14:20:14:609 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20b46dcd4fe35046898dce3b14485d2ebc
+07/06/2023 14:20:15:116 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:15:121 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:15:125 PM - host initiators list is matching
+07/06/2023 14:20:15:129 PM - host initiator count matched
+07/06/2023 14:20:15:134 PM - suo04ctcplay4        VMware (ESXi)              b46dcd4fe35046898dce3b14485d2ebc d3fb2def5baa4c768ffdd678e1849128
+07/06/2023 14:20:15:142 PM - Getting host detail from initiator Id b5ea036efa9e42709bae293a4d3ef2fe
+07/06/2023 14:20:15:147 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20b5ea036efa9e42709bae293a4d3ef2fe
+07/06/2023 14:20:15:569 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:15:574 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:15:578 PM - host initiators list is matching
+07/06/2023 14:20:15:582 PM - host initiator count matched
+07/06/2023 14:20:15:586 PM - SUO04CTCSTOWIN       Windows Server             b5ea036efa9e42709bae293a4d3ef2fe c848e9f1b96646cdbcda3361b5c7ff6a
+07/06/2023 14:20:15:593 PM - Getting host detail from initiator Id c848e9f1b96646cdbcda3361b5c7ff6a
+07/06/2023 14:20:15:601 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20c848e9f1b96646cdbcda3361b5c7ff6a
+07/06/2023 14:20:16:151 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:16:155 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:16:158 PM - host initiators list is matching
+07/06/2023 14:20:16:162 PM - host initiator count matched
+07/06/2023 14:20:16:165 PM - SUO04CTCSTOWIN       Windows Server             b5ea036efa9e42709bae293a4d3ef2fe c848e9f1b96646cdbcda3361b5c7ff6a
+07/06/2023 14:20:16:172 PM - Getting host detail from initiator Id d368941328dbd11dec5195c44c685cd6
+07/06/2023 14:20:16:176 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20d368941328dbd11dec5195c44c685cd6
+07/06/2023 14:20:16:634 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:16:639 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:16:643 PM - host initiators list is matching
+07/06/2023 14:20:16:647 PM - host initiator count matched
+07/06/2023 14:20:16:650 PM - 10.1.36.101-Container-ESX1 VMware (ESXi)              59c4d89ad5529997a24eb7a9f37b1799 d368941328dbd11dec5195c44c685cd6
+07/06/2023 14:20:16:656 PM - Getting host detail from initiator Id d3fb2def5baa4c768ffdd678e1849128
+07/06/2023 14:20:16:661 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20d3fb2def5baa4c768ffdd678e1849128
+07/06/2023 14:20:17:109 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:17:112 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:17:117 PM - host initiators list is matching
+07/06/2023 14:20:17:120 PM - host initiator count matched
+07/06/2023 14:20:17:122 PM - suo04ctcplay4        VMware (ESXi)              b46dcd4fe35046898dce3b14485d2ebc d3fb2def5baa4c768ffdd678e1849128
+07/06/2023 14:20:17:131 PM - Getting host detail from initiator Id d554c5c3e6ed4e182aea84cdee5417be
+07/06/2023 14:20:17:139 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20d554c5c3e6ed4e182aea84cdee5417be
+07/06/2023 14:20:17:676 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:17:682 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:17:687 PM - host initiators list is matching
+07/06/2023 14:20:17:693 PM - host initiator count matched
+07/06/2023 14:20:17:699 PM - 10.1.36.103-Container-ESX3 VMware (ESXi)              5328f8f63307953009c19eae6e39c3f0 d554c5c3e6ed4e182aea84cdee5417be
+07/06/2023 14:20:17:713 PM - Getting host detail from initiator Id db4a092565f0e892c09751957c14843c
+07/06/2023 14:20:17:716 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20db4a092565f0e892c09751957c14843c
+07/06/2023 14:20:18:167 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:18:171 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:18:175 PM - host initiators list is matching
+07/06/2023 14:20:18:178 PM - host initiator count matched
+07/06/2023 14:20:18:181 PM - 10.1.36.104-Contain_1838E07EDD1 VMware (ESXi)              5df97a864c626eba415bbf6fc54d6e70 db4a092565f0e892c09751957c14843c
+07/06/2023 14:20:18:188 PM - Getting host detail from initiator Id e28f903a53884800b45abc3c43368f1b
+07/06/2023 14:20:18:193 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20e28f903a53884800b45abc3c43368f1b
+07/06/2023 14:20:18:642 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:18:649 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:18:654 PM - host initiators list is matching
+07/06/2023 14:20:18:659 PM - host initiator count matched
+07/06/2023 14:20:18:663 PM - suo04ctcplay2        VMware (ESXi)              e28f903a53884800b45abc3c43368f1b f765e2e65e694789822c4ca9b0cc083c
+07/06/2023 14:20:18:669 PM - Getting host detail from initiator Id f4792bd473214eba9885ea71c6d14d9b
+07/06/2023 14:20:18:673 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20f4792bd473214eba9885ea71c6d14d9b
+07/06/2023 14:20:19:182 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:19:190 PM - host operating system is not matching
+07/06/2023 14:20:19:198 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:19:203 PM - host initiators list is matching
+07/06/2023 14:20:19:209 PM - host initiator count matched
+07/06/2023 14:20:19:213 PM - SUO04CTCESX3002      VMware (ESXi)              f4792bd473214eba9885ea71c6d14d9b fe8fdb81b2e9413eac72a27279cc5633
+07/06/2023 14:20:19:219 PM - Getting host detail from initiator Id f765e2e65e694789822c4ca9b0cc083c
+07/06/2023 14:20:19:223 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20f765e2e65e694789822c4ca9b0cc083c
+07/06/2023 14:20:19:658 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:19:664 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:19:672 PM - host initiators list is matching
+07/06/2023 14:20:19:681 PM - host initiator count matched
+07/06/2023 14:20:19:686 PM - suo04ctcplay2        VMware (ESXi)              e28f903a53884800b45abc3c43368f1b f765e2e65e694789822c4ca9b0cc083c
+07/06/2023 14:20:19:693 PM - Getting host detail from initiator Id fe8fdb81b2e9413eac72a27279cc5633
+07/06/2023 14:20:19:699 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20fe8fdb81b2e9413eac72a27279cc5633
+07/06/2023 14:20:20:328 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:20:20:334 PM - host operating system is not matching
+07/06/2023 14:20:20:341 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:20:20:345 PM - host initiators list is matching
+07/06/2023 14:20:20:350 PM - host initiator count matched
+07/06/2023 14:20:20:354 PM - SUO04CTCESX3002      VMware (ESXi)              f4792bd473214eba9885ea71c6d14d9b fe8fdb81b2e9413eac72a27279cc5633
+07/06/2023 14:20:20:361 PM - Identify single discovered hosts for host migration.
+07/06/2023 14:23:01:659 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/initiators
+07/06/2023 14:23:05:155 PM - Getting discovered/system hosts
+07/06/2023 14:23:05:170 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:175 PM - Individual Host @{id=b7d1230da10c251336776a0380dc441c; name=AA-SUO04CTCESX2-129; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:182 PM - Initiator found 027ab75be4a1d04a0fa8da379f2dc995 associated with AA-SUO04CTCESX2-129 which is Discovered Host
+07/06/2023 14:23:05:187 PM - Adding initiator 027ab75be4a1d04a0fa8da379f2dc995 in the list.
+07/06/2023 14:23:05:193 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:198 PM - Individual Host @{id=ebf99fe29ea3508e5c35d56338ad7a0b; name=10.1.80.11-G5HE05DL380; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:204 PM - Initiator found 0e5788fbfee6ef2b20909bf42c5cf6ef associated with 10.1.80.11-G5HE05DL380 which is Discovered Host
+07/06/2023 14:23:05:209 PM - Adding initiator 0e5788fbfee6ef2b20909bf42c5cf6ef in the list.
+07/06/2023 14:23:05:214 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:218 PM - Individual Host @{id=6d195f6e6d4c45609cac006934b3df7f; name=SYH5HE01B6; ipAddress=10.1.20.12; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:221 PM - Initiator found 18b16d3a6bd34ee0a5b494ee35ed7380 associated with SYH5HE01B6 which is User Created Host
+07/06/2023 14:23:05:225 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:229 PM - Individual Host @{id=60444512f18a7d9978a2f2e636205724; name=AA-SUO04CTCSUSE-121; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:232 PM - Initiator found 1db061913e8f78ab17f9d805fa3cb6cc associated with AA-SUO04CTCSUSE-121 which is Discovered Host
+07/06/2023 14:23:05:236 PM - Adding initiator 1db061913e8f78ab17f9d805fa3cb6cc in the list.
+07/06/2023 14:23:05:241 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:244 PM - Individual Host @{id=0e375182d7b5185dd06f2aa8ad6f7840; name=10.1.35.94-Harvester3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:248 PM - Initiator found 206c3e83e7adc8677c732a3614aa3b78 associated with 10.1.35.94-Harvester3 which is Discovered Host
+07/06/2023 14:23:05:251 PM - Adding initiator 206c3e83e7adc8677c732a3614aa3b78 in the list.
+07/06/2023 14:23:05:254 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:258 PM - Individual Host @{id=de29dd0902369d535163dd3ee5b9b65a; name=AA-SUO04CTCESX2-127; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:261 PM - Initiator found 28bd5bd8fb5dd08f025dad738620978c associated with AA-SUO04CTCESX2-127 which is Discovered Host
+07/06/2023 14:23:05:264 PM - Adding initiator 28bd5bd8fb5dd08f025dad738620978c in the list.
+07/06/2023 14:23:05:267 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:270 PM - Individual Host @{id=b7d1230da10c251336776a0380dc441c; name=AA-SUO04CTCESX2-129; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:273 PM - Initiator found 338e3c995ed62d72069e8fdfbc5ed741 associated with AA-SUO04CTCESX2-129 which is Discovered Host
+07/06/2023 14:23:05:277 PM - Adding initiator 338e3c995ed62d72069e8fdfbc5ed741 in the list.
+07/06/2023 14:23:05:285 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:288 PM - Individual Host @{id=a6f122612caba94c6299e7dfcdf16f98; name=10.1.35.91-Harveste_1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:291 PM - Initiator found 363532cd54f9a016f0a1a7a11ac02c78 associated with 10.1.35.91-Harveste_1 which is Discovered Host
+07/06/2023 14:23:05:294 PM - Adding initiator 363532cd54f9a016f0a1a7a11ac02c78 in the list.
+07/06/2023 14:23:05:297 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:300 PM - Individual Host @{id=a6f122612caba94c6299e7dfcdf16f98; name=10.1.35.91-Harveste_1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:303 PM - Initiator found 38602b01ccd640bbb47c1dfa58f52859 associated with 10.1.35.91-Harveste_1 which is Discovered Host
+07/06/2023 14:23:05:306 PM - Adding initiator 38602b01ccd640bbb47c1dfa58f52859 in the list.
+07/06/2023 14:23:05:312 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:316 PM - Individual Host @{id=0e375182d7b5185dd06f2aa8ad6f7840; name=10.1.35.94-Harvester3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:319 PM - Initiator found 4205353a91d8bd8df0b3a9db3a74a644 associated with 10.1.35.94-Harvester3 which is Discovered Host
+07/06/2023 14:23:05:322 PM - Adding initiator 4205353a91d8bd8df0b3a9db3a74a644 in the list.
+07/06/2023 14:23:05:325 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:329 PM - Individual Host @{id=92249be25f5b4e73aaba0d4867af8207; name=SYH5HE01B5; ipAddress=10.1.20.11; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:331 PM - Initiator found 488d651ed372436e851d844057eaf44c associated with SYH5HE01B5 which is User Created Host
+07/06/2023 14:23:05:335 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:337 PM - Individual Host @{id=92249be25f5b4e73aaba0d4867af8207; name=SYH5HE01B5; ipAddress=10.1.20.11; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:341 PM - Initiator found 4fa5e24fc743484499ab480c9bd1a547 associated with SYH5HE01B5 which is User Created Host
+07/06/2023 14:23:05:347 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:350 PM - Individual Host @{id=ea08483db007ac70625100674c21729d; name=10.1.35.94-Harvester4; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:354 PM - Initiator found 63a75fad20d24b008c963be8f51145b1 associated with 10.1.35.94-Harvester4 which is Discovered Host
+07/06/2023 14:23:05:357 PM - Adding initiator 63a75fad20d24b008c963be8f51145b1 in the list.
+07/06/2023 14:23:05:360 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:363 PM - Individual Host @{id=ec470b7f3a961ccd1b029579fb63d28a; name=AA-SUO04CTCSUSE-122; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:366 PM - Initiator found 63c2f2a9c0ca359e499c11e42f1b95fc associated with AA-SUO04CTCSUSE-122 which is Discovered Host
+07/06/2023 14:23:05:370 PM - Adding initiator 63c2f2a9c0ca359e499c11e42f1b95fc in the list.
+07/06/2023 14:23:05:374 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:377 PM - Individual Host @{id=dadbf34f46b845c8bdfdfce72ebbe9bf; name=Martin-Test-Host; ipAddress=; systems=; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:383 PM - Initiator found 7a27ca19eb3a4c26a5370822f8f91a7a associated with Martin-Test-Host which is User Created Host
+07/06/2023 14:23:05:386 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:389 PM - Individual Host @{id=dadbf34f46b845c8bdfdfce72ebbe9bf; name=Martin-Test-Host; ipAddress=; systems=; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:392 PM - Initiator found 8129b3fa32504fa892be7aba0261e386 associated with Martin-Test-Host which is User Created Host
+07/06/2023 14:23:05:395 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:398 PM - Individual Host @{id=a6cc3f287c0582c60452483124ae1494; name=AA-SUO04CTCESX2-128; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:401 PM - Initiator found 882a0ddd0cae583ca15b2097b001a8c5 associated with AA-SUO04CTCESX2-128 which is Discovered Host
+07/06/2023 14:23:05:404 PM - Adding initiator 882a0ddd0cae583ca15b2097b001a8c5 in the list.
+07/06/2023 14:23:05:409 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:414 PM - Individual Host @{id=0e8d38b180c7f875709773d2f08f22ec; name=10.1.80.12-G5HE35DL380; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:418 PM - Initiator found 883a9f4dec35ecbbc26a15d65c6b1bd2 associated with 10.1.80.12-G5HE35DL380 which is Discovered Host
+07/06/2023 14:23:05:423 PM - Adding initiator 883a9f4dec35ecbbc26a15d65c6b1bd2 in the list.
+07/06/2023 14:23:05:427 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:430 PM - Individual Host @{id=ebf99fe29ea3508e5c35d56338ad7a0b; name=10.1.80.11-G5HE05DL380; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:433 PM - Initiator found 91a60f68d86f517182081069cba7c032 associated with 10.1.80.11-G5HE05DL380 which is Discovered Host
+07/06/2023 14:23:05:437 PM - Adding initiator 91a60f68d86f517182081069cba7c032 in the list.
+07/06/2023 14:23:05:440 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:444 PM - Individual Host @{id=60444512f18a7d9978a2f2e636205724; name=AA-SUO04CTCSUSE-121; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:448 PM - Initiator found 9538b4d2734ffd88f711866a51715956 associated with AA-SUO04CTCSUSE-121 which is Discovered Host
+07/06/2023 14:23:05:452 PM - Adding initiator 9538b4d2734ffd88f711866a51715956 in the list.
+07/06/2023 14:23:05:455 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:457 PM - Individual Host @{id=de29dd0902369d535163dd3ee5b9b65a; name=AA-SUO04CTCESX2-127; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:462 PM - Initiator found 9d6049e89ccfab6ccdeef71bd9c1337d associated with AA-SUO04CTCESX2-127 which is Discovered Host
+07/06/2023 14:23:05:465 PM - Adding initiator 9d6049e89ccfab6ccdeef71bd9c1337d in the list.
+07/06/2023 14:23:05:469 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:472 PM - Individual Host @{id=6d195f6e6d4c45609cac006934b3df7f; name=SYH5HE01B6; ipAddress=10.1.20.12; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:475 PM - Initiator found aeaa12cebe824cb19903856b6e95fdc4 associated with SYH5HE01B6 which is User Created Host
+07/06/2023 14:23:05:478 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:482 PM - Individual Host @{id=a6cc3f287c0582c60452483124ae1494; name=AA-SUO04CTCESX2-128; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:486 PM - Initiator found b3969ffa4e1f7f2cba8cf07c185b0de2 associated with AA-SUO04CTCESX2-128 which is Discovered Host
+07/06/2023 14:23:05:490 PM - Adding initiator b3969ffa4e1f7f2cba8cf07c185b0de2 in the list.
+07/06/2023 14:23:05:494 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:497 PM - Individual Host @{id=e626159697ca4c45a2402313813abac7; name=SYH5HE01B11; ipAddress=10.1.20.13; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:500 PM - Initiator found be5debe981da4dd68ff9e3aec938f93d associated with SYH5HE01B11 which is User Created Host
+07/06/2023 14:23:05:503 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:507 PM - Individual Host @{id=0e8d38b180c7f875709773d2f08f22ec; name=10.1.80.12-G5HE35DL380; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:510 PM - Initiator found c841443cbb89631c7439198d5dc52499 associated with 10.1.80.12-G5HE35DL380 which is Discovered Host
+07/06/2023 14:23:05:514 PM - Adding initiator c841443cbb89631c7439198d5dc52499 in the list.
+07/06/2023 14:23:05:517 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:520 PM - Individual Host @{id=e626159697ca4c45a2402313813abac7; name=SYH5HE01B11; ipAddress=10.1.20.13; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:524 PM - Initiator found cd88fa0d62174f17a33e3b8e12677afd associated with SYH5HE01B11 which is User Created Host
+07/06/2023 14:23:05:528 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:531 PM - Individual Host @{id=ec470b7f3a961ccd1b029579fb63d28a; name=AA-SUO04CTCSUSE-122; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:535 PM - Initiator found eb19f890cfebc499242f1b708c6210f7 associated with AA-SUO04CTCSUSE-122 which is Discovered Host
+07/06/2023 14:23:05:537 PM - Adding initiator eb19f890cfebc499242f1b708c6210f7 in the list.
+07/06/2023 14:23:05:541 PM - Found single discovered Host for the initiator
+07/06/2023 14:23:05:544 PM - Individual Host @{id=ea08483db007ac70625100674c21729d; name=10.1.35.94-Harvester4; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:23:05:548 PM - Initiator found ffa6fa05635b23b97be9d0bef5253111 associated with 10.1.35.94-Harvester4 which is Discovered Host
+07/06/2023 14:23:05:553 PM - Adding initiator ffa6fa05635b23b97be9d0bef5253111 in the list.
+07/06/2023 14:23:05:557 PM - Initiator with single discovered host found on the Array: 20
+07/06/2023 14:23:13:612 PM - ------------------------------------------------------------------------------------------
+07/06/2023 14:23:14:092 PM -                        Single Discovered Host PreMerge Summary
+07/06/2023 14:23:14:656 PM - ------------------------------------------------------------------------------------------
+07/06/2023 14:23:18:771 PM - Host Name            Operating System           Initiators Ids      
+07/06/2023 14:23:19:922 PM - ------------------------------------------------------------------------------------------
+07/06/2023 14:24:09:486 PM - Getting host detail from initiator Id 027ab75be4a1d04a0fa8da379f2dc995
+07/06/2023 14:24:09:491 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20027ab75be4a1d04a0fa8da379f2dc995
+07/06/2023 14:24:10:000 PM - Host Id: b7d1230da10c251336776a0380dc441c
+07/06/2023 14:24:10:020 PM - Operating System: VMware (ESXi)
+07/06/2023 14:24:10:029 PM - Host Name: AA-SUO04CTCESX2-129
+07/06/2023 14:24:10:038 PM - Initiator List: 027ab75be4a1d04a0fa8da379f2dc995 338e3c995ed62d72069e8fdfbc5ed741
+07/06/2023 14:24:18:179 PM - AA-SUO04CTCESX2-129  VMware (ESXi)              027ab75be4a1d04a0fa8da379f2dc995 338e3c995ed62d72069e8fdfbc5ed741
+07/06/2023 14:24:18:188 PM - Getting host detail from initiator Id 0e5788fbfee6ef2b20909bf42c5cf6ef
+07/06/2023 14:24:18:198 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%200e5788fbfee6ef2b20909bf42c5cf6ef
+07/06/2023 14:24:18:627 PM - Host Id: ebf99fe29ea3508e5c35d56338ad7a0b
+07/06/2023 14:24:18:632 PM - Operating System: VMware (ESXi)
+07/06/2023 14:24:18:637 PM - Host Name: 10.1.80.11-G5HE05DL380
+07/06/2023 14:24:18:642 PM - Initiator List: 0e5788fbfee6ef2b20909bf42c5cf6ef 91a60f68d86f517182081069cba7c032
+07/06/2023 14:24:18:647 PM - 10.1.80.11-G5HE05DL380 VMware (ESXi)              0e5788fbfee6ef2b20909bf42c5cf6ef 91a60f68d86f517182081069cba7c032
+07/06/2023 14:24:18:654 PM - Getting host detail from initiator Id 1db061913e8f78ab17f9d805fa3cb6cc
+07/06/2023 14:24:18:659 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%201db061913e8f78ab17f9d805fa3cb6cc
+07/06/2023 14:24:19:120 PM - Host Id: 60444512f18a7d9978a2f2e636205724
+07/06/2023 14:24:19:136 PM - Operating System: SuSE (10.x, 11.x, 12.x, 15.x)
+07/06/2023 14:24:19:146 PM - Host Name: AA-SUO04CTCSUSE-121
+07/06/2023 14:24:19:154 PM - Initiator List: 1db061913e8f78ab17f9d805fa3cb6cc 9538b4d2734ffd88f711866a51715956
+07/06/2023 14:24:19:161 PM - AA-SUO04CTCSUSE-121  SuSE (10.x, 11.x, 12.x, 15.x)  1db061913e8f78ab17f9d805fa3cb6cc 9538b4d2734ffd88f711866a51715956
+07/06/2023 14:24:19:171 PM - Getting host detail from initiator Id 206c3e83e7adc8677c732a3614aa3b78
+07/06/2023 14:24:19:179 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20206c3e83e7adc8677c732a3614aa3b78
+07/06/2023 14:24:19:916 PM - Host Id: 0e375182d7b5185dd06f2aa8ad6f7840
+07/06/2023 14:24:19:921 PM - Operating System: SuSE (10.x, 11.x, 12.x, 15.x)
+07/06/2023 14:24:19:924 PM - Host Name: 10.1.35.94-Harvester3
+07/06/2023 14:24:19:929 PM - Initiator List: 206c3e83e7adc8677c732a3614aa3b78 4205353a91d8bd8df0b3a9db3a74a644
+07/06/2023 14:24:19:932 PM - 10.1.35.94-Harvester3 SuSE (10.x, 11.x, 12.x, 15.x)  206c3e83e7adc8677c732a3614aa3b78 4205353a91d8bd8df0b3a9db3a74a644
+07/06/2023 14:24:19:938 PM - Getting host detail from initiator Id 28bd5bd8fb5dd08f025dad738620978c
+07/06/2023 14:24:19:942 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%2028bd5bd8fb5dd08f025dad738620978c
+07/06/2023 14:24:20:429 PM - Host Id: de29dd0902369d535163dd3ee5b9b65a
+07/06/2023 14:24:20:437 PM - Operating System: VMware (ESXi)
+07/06/2023 14:24:20:443 PM - Host Name: AA-SUO04CTCESX2-127
+07/06/2023 14:24:20:448 PM - Initiator List: 28bd5bd8fb5dd08f025dad738620978c 9d6049e89ccfab6ccdeef71bd9c1337d
+07/06/2023 14:24:20:453 PM - AA-SUO04CTCESX2-127  VMware (ESXi)              28bd5bd8fb5dd08f025dad738620978c 9d6049e89ccfab6ccdeef71bd9c1337d
+07/06/2023 14:24:20:458 PM - Getting host detail from initiator Id 338e3c995ed62d72069e8fdfbc5ed741
+07/06/2023 14:24:20:464 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20338e3c995ed62d72069e8fdfbc5ed741
+07/06/2023 14:24:21:132 PM - Host Id: b7d1230da10c251336776a0380dc441c
+07/06/2023 14:24:21:135 PM - Operating System: VMware (ESXi)
+07/06/2023 14:24:21:139 PM - Host Name: AA-SUO04CTCESX2-129
+07/06/2023 14:24:21:142 PM - Initiator List: 027ab75be4a1d04a0fa8da379f2dc995 338e3c995ed62d72069e8fdfbc5ed741
+07/06/2023 14:24:21:145 PM - AA-SUO04CTCESX2-129  VMware (ESXi)              027ab75be4a1d04a0fa8da379f2dc995 338e3c995ed62d72069e8fdfbc5ed741
+07/06/2023 14:24:21:153 PM - Getting host detail from initiator Id 363532cd54f9a016f0a1a7a11ac02c78
+07/06/2023 14:24:21:158 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20363532cd54f9a016f0a1a7a11ac02c78
+07/06/2023 14:24:22:099 PM - Host Id: a6f122612caba94c6299e7dfcdf16f98
+07/06/2023 14:24:22:104 PM - Operating System: SuSE Linux
+07/06/2023 14:24:22:109 PM - Host Name: 10.1.35.91-Harveste_1
+07/06/2023 14:24:22:114 PM - Initiator List: 363532cd54f9a016f0a1a7a11ac02c78 38602b01ccd640bbb47c1dfa58f52859
+07/06/2023 14:24:22:119 PM - 10.1.35.91-Harveste_1 SuSE Linux                 363532cd54f9a016f0a1a7a11ac02c78 38602b01ccd640bbb47c1dfa58f52859
+07/06/2023 14:24:22:127 PM - Getting host detail from initiator Id 38602b01ccd640bbb47c1dfa58f52859
+07/06/2023 14:24:22:133 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%2038602b01ccd640bbb47c1dfa58f52859
+07/06/2023 14:24:22:941 PM - Host Id: a6f122612caba94c6299e7dfcdf16f98
+07/06/2023 14:24:22:945 PM - Operating System: SuSE Linux
+07/06/2023 14:24:22:951 PM - Host Name: 10.1.35.91-Harveste_1
+07/06/2023 14:24:22:954 PM - Initiator List: 363532cd54f9a016f0a1a7a11ac02c78 38602b01ccd640bbb47c1dfa58f52859
+07/06/2023 14:24:22:958 PM - 10.1.35.91-Harveste_1 SuSE Linux                 363532cd54f9a016f0a1a7a11ac02c78 38602b01ccd640bbb47c1dfa58f52859
+07/06/2023 14:24:22:964 PM - Getting host detail from initiator Id 4205353a91d8bd8df0b3a9db3a74a644
+07/06/2023 14:24:22:968 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%204205353a91d8bd8df0b3a9db3a74a644
+07/06/2023 14:24:23:821 PM - Host Id: 0e375182d7b5185dd06f2aa8ad6f7840
+07/06/2023 14:24:23:827 PM - Operating System: SuSE (10.x, 11.x, 12.x, 15.x)
+07/06/2023 14:24:23:831 PM - Host Name: 10.1.35.94-Harvester3
+07/06/2023 14:24:23:834 PM - Initiator List: 206c3e83e7adc8677c732a3614aa3b78 4205353a91d8bd8df0b3a9db3a74a644
+07/06/2023 14:24:23:837 PM - 10.1.35.94-Harvester3 SuSE (10.x, 11.x, 12.x, 15.x)  206c3e83e7adc8677c732a3614aa3b78 4205353a91d8bd8df0b3a9db3a74a644
+07/06/2023 14:24:23:842 PM - Getting host detail from initiator Id 63a75fad20d24b008c963be8f51145b1
+07/06/2023 14:24:23:847 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%2063a75fad20d24b008c963be8f51145b1
+07/06/2023 14:24:24:588 PM - Host Id: ea08483db007ac70625100674c21729d
+07/06/2023 14:24:24:593 PM - Operating System: SuSE (10.x, 11.x, 12.x, 15.x)
+07/06/2023 14:24:24:598 PM - Host Name: 10.1.35.94-Harvester4
+07/06/2023 14:24:24:603 PM - Initiator List: 63a75fad20d24b008c963be8f51145b1 ffa6fa05635b23b97be9d0bef5253111
+07/06/2023 14:24:24:607 PM - 10.1.35.94-Harvester4 SuSE (10.x, 11.x, 12.x, 15.x)  63a75fad20d24b008c963be8f51145b1 ffa6fa05635b23b97be9d0bef5253111
+07/06/2023 14:24:24:612 PM - Getting host detail from initiator Id 63c2f2a9c0ca359e499c11e42f1b95fc
+07/06/2023 14:24:24:617 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%2063c2f2a9c0ca359e499c11e42f1b95fc
+07/06/2023 14:24:24:975 PM - Host Id: ec470b7f3a961ccd1b029579fb63d28a
+07/06/2023 14:24:24:979 PM - Operating System: SuSE (10.x, 11.x, 12.x, 15.x)
+07/06/2023 14:24:24:985 PM - Host Name: AA-SUO04CTCSUSE-122
+07/06/2023 14:24:24:988 PM - Initiator List: 63c2f2a9c0ca359e499c11e42f1b95fc eb19f890cfebc499242f1b708c6210f7
+07/06/2023 14:24:24:992 PM - AA-SUO04CTCSUSE-122  SuSE (10.x, 11.x, 12.x, 15.x)  63c2f2a9c0ca359e499c11e42f1b95fc eb19f890cfebc499242f1b708c6210f7
+07/06/2023 14:24:24:996 PM - Getting host detail from initiator Id 882a0ddd0cae583ca15b2097b001a8c5
+07/06/2023 14:24:25:000 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20882a0ddd0cae583ca15b2097b001a8c5
+07/06/2023 14:24:25:346 PM - Host Id: a6cc3f287c0582c60452483124ae1494
+07/06/2023 14:24:25:354 PM - Operating System: VMware (ESXi)
+07/06/2023 14:24:25:359 PM - Host Name: AA-SUO04CTCESX2-128
+07/06/2023 14:24:25:365 PM - Initiator List: 882a0ddd0cae583ca15b2097b001a8c5 b3969ffa4e1f7f2cba8cf07c185b0de2
+07/06/2023 14:24:25:369 PM - AA-SUO04CTCESX2-128  VMware (ESXi)              882a0ddd0cae583ca15b2097b001a8c5 b3969ffa4e1f7f2cba8cf07c185b0de2
+07/06/2023 14:24:25:377 PM - Getting host detail from initiator Id 883a9f4dec35ecbbc26a15d65c6b1bd2
+07/06/2023 14:24:25:383 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20883a9f4dec35ecbbc26a15d65c6b1bd2
+07/06/2023 14:24:25:866 PM - Host Id: 0e8d38b180c7f875709773d2f08f22ec
+07/06/2023 14:24:25:873 PM - Operating System: VMware (ESXi)
+07/06/2023 14:24:25:881 PM - Host Name: 10.1.80.12-G5HE35DL380
+07/06/2023 14:24:25:890 PM - Initiator List: 883a9f4dec35ecbbc26a15d65c6b1bd2 c841443cbb89631c7439198d5dc52499
+07/06/2023 14:24:25:894 PM - 10.1.80.12-G5HE35DL380 VMware (ESXi)              883a9f4dec35ecbbc26a15d65c6b1bd2 c841443cbb89631c7439198d5dc52499
+07/06/2023 14:24:25:902 PM - Getting host detail from initiator Id 91a60f68d86f517182081069cba7c032
+07/06/2023 14:24:25:914 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%2091a60f68d86f517182081069cba7c032
+07/06/2023 14:24:26:246 PM - Host Id: ebf99fe29ea3508e5c35d56338ad7a0b
+07/06/2023 14:24:26:255 PM - Operating System: VMware (ESXi)
+07/06/2023 14:24:26:264 PM - Host Name: 10.1.80.11-G5HE05DL380
+07/06/2023 14:24:26:275 PM - Initiator List: 0e5788fbfee6ef2b20909bf42c5cf6ef 91a60f68d86f517182081069cba7c032
+07/06/2023 14:24:26:285 PM - 10.1.80.11-G5HE05DL380 VMware (ESXi)              0e5788fbfee6ef2b20909bf42c5cf6ef 91a60f68d86f517182081069cba7c032
+07/06/2023 14:24:26:294 PM - Getting host detail from initiator Id 9538b4d2734ffd88f711866a51715956
+07/06/2023 14:24:26:301 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%209538b4d2734ffd88f711866a51715956
+07/06/2023 14:24:26:601 PM - Host Id: 60444512f18a7d9978a2f2e636205724
+07/06/2023 14:24:26:607 PM - Operating System: SuSE (10.x, 11.x, 12.x, 15.x)
+07/06/2023 14:24:26:613 PM - Host Name: AA-SUO04CTCSUSE-121
+07/06/2023 14:24:26:623 PM - Initiator List: 1db061913e8f78ab17f9d805fa3cb6cc 9538b4d2734ffd88f711866a51715956
+07/06/2023 14:24:26:628 PM - AA-SUO04CTCSUSE-121  SuSE (10.x, 11.x, 12.x, 15.x)  1db061913e8f78ab17f9d805fa3cb6cc 9538b4d2734ffd88f711866a51715956
+07/06/2023 14:24:26:634 PM - Getting host detail from initiator Id 9d6049e89ccfab6ccdeef71bd9c1337d
+07/06/2023 14:24:26:638 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%209d6049e89ccfab6ccdeef71bd9c1337d
+07/06/2023 14:24:27:028 PM - Host Id: de29dd0902369d535163dd3ee5b9b65a
+07/06/2023 14:24:27:031 PM - Operating System: VMware (ESXi)
+07/06/2023 14:24:27:034 PM - Host Name: AA-SUO04CTCESX2-127
+07/06/2023 14:24:27:037 PM - Initiator List: 28bd5bd8fb5dd08f025dad738620978c 9d6049e89ccfab6ccdeef71bd9c1337d
+07/06/2023 14:24:27:040 PM - AA-SUO04CTCESX2-127  VMware (ESXi)              28bd5bd8fb5dd08f025dad738620978c 9d6049e89ccfab6ccdeef71bd9c1337d
+07/06/2023 14:24:27:045 PM - Getting host detail from initiator Id b3969ffa4e1f7f2cba8cf07c185b0de2
+07/06/2023 14:24:27:053 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20b3969ffa4e1f7f2cba8cf07c185b0de2
+07/06/2023 14:24:27:397 PM - Host Id: a6cc3f287c0582c60452483124ae1494
+07/06/2023 14:24:27:400 PM - Operating System: VMware (ESXi)
+07/06/2023 14:24:27:403 PM - Host Name: AA-SUO04CTCESX2-128
+07/06/2023 14:24:27:407 PM - Initiator List: 882a0ddd0cae583ca15b2097b001a8c5 b3969ffa4e1f7f2cba8cf07c185b0de2
+07/06/2023 14:24:27:410 PM - AA-SUO04CTCESX2-128  VMware (ESXi)              882a0ddd0cae583ca15b2097b001a8c5 b3969ffa4e1f7f2cba8cf07c185b0de2
+07/06/2023 14:24:27:417 PM - Getting host detail from initiator Id c841443cbb89631c7439198d5dc52499
+07/06/2023 14:24:27:422 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20c841443cbb89631c7439198d5dc52499
+07/06/2023 14:24:27:736 PM - Host Id: 0e8d38b180c7f875709773d2f08f22ec
+07/06/2023 14:24:27:739 PM - Operating System: VMware (ESXi)
+07/06/2023 14:24:27:742 PM - Host Name: 10.1.80.12-G5HE35DL380
+07/06/2023 14:24:27:746 PM - Initiator List: 883a9f4dec35ecbbc26a15d65c6b1bd2 c841443cbb89631c7439198d5dc52499
+07/06/2023 14:24:27:750 PM - 10.1.80.12-G5HE35DL380 VMware (ESXi)              883a9f4dec35ecbbc26a15d65c6b1bd2 c841443cbb89631c7439198d5dc52499
+07/06/2023 14:24:27:756 PM - Getting host detail from initiator Id eb19f890cfebc499242f1b708c6210f7
+07/06/2023 14:24:27:762 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20eb19f890cfebc499242f1b708c6210f7
+07/06/2023 14:24:28:002 PM - Host Id: ec470b7f3a961ccd1b029579fb63d28a
+07/06/2023 14:24:28:009 PM - Operating System: SuSE (10.x, 11.x, 12.x, 15.x)
+07/06/2023 14:24:28:018 PM - Host Name: AA-SUO04CTCSUSE-122
+07/06/2023 14:24:28:023 PM - Initiator List: 63c2f2a9c0ca359e499c11e42f1b95fc eb19f890cfebc499242f1b708c6210f7
+07/06/2023 14:24:28:027 PM - AA-SUO04CTCSUSE-122  SuSE (10.x, 11.x, 12.x, 15.x)  63c2f2a9c0ca359e499c11e42f1b95fc eb19f890cfebc499242f1b708c6210f7
+07/06/2023 14:24:28:034 PM - Getting host detail from initiator Id ffa6fa05635b23b97be9d0bef5253111
+07/06/2023 14:24:28:040 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20ffa6fa05635b23b97be9d0bef5253111
+07/06/2023 14:24:28:333 PM - Host Id: ea08483db007ac70625100674c21729d
+07/06/2023 14:24:28:339 PM - Operating System: SuSE (10.x, 11.x, 12.x, 15.x)
+07/06/2023 14:24:28:347 PM - Host Name: 10.1.35.94-Harvester4
+07/06/2023 14:24:28:354 PM - Initiator List: 63a75fad20d24b008c963be8f51145b1 ffa6fa05635b23b97be9d0bef5253111
+07/06/2023 14:24:28:359 PM - 10.1.35.94-Harvester4 SuSE (10.x, 11.x, 12.x, 15.x)  63a75fad20d24b008c963be8f51145b1 ffa6fa05635b23b97be9d0bef5253111
+07/06/2023 14:28:45:067 PM - -----------------------------------------------------------------------------------------
+07/06/2023 14:28:45:114 PM -                             Staring Host Migration Job                                   
+07/06/2023 14:28:45:133 PM - -----------------------------------------------------------------------------------------
+07/06/2023 14:28:45:167 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems
+07/06/2023 14:28:46:835 PM - 3
+07/06/2023 14:28:46:845 PM - Identify hosts discovered from onboarded systems and migrate them to DSCC hosts.
+07/06/2023 14:28:46:852 PM - Identify multiple discovered hosts for host migration.
+07/06/2023 14:28:46:906 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/initiators
+07/06/2023 14:28:50:773 PM - For the intiator found more than two hosts
+07/06/2023 14:28:50:777 PM - Individual Host @{id=4ed0f30ddf529275bc56483e34db35ed; name=SUO04CTCESX3001; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:50:784 PM - Initiator Found 057682e54828484fb2034f928080f4fd associated with SUO04CTCESX3001 which is Discovered Host
+07/06/2023 14:28:50:791 PM - Individual Host @{id=5ef3410d1efe45be8bac72c60cf37729; name=EsxHost-suo04ctcesx3001.demo.local; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:50:794 PM - Initiator Found 057682e54828484fb2034f928080f4fd associated with EsxHost-suo04ctcesx3001.demo.local which is Discovered Host
+07/06/2023 14:28:50:798 PM - Individual Host @{id=9ee6a9a81f028540c15e23ba11c3a061; name=SUO04CTCESX3001; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:50:802 PM - Initiator Found 057682e54828484fb2034f928080f4fd associated with SUO04CTCESX3001 which is Discovered Host
+07/06/2023 14:28:50:805 PM - Adding initiator 057682e54828484fb2034f928080f4fd in the list.
+07/06/2023 14:28:50:809 PM - For the intiator found more than two hosts
+07/06/2023 14:28:50:813 PM - Individual Host @{id=a0be130af8e4a23f779a3713d4b288f2; name=10.1.36.102-Container-ESX2; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:50:817 PM - Initiator Found 1ce9b46d4ccb98e30f98839d85de23af associated with 10.1.36.102-Container-ESX2 which is Discovered Host
+07/06/2023 14:28:50:824 PM - Individual Host @{id=e55dcd7a702cc46cdaaf57217664006f; name=10.1.36.102-Container-ESX2; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:50:830 PM - Initiator Found 1ce9b46d4ccb98e30f98839d85de23af associated with 10.1.36.102-Container-ESX2 which is Discovered Host
+07/06/2023 14:28:50:835 PM - Adding initiator 1ce9b46d4ccb98e30f98839d85de23af in the list.
+07/06/2023 14:28:50:840 PM - For the intiator found more than two hosts
+07/06/2023 14:28:50:844 PM - Individual Host @{id=34c089fc357e4d6d4d9e332d19d6a1c8; name=suo04ctcplay3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:50:848 PM - Initiator Found 1f5785754cd64db1a931893ecae394ee associated with suo04ctcplay3 which is Discovered Host
+07/06/2023 14:28:50:851 PM - Individual Host @{id=e636c476fa35829d46ddcc03bed291ba; name=suo04ctcplay3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:50:857 PM - Initiator Found 1f5785754cd64db1a931893ecae394ee associated with suo04ctcplay3 which is Discovered Host
+07/06/2023 14:28:50:861 PM - Adding initiator 1f5785754cd64db1a931893ecae394ee in the list.
+07/06/2023 14:28:50:864 PM - For the intiator found more than two hosts
+07/06/2023 14:28:50:868 PM - Individual Host @{id=61b46e657249666049468791e3f22510; name=10.1.35.106-Container-ESX5; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:50:872 PM - Initiator Found 3a9369f9ca2c3f071c01304c3fbdf441 associated with 10.1.35.106-Container-ESX5 which is Discovered Host
+07/06/2023 14:28:50:875 PM - Individual Host @{id=c21924ef7641f3727cc074003f3adcec; name=10.1.35.106-Container-ESX5; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:50:878 PM - Initiator Found 3a9369f9ca2c3f071c01304c3fbdf441 associated with 10.1.35.106-Container-ESX5 which is Discovered Host
+07/06/2023 14:28:50:882 PM - Adding initiator 3a9369f9ca2c3f071c01304c3fbdf441 in the list.
+07/06/2023 14:28:50:889 PM - For the intiator found more than two hosts
+07/06/2023 14:28:50:892 PM - Individual Host @{id=996893580a442d7f602cb9964f42b8c1; name=10.1.35.106-Container-ESX6; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:50:895 PM - Initiator Found 42c9aaffb058df294ba30db525cc2089 associated with 10.1.35.106-Container-ESX6 which is Discovered Host
+07/06/2023 14:28:50:899 PM - Individual Host @{id=ad59aeddcca3af74502f164c80c03eea; name=10.1.35.106-Container-ESX6; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:50:903 PM - Initiator Found 42c9aaffb058df294ba30db525cc2089 associated with 10.1.35.106-Container-ESX6 which is Discovered Host
+07/06/2023 14:28:50:910 PM - Adding initiator 42c9aaffb058df294ba30db525cc2089 in the list.
+07/06/2023 14:28:50:914 PM - For the intiator found more than two hosts
+07/06/2023 14:28:50:918 PM - Individual Host @{id=996893580a442d7f602cb9964f42b8c1; name=10.1.35.106-Container-ESX6; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:50:923 PM - Initiator Found 4ac473ef68be967dfe2ef67a96308378 associated with 10.1.35.106-Container-ESX6 which is Discovered Host
+07/06/2023 14:28:50:926 PM - Individual Host @{id=ad59aeddcca3af74502f164c80c03eea; name=10.1.35.106-Container-ESX6; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:50:930 PM - Initiator Found 4ac473ef68be967dfe2ef67a96308378 associated with 10.1.35.106-Container-ESX6 which is Discovered Host
+07/06/2023 14:28:50:933 PM - Adding initiator 4ac473ef68be967dfe2ef67a96308378 in the list.
+07/06/2023 14:28:50:936 PM - For the intiator found more than two hosts
+07/06/2023 14:28:50:940 PM - Individual Host @{id=3b749af7fa542ccb01a0d6917519d8bb; name=suo04ctcplay1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:50:943 PM - Initiator Found 4e804d918f2445ecb9efe70c546dcf23 associated with suo04ctcplay1 which is Discovered Host
+07/06/2023 14:28:50:946 PM - Individual Host @{id=416f669ee4afc9dad485099b966398b4; name=suo04ctcplay1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:50:948 PM - Initiator Found 4e804d918f2445ecb9efe70c546dcf23 associated with suo04ctcplay1 which is Discovered Host
+07/06/2023 14:28:50:952 PM - Adding initiator 4e804d918f2445ecb9efe70c546dcf23 in the list.
+07/06/2023 14:28:50:955 PM - For the intiator found more than two hosts
+07/06/2023 14:28:50:958 PM - Individual Host @{id=22ea6d9b2026f099f3abee0b277a4fa5; name=10.1.36.103-Container-ESX3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:50:962 PM - Initiator Found 5328f8f63307953009c19eae6e39c3f0 associated with 10.1.36.103-Container-ESX3 which is Discovered Host
+07/06/2023 14:28:50:966 PM - Individual Host @{id=ba2835a8191e12577827c56a72fb4363; name=10.1.36.103-Container-ESX3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:50:970 PM - Initiator Found 5328f8f63307953009c19eae6e39c3f0 associated with 10.1.36.103-Container-ESX3 which is Discovered Host
+07/06/2023 14:28:50:973 PM - Adding initiator 5328f8f63307953009c19eae6e39c3f0 in the list.
+07/06/2023 14:28:50:976 PM - For the intiator found more than two hosts
+07/06/2023 14:28:50:979 PM - Individual Host @{id=2a131c91a8469875b8646d9e697c92cc; name=10.1.36.101-Container-ESX1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:50:982 PM - Initiator Found 59c4d89ad5529997a24eb7a9f37b1799 associated with 10.1.36.101-Container-ESX1 which is Discovered Host
+07/06/2023 14:28:50:985 PM - Individual Host @{id=bee773e82d5896c75ca5a1ecec41280f; name=10.1.36.101-Container-ESX1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:006 PM - Initiator Found 59c4d89ad5529997a24eb7a9f37b1799 associated with 10.1.36.101-Container-ESX1 which is Discovered Host
+07/06/2023 14:28:51:009 PM - Adding initiator 59c4d89ad5529997a24eb7a9f37b1799 in the list.
+07/06/2023 14:28:51:012 PM - For the intiator found more than two hosts
+07/06/2023 14:28:51:016 PM - Individual Host @{id=31345562b50f8a7ee6b8674ef25595ea; name=10.1.36.104-Contain_1838E07EDD1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:018 PM - Initiator Found 5df97a864c626eba415bbf6fc54d6e70 associated with 10.1.36.104-Contain_1838E07EDD1 which is Discovered Host
+07/06/2023 14:28:51:022 PM - Individual Host @{id=659f6d06ec278b6aaacf5f94a37c950f; name=10.1.36.104-Contain_1838E07ECC8; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:026 PM - Initiator Found 5df97a864c626eba415bbf6fc54d6e70 associated with 10.1.36.104-Contain_1838E07ECC8 which is Discovered Host
+07/06/2023 14:28:51:031 PM - Adding initiator 5df97a864c626eba415bbf6fc54d6e70 in the list.
+07/06/2023 14:28:51:035 PM - For the intiator found more than two hosts
+07/06/2023 14:28:51:038 PM - Individual Host @{id=34c089fc357e4d6d4d9e332d19d6a1c8; name=suo04ctcplay3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:041 PM - Initiator Found 6a063c53f870434dab455e98ff26d997 associated with suo04ctcplay3 which is Discovered Host
+07/06/2023 14:28:51:043 PM - Individual Host @{id=e636c476fa35829d46ddcc03bed291ba; name=suo04ctcplay3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:046 PM - Initiator Found 6a063c53f870434dab455e98ff26d997 associated with suo04ctcplay3 which is Discovered Host
+07/06/2023 14:28:51:050 PM - Adding initiator 6a063c53f870434dab455e98ff26d997 in the list.
+07/06/2023 14:28:51:055 PM - For the intiator found more than two hosts
+07/06/2023 14:28:51:059 PM - Individual Host @{id=3b749af7fa542ccb01a0d6917519d8bb; name=suo04ctcplay1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:065 PM - Initiator Found a1c9a016eb5a45e38eda9e79f43e45bd associated with suo04ctcplay1 which is Discovered Host
+07/06/2023 14:28:51:069 PM - Individual Host @{id=416f669ee4afc9dad485099b966398b4; name=suo04ctcplay1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:072 PM - Initiator Found a1c9a016eb5a45e38eda9e79f43e45bd associated with suo04ctcplay1 which is Discovered Host
+07/06/2023 14:28:51:074 PM - Adding initiator a1c9a016eb5a45e38eda9e79f43e45bd in the list.
+07/06/2023 14:28:51:080 PM - For the intiator found more than two hosts
+07/06/2023 14:28:51:083 PM - Individual Host @{id=61b46e657249666049468791e3f22510; name=10.1.35.106-Container-ESX5; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:088 PM - Initiator Found a89069965139570b049e1df590a1bf9e associated with 10.1.35.106-Container-ESX5 which is Discovered Host
+07/06/2023 14:28:51:092 PM - Individual Host @{id=c21924ef7641f3727cc074003f3adcec; name=10.1.35.106-Container-ESX5; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:097 PM - Initiator Found a89069965139570b049e1df590a1bf9e associated with 10.1.35.106-Container-ESX5 which is Discovered Host
+07/06/2023 14:28:51:102 PM - Adding initiator a89069965139570b049e1df590a1bf9e in the list.
+07/06/2023 14:28:51:105 PM - For the intiator found more than two hosts
+07/06/2023 14:28:51:108 PM - Individual Host @{id=4ed0f30ddf529275bc56483e34db35ed; name=SUO04CTCESX3001; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:111 PM - Initiator Found a8bce73889ae44ed8a84c5fc02e2e513 associated with SUO04CTCESX3001 which is Discovered Host
+07/06/2023 14:28:51:115 PM - Individual Host @{id=5ef3410d1efe45be8bac72c60cf37729; name=EsxHost-suo04ctcesx3001.demo.local; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:118 PM - Initiator Found a8bce73889ae44ed8a84c5fc02e2e513 associated with EsxHost-suo04ctcesx3001.demo.local which is Discovered Host
+07/06/2023 14:28:51:122 PM - Individual Host @{id=9ee6a9a81f028540c15e23ba11c3a061; name=SUO04CTCESX3001; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:126 PM - Initiator Found a8bce73889ae44ed8a84c5fc02e2e513 associated with SUO04CTCESX3001 which is Discovered Host
+07/06/2023 14:28:51:130 PM - Adding initiator a8bce73889ae44ed8a84c5fc02e2e513 in the list.
+07/06/2023 14:28:51:133 PM - For the intiator found more than two hosts
+07/06/2023 14:28:51:136 PM - Individual Host @{id=a0be130af8e4a23f779a3713d4b288f2; name=10.1.36.102-Container-ESX2; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:142 PM - Initiator Found b08f0c428770c3bfbc324ce3543869e9 associated with 10.1.36.102-Container-ESX2 which is Discovered Host
+07/06/2023 14:28:51:146 PM - Individual Host @{id=e55dcd7a702cc46cdaaf57217664006f; name=10.1.36.102-Container-ESX2; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:150 PM - Initiator Found b08f0c428770c3bfbc324ce3543869e9 associated with 10.1.36.102-Container-ESX2 which is Discovered Host
+07/06/2023 14:28:51:155 PM - Adding initiator b08f0c428770c3bfbc324ce3543869e9 in the list.
+07/06/2023 14:28:51:162 PM - For the intiator found more than two hosts
+07/06/2023 14:28:51:169 PM - Individual Host @{id=003bfff9fe6bca09dfe4e7869e2e66f2; name=suo04ctcplay4; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:176 PM - Initiator Found b46dcd4fe35046898dce3b14485d2ebc associated with suo04ctcplay4 which is Discovered Host
+07/06/2023 14:28:51:181 PM - Individual Host @{id=0d12438ba70cb93f65b8ce2a7545e3d5; name=suo04ctcplay4; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:185 PM - Initiator Found b46dcd4fe35046898dce3b14485d2ebc associated with suo04ctcplay4 which is Discovered Host
+07/06/2023 14:28:51:189 PM - Adding initiator b46dcd4fe35046898dce3b14485d2ebc in the list.
+07/06/2023 14:28:51:193 PM - For the intiator found more than two hosts
+07/06/2023 14:28:51:195 PM - Individual Host @{id=183f2f60f164262b3adc6fcddee00fb9; name=SUO04CTCSTOWIN; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:199 PM - Initiator Found b5ea036efa9e42709bae293a4d3ef2fe associated with SUO04CTCSTOWIN which is Discovered Host
+07/06/2023 14:28:51:203 PM - Individual Host @{id=3e60c8d23a3dc69a74e1081b1c5b7ddc; name=SUO04CTCSTOWIN; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:207 PM - Initiator Found b5ea036efa9e42709bae293a4d3ef2fe associated with SUO04CTCSTOWIN which is Discovered Host
+07/06/2023 14:28:51:210 PM - Adding initiator b5ea036efa9e42709bae293a4d3ef2fe in the list.
+07/06/2023 14:28:51:215 PM - For the intiator found more than two hosts
+07/06/2023 14:28:51:218 PM - Individual Host @{id=183f2f60f164262b3adc6fcddee00fb9; name=SUO04CTCSTOWIN; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:222 PM - Initiator Found c848e9f1b96646cdbcda3361b5c7ff6a associated with SUO04CTCSTOWIN which is Discovered Host
+07/06/2023 14:28:51:226 PM - Individual Host @{id=3e60c8d23a3dc69a74e1081b1c5b7ddc; name=SUO04CTCSTOWIN; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:230 PM - Initiator Found c848e9f1b96646cdbcda3361b5c7ff6a associated with SUO04CTCSTOWIN which is Discovered Host
+07/06/2023 14:28:51:233 PM - Adding initiator c848e9f1b96646cdbcda3361b5c7ff6a in the list.
+07/06/2023 14:28:51:236 PM - For the intiator found more than two hosts
+07/06/2023 14:28:51:239 PM - Individual Host @{id=2a131c91a8469875b8646d9e697c92cc; name=10.1.36.101-Container-ESX1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:242 PM - Initiator Found d368941328dbd11dec5195c44c685cd6 associated with 10.1.36.101-Container-ESX1 which is Discovered Host
+07/06/2023 14:28:51:246 PM - Individual Host @{id=bee773e82d5896c75ca5a1ecec41280f; name=10.1.36.101-Container-ESX1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:249 PM - Initiator Found d368941328dbd11dec5195c44c685cd6 associated with 10.1.36.101-Container-ESX1 which is Discovered Host
+07/06/2023 14:28:51:253 PM - Adding initiator d368941328dbd11dec5195c44c685cd6 in the list.
+07/06/2023 14:28:51:258 PM - For the intiator found more than two hosts
+07/06/2023 14:28:51:261 PM - Individual Host @{id=003bfff9fe6bca09dfe4e7869e2e66f2; name=suo04ctcplay4; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:264 PM - Initiator Found d3fb2def5baa4c768ffdd678e1849128 associated with suo04ctcplay4 which is Discovered Host
+07/06/2023 14:28:51:268 PM - Individual Host @{id=0d12438ba70cb93f65b8ce2a7545e3d5; name=suo04ctcplay4; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:271 PM - Initiator Found d3fb2def5baa4c768ffdd678e1849128 associated with suo04ctcplay4 which is Discovered Host
+07/06/2023 14:28:51:274 PM - Adding initiator d3fb2def5baa4c768ffdd678e1849128 in the list.
+07/06/2023 14:28:51:278 PM - For the intiator found more than two hosts
+07/06/2023 14:28:51:281 PM - Individual Host @{id=22ea6d9b2026f099f3abee0b277a4fa5; name=10.1.36.103-Container-ESX3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:284 PM - Initiator Found d554c5c3e6ed4e182aea84cdee5417be associated with 10.1.36.103-Container-ESX3 which is Discovered Host
+07/06/2023 14:28:51:288 PM - Individual Host @{id=ba2835a8191e12577827c56a72fb4363; name=10.1.36.103-Container-ESX3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:291 PM - Initiator Found d554c5c3e6ed4e182aea84cdee5417be associated with 10.1.36.103-Container-ESX3 which is Discovered Host
+07/06/2023 14:28:51:294 PM - Adding initiator d554c5c3e6ed4e182aea84cdee5417be in the list.
+07/06/2023 14:28:51:297 PM - For the intiator found more than two hosts
+07/06/2023 14:28:51:301 PM - Individual Host @{id=31345562b50f8a7ee6b8674ef25595ea; name=10.1.36.104-Contain_1838E07EDD1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:304 PM - Initiator Found db4a092565f0e892c09751957c14843c associated with 10.1.36.104-Contain_1838E07EDD1 which is Discovered Host
+07/06/2023 14:28:51:307 PM - Individual Host @{id=659f6d06ec278b6aaacf5f94a37c950f; name=10.1.36.104-Contain_1838E07ECC8; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:311 PM - Initiator Found db4a092565f0e892c09751957c14843c associated with 10.1.36.104-Contain_1838E07ECC8 which is Discovered Host
+07/06/2023 14:28:51:314 PM - Adding initiator db4a092565f0e892c09751957c14843c in the list.
+07/06/2023 14:28:51:318 PM - For the intiator found more than two hosts
+07/06/2023 14:28:51:322 PM - Individual Host @{id=20f27e64b25c397ebe2343b1372445a7; name=suo04ctcplay2; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:325 PM - Initiator Found e28f903a53884800b45abc3c43368f1b associated with suo04ctcplay2 which is Discovered Host
+07/06/2023 14:28:51:328 PM - Individual Host @{id=61cebc63c7e45cfba6341442bf80cdda; name=suo04ctcplay2; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:333 PM - Initiator Found e28f903a53884800b45abc3c43368f1b associated with suo04ctcplay2 which is Discovered Host
+07/06/2023 14:28:51:339 PM - Adding initiator e28f903a53884800b45abc3c43368f1b in the list.
+07/06/2023 14:28:51:343 PM - For the intiator found more than two hosts
+07/06/2023 14:28:51:346 PM - Individual Host @{id=0bf663c860e8aae22959ada4c565c6ad; name=SUO04CTCESX3002; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:350 PM - Initiator Found f4792bd473214eba9885ea71c6d14d9b associated with SUO04CTCESX3002 which is Discovered Host
+07/06/2023 14:28:51:354 PM - Individual Host @{id=5e0c93b2a300460381aa9f7e3cb53952; name=EsxHost-suo04ctcesx3002.demo.local; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:359 PM - Initiator Found f4792bd473214eba9885ea71c6d14d9b associated with EsxHost-suo04ctcesx3002.demo.local which is Discovered Host
+07/06/2023 14:28:51:369 PM - Individual Host @{id=c9e3732189ba4c6f7e2f39b99f210565; name=SUO04CTCESX3002; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:372 PM - Initiator Found f4792bd473214eba9885ea71c6d14d9b associated with SUO04CTCESX3002 which is Discovered Host
+07/06/2023 14:28:51:375 PM - Adding initiator f4792bd473214eba9885ea71c6d14d9b in the list.
+07/06/2023 14:28:51:379 PM - For the intiator found more than two hosts
+07/06/2023 14:28:51:383 PM - Individual Host @{id=20f27e64b25c397ebe2343b1372445a7; name=suo04ctcplay2; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:386 PM - Initiator Found f765e2e65e694789822c4ca9b0cc083c associated with suo04ctcplay2 which is Discovered Host
+07/06/2023 14:28:51:391 PM - Individual Host @{id=61cebc63c7e45cfba6341442bf80cdda; name=suo04ctcplay2; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:394 PM - Initiator Found f765e2e65e694789822c4ca9b0cc083c associated with suo04ctcplay2 which is Discovered Host
+07/06/2023 14:28:51:398 PM - Adding initiator f765e2e65e694789822c4ca9b0cc083c in the list.
+07/06/2023 14:28:51:401 PM - For the intiator found more than two hosts
+07/06/2023 14:28:51:404 PM - Individual Host @{id=0bf663c860e8aae22959ada4c565c6ad; name=SUO04CTCESX3002; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:407 PM - Initiator Found fe8fdb81b2e9413eac72a27279cc5633 associated with SUO04CTCESX3002 which is Discovered Host
+07/06/2023 14:28:51:410 PM - Individual Host @{id=5e0c93b2a300460381aa9f7e3cb53952; name=EsxHost-suo04ctcesx3002.demo.local; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:413 PM - Initiator Found fe8fdb81b2e9413eac72a27279cc5633 associated with EsxHost-suo04ctcesx3002.demo.local which is Discovered Host
+07/06/2023 14:28:51:417 PM - Individual Host @{id=c9e3732189ba4c6f7e2f39b99f210565; name=SUO04CTCESX3002; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:28:51:422 PM - Initiator Found fe8fdb81b2e9413eac72a27279cc5633 associated with SUO04CTCESX3002 which is Discovered Host
+07/06/2023 14:28:51:426 PM - Adding initiator fe8fdb81b2e9413eac72a27279cc5633 in the list.
+07/06/2023 14:29:58:441 PM - Starting the migration tasks...
+07/06/2023 14:30:18:069 PM - Getting host detail from initiator Id 057682e54828484fb2034f928080f4fd
+07/06/2023 14:30:18:076 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20057682e54828484fb2034f928080f4fd
+07/06/2023 14:30:18:865 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:30:18:874 PM - host operating system is not matching
+07/06/2023 14:30:18:879 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:30:18:886 PM - host initiators list is matching
+07/06/2023 14:30:18:889 PM - host initiator count matched
+07/06/2023 14:30:59:091 PM - Creating host SUO04CTCESX3001 with initiators 057682e54828484fb2034f928080f4fd a8bce73889ae44ed8a84c5fc02e2e513
+07/06/2023 14:34:30:563 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+07/06/2023 14:34:30:571 PM - Payload Body: {
+  "operatingSystem": "VMware (ESXi)",
+  "initiatorIds": [
+    "057682e54828484fb2034f928080f4fd",
+    "a8bce73889ae44ed8a84c5fc02e2e513"
+  ],
+  "name": "SUO04CTCESX3001-DSSC",
+  "userCreated": true
+}
+07/06/2023 14:36:33:673 PM - Host with HostName SUO04CTCESX3001-DSSC is created successfully.
+07/06/2023 14:37:07:497 PM - Getting host detail from initiator Id 1ce9b46d4ccb98e30f98839d85de23af
+07/06/2023 14:37:07:502 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%201ce9b46d4ccb98e30f98839d85de23af
+07/06/2023 14:37:07:941 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:37:07:955 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:37:07:965 PM - host initiators list is matching
+07/06/2023 14:37:07:972 PM - host initiator count matched
+07/06/2023 14:37:34:540 PM - Creating host 10.1.36.102-Container-ESX2 with initiators 1ce9b46d4ccb98e30f98839d85de23af b08f0c428770c3bfbc324ce3543869e9
+07/06/2023 14:37:34:546 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+07/06/2023 14:37:34:551 PM - Payload Body: {
+  "operatingSystem": "VMware (ESXi)",
+  "initiatorIds": [
+    "1ce9b46d4ccb98e30f98839d85de23af",
+    "b08f0c428770c3bfbc324ce3543869e9"
+  ],
+  "name": "10.1.36.102-Container-ESX2-DSSC",
+  "userCreated": true
+}
+07/06/2023 14:37:35:969 PM - Host with HostName 10.1.36.102-Container-ESX2-DSSC is created successfully.
+07/06/2023 14:37:35:974 PM - Getting host detail from initiator Id 1f5785754cd64db1a931893ecae394ee
+07/06/2023 14:37:35:978 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%201f5785754cd64db1a931893ecae394ee
+07/06/2023 14:37:36:854 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:37:36:859 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:37:36:863 PM - host initiators list is matching
+07/06/2023 14:37:36:867 PM - host initiator count matched
+07/06/2023 14:37:36:873 PM - Creating host suo04ctcplay3 with initiators 1f5785754cd64db1a931893ecae394ee 6a063c53f870434dab455e98ff26d997
+07/06/2023 14:37:36:878 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+07/06/2023 14:37:36:881 PM - Payload Body: {
+  "operatingSystem": "VMware (ESXi)",
+  "initiatorIds": [
+    "1f5785754cd64db1a931893ecae394ee",
+    "6a063c53f870434dab455e98ff26d997"
+  ],
+  "name": "suo04ctcplay3-DSSC",
+  "userCreated": true
+}
+07/06/2023 14:37:39:061 PM - Host with HostName suo04ctcplay3-DSSC is created successfully.
+07/06/2023 14:37:39:067 PM - Getting host detail from initiator Id 3a9369f9ca2c3f071c01304c3fbdf441
+07/06/2023 14:37:39:072 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%203a9369f9ca2c3f071c01304c3fbdf441
+07/06/2023 14:37:41:522 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:37:41:536 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:37:41:542 PM - host initiators list is matching
+07/06/2023 14:37:41:549 PM - host initiator count matched
+07/06/2023 14:37:41:555 PM - Creating host 10.1.35.106-Container-ESX5 with initiators 3a9369f9ca2c3f071c01304c3fbdf441 a89069965139570b049e1df590a1bf9e
+07/06/2023 14:37:41:565 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+07/06/2023 14:37:41:570 PM - Payload Body: {
+  "operatingSystem": "VMware (ESXi)",
+  "initiatorIds": [
+    "3a9369f9ca2c3f071c01304c3fbdf441",
+    "a89069965139570b049e1df590a1bf9e"
+  ],
+  "name": "10.1.35.106-Container-ESX5-DSSC",
+  "userCreated": true
+}
+07/06/2023 14:37:43:713 PM - Host with HostName 10.1.35.106-Container-ESX5-DSSC is created successfully.
+07/06/2023 14:37:43:722 PM - Getting host detail from initiator Id 42c9aaffb058df294ba30db525cc2089
+07/06/2023 14:37:43:730 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%2042c9aaffb058df294ba30db525cc2089
+07/06/2023 14:37:45:113 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:37:45:119 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:37:45:126 PM - host initiators list is matching
+07/06/2023 14:37:45:130 PM - host initiator count matched
+07/06/2023 14:37:45:133 PM - Creating host 10.1.35.106-Container-ESX6 with initiators 42c9aaffb058df294ba30db525cc2089 4ac473ef68be967dfe2ef67a96308378
+07/06/2023 14:37:45:137 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+07/06/2023 14:37:45:140 PM - Payload Body: {
+  "operatingSystem": "VMware (ESXi)",
+  "initiatorIds": [
+    "42c9aaffb058df294ba30db525cc2089",
+    "4ac473ef68be967dfe2ef67a96308378"
+  ],
+  "name": "10.1.35.106-Container-ESX6-DSSC",
+  "userCreated": true
+}
+07/06/2023 14:37:47:183 PM - Host with HostName 10.1.35.106-Container-ESX6-DSSC is created successfully.
+07/06/2023 14:37:47:188 PM - Getting host detail from initiator Id 4ac473ef68be967dfe2ef67a96308378
+07/06/2023 14:37:47:194 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%204ac473ef68be967dfe2ef67a96308378
+07/06/2023 14:37:47:598 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:37:47:604 PM - No host to be migrated as initiator count is 0.
+07/06/2023 14:37:47:611 PM - Getting host detail from initiator Id 4e804d918f2445ecb9efe70c546dcf23
+07/06/2023 14:37:47:616 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%204e804d918f2445ecb9efe70c546dcf23
+07/06/2023 14:37:49:169 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:37:49:174 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:37:49:179 PM - host initiators list is matching
+07/06/2023 14:37:49:184 PM - host initiator count matched
+07/06/2023 14:37:49:189 PM - Creating host suo04ctcplay1 with initiators 4e804d918f2445ecb9efe70c546dcf23 a1c9a016eb5a45e38eda9e79f43e45bd
+07/06/2023 14:37:49:194 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+07/06/2023 14:37:49:199 PM - Payload Body: {
+  "operatingSystem": "VMware (ESXi)",
+  "initiatorIds": [
+    "4e804d918f2445ecb9efe70c546dcf23",
+    "a1c9a016eb5a45e38eda9e79f43e45bd"
+  ],
+  "name": "suo04ctcplay1-DSSC",
+  "userCreated": true
+}
+07/06/2023 14:37:50:662 PM - Host with HostName suo04ctcplay1-DSSC is created successfully.
+07/06/2023 14:37:50:667 PM - Getting host detail from initiator Id 5328f8f63307953009c19eae6e39c3f0
+07/06/2023 14:37:50:671 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%205328f8f63307953009c19eae6e39c3f0
+07/06/2023 14:37:51:337 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:37:51:343 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:37:51:348 PM - host initiators list is matching
+07/06/2023 14:37:51:354 PM - host initiator count matched
+07/06/2023 14:37:51:361 PM - Creating host 10.1.36.103-Container-ESX3 with initiators 5328f8f63307953009c19eae6e39c3f0 d554c5c3e6ed4e182aea84cdee5417be
+07/06/2023 14:37:51:367 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+07/06/2023 14:37:51:372 PM - Payload Body: {
+  "operatingSystem": "VMware (ESXi)",
+  "initiatorIds": [
+    "5328f8f63307953009c19eae6e39c3f0",
+    "d554c5c3e6ed4e182aea84cdee5417be"
+  ],
+  "name": "10.1.36.103-Container-ESX3-DSSC",
+  "userCreated": true
+}
+07/06/2023 14:37:51:755 PM - Host with HostName 10.1.36.103-Container-ESX3-DSSC is created successfully.
+07/06/2023 14:37:51:762 PM - Getting host detail from initiator Id 59c4d89ad5529997a24eb7a9f37b1799
+07/06/2023 14:37:51:767 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%2059c4d89ad5529997a24eb7a9f37b1799
+07/06/2023 14:37:52:105 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:37:52:112 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:37:52:117 PM - host initiators list is matching
+07/06/2023 14:37:52:123 PM - host initiator count matched
+07/06/2023 14:37:52:129 PM - Creating host 10.1.36.101-Container-ESX1 with initiators 59c4d89ad5529997a24eb7a9f37b1799 d368941328dbd11dec5195c44c685cd6
+07/06/2023 14:37:52:134 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+07/06/2023 14:37:52:138 PM - Payload Body: {
+  "operatingSystem": "VMware (ESXi)",
+  "initiatorIds": [
+    "59c4d89ad5529997a24eb7a9f37b1799",
+    "d368941328dbd11dec5195c44c685cd6"
+  ],
+  "name": "10.1.36.101-Container-ESX1-DSSC",
+  "userCreated": true
+}
+07/06/2023 14:37:52:622 PM - Host with HostName 10.1.36.101-Container-ESX1-DSSC is created successfully.
+07/06/2023 14:37:52:629 PM - Getting host detail from initiator Id 5df97a864c626eba415bbf6fc54d6e70
+07/06/2023 14:37:52:637 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%205df97a864c626eba415bbf6fc54d6e70
+07/06/2023 14:37:53:042 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:37:53:047 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:37:53:051 PM - host initiators list is matching
+07/06/2023 14:37:53:055 PM - host initiator count matched
+07/06/2023 14:37:53:064 PM - Creating host 10.1.36.104-Contain_1838E07EDD1 with initiators 5df97a864c626eba415bbf6fc54d6e70 db4a092565f0e892c09751957c14843c
+07/06/2023 14:37:53:069 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+07/06/2023 14:37:53:073 PM - Payload Body: {
+  "operatingSystem": "VMware (ESXi)",
+  "initiatorIds": [
+    "5df97a864c626eba415bbf6fc54d6e70",
+    "db4a092565f0e892c09751957c14843c"
+  ],
+  "name": "10.1.36.104-Contain_1838E07EDD1-DSSC",
+  "userCreated": true
+}
+07/06/2023 14:37:53:549 PM - Host with HostName 10.1.36.104-Contain_1838E07EDD1-DSSC is created successfully.
+07/06/2023 14:37:53:557 PM - Getting host detail from initiator Id 6a063c53f870434dab455e98ff26d997
+07/06/2023 14:37:53:567 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%206a063c53f870434dab455e98ff26d997
+07/06/2023 14:37:53:876 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:37:53:882 PM - No host to be migrated as initiator count is 0.
+07/06/2023 14:37:53:888 PM - Getting host detail from initiator Id a1c9a016eb5a45e38eda9e79f43e45bd
+07/06/2023 14:37:53:894 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20a1c9a016eb5a45e38eda9e79f43e45bd
+07/06/2023 14:37:54:698 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:37:54:704 PM - No host to be migrated as initiator count is 0.
+07/06/2023 14:37:54:709 PM - Getting host detail from initiator Id a89069965139570b049e1df590a1bf9e
+07/06/2023 14:37:54:714 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20a89069965139570b049e1df590a1bf9e
+07/06/2023 14:37:55:156 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:37:55:164 PM - No host to be migrated as initiator count is 0.
+07/06/2023 14:37:55:178 PM - Getting host detail from initiator Id a8bce73889ae44ed8a84c5fc02e2e513
+07/06/2023 14:37:55:186 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20a8bce73889ae44ed8a84c5fc02e2e513
+07/06/2023 14:37:56:511 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:37:56:517 PM - No host to be migrated as initiator count is 0.
+07/06/2023 14:37:56:525 PM - Getting host detail from initiator Id b08f0c428770c3bfbc324ce3543869e9
+07/06/2023 14:37:56:530 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20b08f0c428770c3bfbc324ce3543869e9
+07/06/2023 14:37:56:972 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:37:56:975 PM - No host to be migrated as initiator count is 0.
+07/06/2023 14:37:56:979 PM - Getting host detail from initiator Id b46dcd4fe35046898dce3b14485d2ebc
+07/06/2023 14:37:56:983 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20b46dcd4fe35046898dce3b14485d2ebc
+07/06/2023 14:38:11:029 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:38:11:036 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:38:11:042 PM - host initiators list is matching
+07/06/2023 14:38:11:049 PM - host initiator count matched
+07/06/2023 14:38:11:053 PM - Creating host suo04ctcplay4 with initiators b46dcd4fe35046898dce3b14485d2ebc d3fb2def5baa4c768ffdd678e1849128
+07/06/2023 14:38:11:062 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+07/06/2023 14:38:11:068 PM - Payload Body: {
+  "operatingSystem": "VMware (ESXi)",
+  "initiatorIds": [
+    "b46dcd4fe35046898dce3b14485d2ebc",
+    "d3fb2def5baa4c768ffdd678e1849128"
+  ],
+  "name": "suo04ctcplay4-DSSC",
+  "userCreated": true
+}
+07/06/2023 14:38:12:656 PM - Host with HostName suo04ctcplay4-DSSC is created successfully.
+07/06/2023 14:38:12:663 PM - Getting host detail from initiator Id b5ea036efa9e42709bae293a4d3ef2fe
+07/06/2023 14:38:12:667 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20b5ea036efa9e42709bae293a4d3ef2fe
+07/06/2023 14:38:13:088 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:38:13:096 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:38:13:102 PM - host initiators list is matching
+07/06/2023 14:38:13:108 PM - host initiator count matched
+07/06/2023 14:38:13:116 PM - Creating host SUO04CTCSTOWIN with initiators b5ea036efa9e42709bae293a4d3ef2fe c848e9f1b96646cdbcda3361b5c7ff6a
+07/06/2023 14:38:13:121 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+07/06/2023 14:38:13:129 PM - Payload Body: {
+  "operatingSystem": "Windows Server",
+  "initiatorIds": [
+    "b5ea036efa9e42709bae293a4d3ef2fe",
+    "c848e9f1b96646cdbcda3361b5c7ff6a"
+  ],
+  "name": "SUO04CTCSTOWIN-DSSC",
+  "userCreated": true
+}
+07/06/2023 14:38:15:214 PM - Host with HostName SUO04CTCSTOWIN-DSSC is created successfully.
+07/06/2023 14:38:15:224 PM - Getting host detail from initiator Id c848e9f1b96646cdbcda3361b5c7ff6a
+07/06/2023 14:38:15:234 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20c848e9f1b96646cdbcda3361b5c7ff6a
+07/06/2023 14:38:15:908 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:38:15:911 PM - No host to be migrated as initiator count is 0.
+07/06/2023 14:38:15:917 PM - Getting host detail from initiator Id d368941328dbd11dec5195c44c685cd6
+07/06/2023 14:38:15:921 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20d368941328dbd11dec5195c44c685cd6
+07/06/2023 14:38:16:219 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:38:16:226 PM - No host to be migrated as initiator count is 0.
+07/06/2023 14:38:16:233 PM - Getting host detail from initiator Id d3fb2def5baa4c768ffdd678e1849128
+07/06/2023 14:38:16:240 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20d3fb2def5baa4c768ffdd678e1849128
+07/06/2023 14:38:16:539 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:38:16:544 PM - No host to be migrated as initiator count is 0.
+07/06/2023 14:38:16:549 PM - Getting host detail from initiator Id d554c5c3e6ed4e182aea84cdee5417be
+07/06/2023 14:38:16:555 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20d554c5c3e6ed4e182aea84cdee5417be
+07/06/2023 14:38:17:265 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:38:17:270 PM - No host to be migrated as initiator count is 0.
+07/06/2023 14:38:17:277 PM - Getting host detail from initiator Id db4a092565f0e892c09751957c14843c
+07/06/2023 14:38:17:283 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20db4a092565f0e892c09751957c14843c
+07/06/2023 14:38:18:075 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:38:18:083 PM - No host to be migrated as initiator count is 0.
+07/06/2023 14:38:18:088 PM - Getting host detail from initiator Id e28f903a53884800b45abc3c43368f1b
+07/06/2023 14:38:18:098 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20e28f903a53884800b45abc3c43368f1b
+07/06/2023 14:38:18:655 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:38:18:667 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:38:18:673 PM - host initiators list is matching
+07/06/2023 14:38:18:678 PM - host initiator count matched
+07/06/2023 14:38:18:683 PM - Creating host suo04ctcplay2 with initiators e28f903a53884800b45abc3c43368f1b f765e2e65e694789822c4ca9b0cc083c
+07/06/2023 14:38:18:689 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+07/06/2023 14:38:18:698 PM - Payload Body: {
+  "operatingSystem": "VMware (ESXi)",
+  "initiatorIds": [
+    "e28f903a53884800b45abc3c43368f1b",
+    "f765e2e65e694789822c4ca9b0cc083c"
+  ],
+  "name": "suo04ctcplay2-DSSC",
+  "userCreated": true
+}
+07/06/2023 14:38:19:397 PM - Host with HostName suo04ctcplay2-DSSC is created successfully.
+07/06/2023 14:38:19:402 PM - Getting host detail from initiator Id f4792bd473214eba9885ea71c6d14d9b
+07/06/2023 14:38:19:406 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20f4792bd473214eba9885ea71c6d14d9b
+07/06/2023 14:38:19:945 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:38:19:949 PM - host operating system is not matching
+07/06/2023 14:38:19:953 PM - Number of initiator in host1 2 and number of initiator in host2 2
+07/06/2023 14:38:19:957 PM - host initiators list is matching
+07/06/2023 14:38:19:964 PM - host initiator count matched
+07/06/2023 14:38:19:967 PM - Creating host SUO04CTCESX3002 with initiators f4792bd473214eba9885ea71c6d14d9b fe8fdb81b2e9413eac72a27279cc5633
+07/06/2023 14:38:19:971 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+07/06/2023 14:38:19:974 PM - Payload Body: {
+  "operatingSystem": "VMware (ESXi)",
+  "initiatorIds": [
+    "f4792bd473214eba9885ea71c6d14d9b",
+    "fe8fdb81b2e9413eac72a27279cc5633"
+  ],
+  "name": "SUO04CTCESX3002-DSSC",
+  "userCreated": true
+}
+07/06/2023 14:38:20:674 PM - Host with HostName SUO04CTCESX3002-DSSC is created successfully.
+07/06/2023 14:38:20:679 PM - Getting host detail from initiator Id f765e2e65e694789822c4ca9b0cc083c
+07/06/2023 14:38:20:684 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20f765e2e65e694789822c4ca9b0cc083c
+07/06/2023 14:38:20:998 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:38:21:003 PM - No host to be migrated as initiator count is 0.
+07/06/2023 14:38:21:007 PM - Getting host detail from initiator Id fe8fdb81b2e9413eac72a27279cc5633
+07/06/2023 14:38:21:012 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20fe8fdb81b2e9413eac72a27279cc5633
+07/06/2023 14:38:21:593 PM - System.Management.Automation.Internal.Host.InternalHost
+07/06/2023 14:38:21:599 PM - No host to be migrated as initiator count is 0.
+07/06/2023 14:38:21:607 PM - Identify single discovered hosts for host migration.
+07/06/2023 14:39:17:550 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/initiators
+07/06/2023 14:39:22:876 PM - Getting discovered/system hosts
+07/06/2023 14:39:22:897 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:22:902 PM - Individual Host @{id=b7d1230da10c251336776a0380dc441c; name=AA-SUO04CTCESX2-129; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:22:908 PM - Initiator found 027ab75be4a1d04a0fa8da379f2dc995 associated with AA-SUO04CTCESX2-129 which is Discovered Host
+07/06/2023 14:39:22:914 PM - Adding initiator 027ab75be4a1d04a0fa8da379f2dc995 in the list.
+07/06/2023 14:39:22:918 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:22:921 PM - Individual Host @{id=94a602e99a3944d5bcc8f3415f5a3831; name=SUO04CTCESX3001-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:22:925 PM - Initiator found 057682e54828484fb2034f928080f4fd associated with SUO04CTCESX3001-DSSC which is User Created Host
+07/06/2023 14:39:22:930 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:22:933 PM - Individual Host @{id=ebf99fe29ea3508e5c35d56338ad7a0b; name=10.1.80.11-G5HE05DL380; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:22:938 PM - Initiator found 0e5788fbfee6ef2b20909bf42c5cf6ef associated with 10.1.80.11-G5HE05DL380 which is Discovered Host
+07/06/2023 14:39:22:941 PM - Adding initiator 0e5788fbfee6ef2b20909bf42c5cf6ef in the list.
+07/06/2023 14:39:22:945 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:22:948 PM - Individual Host @{id=6d195f6e6d4c45609cac006934b3df7f; name=SYH5HE01B6; ipAddress=10.1.20.12; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:22:951 PM - Initiator found 18b16d3a6bd34ee0a5b494ee35ed7380 associated with SYH5HE01B6 which is User Created Host
+07/06/2023 14:39:22:955 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:22:959 PM - Individual Host @{id=250c4f953cff4df7a95f369a403048e2; name=10.1.36.102-Container-ESX2-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:22:963 PM - Initiator found 1ce9b46d4ccb98e30f98839d85de23af associated with 10.1.36.102-Container-ESX2-DSSC which is User Created Host
+07/06/2023 14:39:22:967 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:22:970 PM - Individual Host @{id=60444512f18a7d9978a2f2e636205724; name=AA-SUO04CTCSUSE-121; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:22:974 PM - Initiator found 1db061913e8f78ab17f9d805fa3cb6cc associated with AA-SUO04CTCSUSE-121 which is Discovered Host
+07/06/2023 14:39:22:977 PM - Adding initiator 1db061913e8f78ab17f9d805fa3cb6cc in the list.
+07/06/2023 14:39:22:980 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:22:982 PM - Individual Host @{id=acdec326e8964334971d75a455a94528; name=suo04ctcplay3-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:22:986 PM - Initiator found 1f5785754cd64db1a931893ecae394ee associated with suo04ctcplay3-DSSC which is User Created Host
+07/06/2023 14:39:22:989 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:22:993 PM - Individual Host @{id=0e375182d7b5185dd06f2aa8ad6f7840; name=10.1.35.94-Harvester3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:22:996 PM - Initiator found 206c3e83e7adc8677c732a3614aa3b78 associated with 10.1.35.94-Harvester3 which is Discovered Host
+07/06/2023 14:39:23:000 PM - Adding initiator 206c3e83e7adc8677c732a3614aa3b78 in the list.
+07/06/2023 14:39:23:003 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:006 PM - Individual Host @{id=de29dd0902369d535163dd3ee5b9b65a; name=AA-SUO04CTCESX2-127; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:009 PM - Initiator found 28bd5bd8fb5dd08f025dad738620978c associated with AA-SUO04CTCESX2-127 which is Discovered Host
+07/06/2023 14:39:23:012 PM - Adding initiator 28bd5bd8fb5dd08f025dad738620978c in the list.
+07/06/2023 14:39:23:017 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:021 PM - Individual Host @{id=b7d1230da10c251336776a0380dc441c; name=AA-SUO04CTCESX2-129; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:025 PM - Initiator found 338e3c995ed62d72069e8fdfbc5ed741 associated with AA-SUO04CTCESX2-129 which is Discovered Host
+07/06/2023 14:39:23:029 PM - Adding initiator 338e3c995ed62d72069e8fdfbc5ed741 in the list.
+07/06/2023 14:39:23:032 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:036 PM - Individual Host @{id=a6f122612caba94c6299e7dfcdf16f98; name=10.1.35.91-Harveste_1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:038 PM - Initiator found 363532cd54f9a016f0a1a7a11ac02c78 associated with 10.1.35.91-Harveste_1 which is Discovered Host
+07/06/2023 14:39:23:041 PM - Adding initiator 363532cd54f9a016f0a1a7a11ac02c78 in the list.
+07/06/2023 14:39:23:044 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:047 PM - Individual Host @{id=a6f122612caba94c6299e7dfcdf16f98; name=10.1.35.91-Harveste_1; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:050 PM - Initiator found 38602b01ccd640bbb47c1dfa58f52859 associated with 10.1.35.91-Harveste_1 which is Discovered Host
+07/06/2023 14:39:23:054 PM - Adding initiator 38602b01ccd640bbb47c1dfa58f52859 in the list.
+07/06/2023 14:39:23:059 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:062 PM - Individual Host @{id=4d8f5c5046114d63983c1cccaab58713; name=10.1.35.106-Container-ESX5-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:065 PM - Initiator found 3a9369f9ca2c3f071c01304c3fbdf441 associated with 10.1.35.106-Container-ESX5-DSSC which is User Created Host
+07/06/2023 14:39:23:069 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:072 PM - Individual Host @{id=0e375182d7b5185dd06f2aa8ad6f7840; name=10.1.35.94-Harvester3; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:075 PM - Initiator found 4205353a91d8bd8df0b3a9db3a74a644 associated with 10.1.35.94-Harvester3 which is Discovered Host
+07/06/2023 14:39:23:078 PM - Adding initiator 4205353a91d8bd8df0b3a9db3a74a644 in the list.
+07/06/2023 14:39:23:080 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:083 PM - Individual Host @{id=5968cc4fe72f4067b9605522628b13e0; name=10.1.35.106-Container-ESX6-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:086 PM - Initiator found 42c9aaffb058df294ba30db525cc2089 associated with 10.1.35.106-Container-ESX6-DSSC which is User Created Host
+07/06/2023 14:39:23:090 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:095 PM - Individual Host @{id=92249be25f5b4e73aaba0d4867af8207; name=SYH5HE01B5; ipAddress=10.1.20.11; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:100 PM - Initiator found 488d651ed372436e851d844057eaf44c associated with SYH5HE01B5 which is User Created Host
+07/06/2023 14:39:23:104 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:107 PM - Individual Host @{id=5968cc4fe72f4067b9605522628b13e0; name=10.1.35.106-Container-ESX6-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:111 PM - Initiator found 4ac473ef68be967dfe2ef67a96308378 associated with 10.1.35.106-Container-ESX6-DSSC which is User Created Host
+07/06/2023 14:39:23:114 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:118 PM - Individual Host @{id=4e7a716fc27b4774911050ae51da9f8b; name=suo04ctcplay1-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:121 PM - Initiator found 4e804d918f2445ecb9efe70c546dcf23 associated with suo04ctcplay1-DSSC which is User Created Host
+07/06/2023 14:39:23:126 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:130 PM - Individual Host @{id=92249be25f5b4e73aaba0d4867af8207; name=SYH5HE01B5; ipAddress=10.1.20.11; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:134 PM - Initiator found 4fa5e24fc743484499ab480c9bd1a547 associated with SYH5HE01B5 which is User Created Host
+07/06/2023 14:39:23:138 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:142 PM - Individual Host @{id=222c72fcfda249f18e647fb825b8f50d; name=10.1.36.103-Container-ESX3-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:146 PM - Initiator found 5328f8f63307953009c19eae6e39c3f0 associated with 10.1.36.103-Container-ESX3-DSSC which is User Created Host
+07/06/2023 14:39:23:149 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:153 PM - Individual Host @{id=b74369d1e0f7472dae92bff580578420; name=10.1.36.101-Container-ESX1-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:157 PM - Initiator found 59c4d89ad5529997a24eb7a9f37b1799 associated with 10.1.36.101-Container-ESX1-DSSC which is User Created Host
+07/06/2023 14:39:23:167 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:174 PM - Individual Host @{id=cf2670c4e4fe4004bd82855f08d833b2; name=10.1.36.104-Contain_1838E07EDD1-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:179 PM - Initiator found 5df97a864c626eba415bbf6fc54d6e70 associated with 10.1.36.104-Contain_1838E07EDD1-DSSC which is User Created Host
+07/06/2023 14:39:23:187 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:195 PM - Individual Host @{id=ea08483db007ac70625100674c21729d; name=10.1.35.94-Harvester4; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:202 PM - Initiator found 63a75fad20d24b008c963be8f51145b1 associated with 10.1.35.94-Harvester4 which is Discovered Host
+07/06/2023 14:39:23:209 PM - Adding initiator 63a75fad20d24b008c963be8f51145b1 in the list.
+07/06/2023 14:39:23:217 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:227 PM - Individual Host @{id=ec470b7f3a961ccd1b029579fb63d28a; name=AA-SUO04CTCSUSE-122; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:237 PM - Initiator found 63c2f2a9c0ca359e499c11e42f1b95fc associated with AA-SUO04CTCSUSE-122 which is Discovered Host
+07/06/2023 14:39:23:245 PM - Adding initiator 63c2f2a9c0ca359e499c11e42f1b95fc in the list.
+07/06/2023 14:39:23:255 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:271 PM - Individual Host @{id=acdec326e8964334971d75a455a94528; name=suo04ctcplay3-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:278 PM - Initiator found 6a063c53f870434dab455e98ff26d997 associated with suo04ctcplay3-DSSC which is User Created Host
+07/06/2023 14:39:23:284 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:289 PM - Individual Host @{id=dadbf34f46b845c8bdfdfce72ebbe9bf; name=Martin-Test-Host; ipAddress=; systems=; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:294 PM - Initiator found 7a27ca19eb3a4c26a5370822f8f91a7a associated with Martin-Test-Host which is User Created Host
+07/06/2023 14:39:23:298 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:302 PM - Individual Host @{id=dadbf34f46b845c8bdfdfce72ebbe9bf; name=Martin-Test-Host; ipAddress=; systems=; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:306 PM - Initiator found 8129b3fa32504fa892be7aba0261e386 associated with Martin-Test-Host which is User Created Host
+07/06/2023 14:39:23:310 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:314 PM - Individual Host @{id=a6cc3f287c0582c60452483124ae1494; name=AA-SUO04CTCESX2-128; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:318 PM - Initiator found 882a0ddd0cae583ca15b2097b001a8c5 associated with AA-SUO04CTCESX2-128 which is Discovered Host
+07/06/2023 14:39:23:321 PM - Adding initiator 882a0ddd0cae583ca15b2097b001a8c5 in the list.
+07/06/2023 14:39:23:327 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:330 PM - Individual Host @{id=0e8d38b180c7f875709773d2f08f22ec; name=10.1.80.12-G5HE35DL380; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:334 PM - Initiator found 883a9f4dec35ecbbc26a15d65c6b1bd2 associated with 10.1.80.12-G5HE35DL380 which is Discovered Host
+07/06/2023 14:39:23:338 PM - Adding initiator 883a9f4dec35ecbbc26a15d65c6b1bd2 in the list.
+07/06/2023 14:39:23:342 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:346 PM - Individual Host @{id=ebf99fe29ea3508e5c35d56338ad7a0b; name=10.1.80.11-G5HE05DL380; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:349 PM - Initiator found 91a60f68d86f517182081069cba7c032 associated with 10.1.80.11-G5HE05DL380 which is Discovered Host
+07/06/2023 14:39:23:352 PM - Adding initiator 91a60f68d86f517182081069cba7c032 in the list.
+07/06/2023 14:39:23:355 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:359 PM - Individual Host @{id=60444512f18a7d9978a2f2e636205724; name=AA-SUO04CTCSUSE-121; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:362 PM - Initiator found 9538b4d2734ffd88f711866a51715956 associated with AA-SUO04CTCSUSE-121 which is Discovered Host
+07/06/2023 14:39:23:365 PM - Adding initiator 9538b4d2734ffd88f711866a51715956 in the list.
+07/06/2023 14:39:23:370 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:373 PM - Individual Host @{id=de29dd0902369d535163dd3ee5b9b65a; name=AA-SUO04CTCESX2-127; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:376 PM - Initiator found 9d6049e89ccfab6ccdeef71bd9c1337d associated with AA-SUO04CTCESX2-127 which is Discovered Host
+07/06/2023 14:39:23:379 PM - Adding initiator 9d6049e89ccfab6ccdeef71bd9c1337d in the list.
+07/06/2023 14:39:23:382 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:385 PM - Individual Host @{id=4e7a716fc27b4774911050ae51da9f8b; name=suo04ctcplay1-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:388 PM - Initiator found a1c9a016eb5a45e38eda9e79f43e45bd associated with suo04ctcplay1-DSSC which is User Created Host
+07/06/2023 14:39:23:392 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:396 PM - Individual Host @{id=4d8f5c5046114d63983c1cccaab58713; name=10.1.35.106-Container-ESX5-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:400 PM - Initiator found a89069965139570b049e1df590a1bf9e associated with 10.1.35.106-Container-ESX5-DSSC which is User Created Host
+07/06/2023 14:39:23:405 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:409 PM - Individual Host @{id=94a602e99a3944d5bcc8f3415f5a3831; name=SUO04CTCESX3001-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:413 PM - Initiator found a8bce73889ae44ed8a84c5fc02e2e513 associated with SUO04CTCESX3001-DSSC which is User Created Host
+07/06/2023 14:39:23:416 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:420 PM - Individual Host @{id=6d195f6e6d4c45609cac006934b3df7f; name=SYH5HE01B6; ipAddress=10.1.20.12; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:427 PM - Initiator found aeaa12cebe824cb19903856b6e95fdc4 associated with SYH5HE01B6 which is User Created Host
+07/06/2023 14:39:23:434 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:438 PM - Individual Host @{id=250c4f953cff4df7a95f369a403048e2; name=10.1.36.102-Container-ESX2-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:445 PM - Initiator found b08f0c428770c3bfbc324ce3543869e9 associated with 10.1.36.102-Container-ESX2-DSSC which is User Created Host
+07/06/2023 14:39:23:449 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:454 PM - Individual Host @{id=a6cc3f287c0582c60452483124ae1494; name=AA-SUO04CTCESX2-128; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:459 PM - Initiator found b3969ffa4e1f7f2cba8cf07c185b0de2 associated with AA-SUO04CTCESX2-128 which is Discovered Host
+07/06/2023 14:39:23:464 PM - Adding initiator b3969ffa4e1f7f2cba8cf07c185b0de2 in the list.
+07/06/2023 14:39:23:469 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:474 PM - Individual Host @{id=53e5bdda45c6402c974b5ec6cd5d5948; name=suo04ctcplay4-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:479 PM - Initiator found b46dcd4fe35046898dce3b14485d2ebc associated with suo04ctcplay4-DSSC which is User Created Host
+07/06/2023 14:39:23:482 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:485 PM - Individual Host @{id=160931ed806d4791a017de8842181de8; name=SUO04CTCSTOWIN-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:488 PM - Initiator found b5ea036efa9e42709bae293a4d3ef2fe associated with SUO04CTCSTOWIN-DSSC which is User Created Host
+07/06/2023 14:39:23:492 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:496 PM - Individual Host @{id=e626159697ca4c45a2402313813abac7; name=SYH5HE01B11; ipAddress=10.1.20.13; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:500 PM - Initiator found be5debe981da4dd68ff9e3aec938f93d associated with SYH5HE01B11 which is User Created Host
+07/06/2023 14:39:23:503 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:506 PM - Individual Host @{id=0e8d38b180c7f875709773d2f08f22ec; name=10.1.80.12-G5HE35DL380; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:509 PM - Initiator found c841443cbb89631c7439198d5dc52499 associated with 10.1.80.12-G5HE35DL380 which is Discovered Host
+07/06/2023 14:39:23:512 PM - Adding initiator c841443cbb89631c7439198d5dc52499 in the list.
+07/06/2023 14:39:23:515 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:518 PM - Individual Host @{id=160931ed806d4791a017de8842181de8; name=SUO04CTCSTOWIN-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:521 PM - Initiator found c848e9f1b96646cdbcda3361b5c7ff6a associated with SUO04CTCSTOWIN-DSSC which is User Created Host
+07/06/2023 14:39:23:535 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:538 PM - Individual Host @{id=e626159697ca4c45a2402313813abac7; name=SYH5HE01B11; ipAddress=10.1.20.13; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:543 PM - Initiator found cd88fa0d62174f17a33e3b8e12677afd associated with SYH5HE01B11 which is User Created Host
+07/06/2023 14:39:23:548 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:554 PM - Individual Host @{id=b74369d1e0f7472dae92bff580578420; name=10.1.36.101-Container-ESX1-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:560 PM - Initiator found d368941328dbd11dec5195c44c685cd6 associated with 10.1.36.101-Container-ESX1-DSSC which is User Created Host
+07/06/2023 14:39:23:564 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:570 PM - Individual Host @{id=53e5bdda45c6402c974b5ec6cd5d5948; name=suo04ctcplay4-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:576 PM - Initiator found d3fb2def5baa4c768ffdd678e1849128 associated with suo04ctcplay4-DSSC which is User Created Host
+07/06/2023 14:39:23:580 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:586 PM - Individual Host @{id=222c72fcfda249f18e647fb825b8f50d; name=10.1.36.103-Container-ESX3-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:594 PM - Initiator found d554c5c3e6ed4e182aea84cdee5417be associated with 10.1.36.103-Container-ESX3-DSSC which is User Created Host
+07/06/2023 14:39:23:598 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:606 PM - Individual Host @{id=cf2670c4e4fe4004bd82855f08d833b2; name=10.1.36.104-Contain_1838E07EDD1-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:613 PM - Initiator found db4a092565f0e892c09751957c14843c associated with 10.1.36.104-Contain_1838E07EDD1-DSSC which is User Created Host
+07/06/2023 14:39:23:621 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:628 PM - Individual Host @{id=5bbf236662f24aa4b1342c5a2fb2cf4b; name=suo04ctcplay2-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:636 PM - Initiator found e28f903a53884800b45abc3c43368f1b associated with suo04ctcplay2-DSSC which is User Created Host
+07/06/2023 14:39:23:643 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:648 PM - Individual Host @{id=ec470b7f3a961ccd1b029579fb63d28a; name=AA-SUO04CTCSUSE-122; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:654 PM - Initiator found eb19f890cfebc499242f1b708c6210f7 associated with AA-SUO04CTCSUSE-122 which is Discovered Host
+07/06/2023 14:39:23:662 PM - Adding initiator eb19f890cfebc499242f1b708c6210f7 in the list.
+07/06/2023 14:39:23:672 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:680 PM - Individual Host @{id=be1354e5c60b44d8b99979b8198d5546; name=SUO04CTCESX3002-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:686 PM - Initiator found f4792bd473214eba9885ea71c6d14d9b associated with SUO04CTCESX3002-DSSC which is User Created Host
+07/06/2023 14:39:23:694 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:699 PM - Individual Host @{id=5bbf236662f24aa4b1342c5a2fb2cf4b; name=suo04ctcplay2-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:707 PM - Initiator found f765e2e65e694789822c4ca9b0cc083c associated with suo04ctcplay2-DSSC which is User Created Host
+07/06/2023 14:39:23:714 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:722 PM - Individual Host @{id=be1354e5c60b44d8b99979b8198d5546; name=SUO04CTCESX3002-DSSC; ipAddress=; systems=System.Object[]; userCreated=True; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:727 PM - Initiator found fe8fdb81b2e9413eac72a27279cc5633 associated with SUO04CTCESX3002-DSSC which is User Created Host
+07/06/2023 14:39:23:732 PM - Found single discovered Host for the initiator
+07/06/2023 14:39:23:739 PM - Individual Host @{id=ea08483db007ac70625100674c21729d; name=10.1.35.94-Harvester4; ipAddress=; systems=System.Object[]; userCreated=False; hostGroups=System.Object[]; markedForDelete=False}
+07/06/2023 14:39:23:744 PM - Initiator found ffa6fa05635b23b97be9d0bef5253111 associated with 10.1.35.94-Harvester4 which is Discovered Host
+07/06/2023 14:39:23:749 PM - Adding initiator ffa6fa05635b23b97be9d0bef5253111 in the list.
+07/06/2023 14:39:23:754 PM - Initiator with single discovered host found on the Array: 20
+07/06/2023 14:40:20:651 PM - Getting host detail from initiator Id 027ab75be4a1d04a0fa8da379f2dc995
+07/06/2023 14:40:20:666 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20027ab75be4a1d04a0fa8da379f2dc995
+07/06/2023 14:40:21:236 PM - Host Id: b7d1230da10c251336776a0380dc441c
+07/06/2023 14:40:21:242 PM - Operating System: VMware (ESXi)
+07/06/2023 14:40:21:247 PM - Host Name: AA-SUO04CTCESX2-129
+07/06/2023 14:40:21:251 PM - Initiator List: 027ab75be4a1d04a0fa8da379f2dc995 338e3c995ed62d72069e8fdfbc5ed741
+07/06/2023 14:40:21:257 PM - Getting host detail from initiator Id 0e5788fbfee6ef2b20909bf42c5cf6ef
+07/06/2023 14:40:21:268 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%200e5788fbfee6ef2b20909bf42c5cf6ef
+07/06/2023 14:40:21:705 PM - Host Id: ebf99fe29ea3508e5c35d56338ad7a0b
+07/06/2023 14:40:21:709 PM - Operating System: VMware (ESXi)
+07/06/2023 14:40:21:715 PM - Host Name: 10.1.80.11-G5HE05DL380
+07/06/2023 14:40:21:720 PM - Initiator List: 0e5788fbfee6ef2b20909bf42c5cf6ef 91a60f68d86f517182081069cba7c032
+07/06/2023 14:40:21:724 PM - Getting host detail from initiator Id 1db061913e8f78ab17f9d805fa3cb6cc
+07/06/2023 14:40:21:730 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%201db061913e8f78ab17f9d805fa3cb6cc
+07/06/2023 14:40:22:128 PM - Host Id: 60444512f18a7d9978a2f2e636205724
+07/06/2023 14:40:22:144 PM - Operating System: SuSE (10.x, 11.x, 12.x, 15.x)
+07/06/2023 14:40:22:152 PM - Host Name: AA-SUO04CTCSUSE-121
+07/06/2023 14:40:22:160 PM - Initiator List: 1db061913e8f78ab17f9d805fa3cb6cc 9538b4d2734ffd88f711866a51715956
+07/06/2023 14:40:22:169 PM - Getting host detail from initiator Id 206c3e83e7adc8677c732a3614aa3b78
+07/06/2023 14:40:22:174 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20206c3e83e7adc8677c732a3614aa3b78
+07/06/2023 14:40:22:527 PM - Host Id: 0e375182d7b5185dd06f2aa8ad6f7840
+07/06/2023 14:40:22:530 PM - Operating System: SuSE (10.x, 11.x, 12.x, 15.x)
+07/06/2023 14:40:22:534 PM - Host Name: 10.1.35.94-Harvester3
+07/06/2023 14:40:22:538 PM - Initiator List: 206c3e83e7adc8677c732a3614aa3b78 4205353a91d8bd8df0b3a9db3a74a644
+07/06/2023 14:40:22:541 PM - Getting host detail from initiator Id 28bd5bd8fb5dd08f025dad738620978c
+07/06/2023 14:40:22:545 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%2028bd5bd8fb5dd08f025dad738620978c
+07/06/2023 14:40:22:896 PM - Host Id: de29dd0902369d535163dd3ee5b9b65a
+07/06/2023 14:40:22:902 PM - Operating System: VMware (ESXi)
+07/06/2023 14:40:22:908 PM - Host Name: AA-SUO04CTCESX2-127
+07/06/2023 14:40:22:913 PM - Initiator List: 28bd5bd8fb5dd08f025dad738620978c 9d6049e89ccfab6ccdeef71bd9c1337d
+07/06/2023 14:40:22:917 PM - Getting host detail from initiator Id 338e3c995ed62d72069e8fdfbc5ed741
+07/06/2023 14:40:22:920 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20338e3c995ed62d72069e8fdfbc5ed741
+07/06/2023 14:40:23:280 PM - Host Id: b7d1230da10c251336776a0380dc441c
+07/06/2023 14:40:23:286 PM - Operating System: VMware (ESXi)
+07/06/2023 14:40:23:291 PM - Host Name: AA-SUO04CTCESX2-129
+07/06/2023 14:40:23:296 PM - Initiator List: 027ab75be4a1d04a0fa8da379f2dc995 338e3c995ed62d72069e8fdfbc5ed741
+07/06/2023 14:40:23:300 PM - Getting host detail from initiator Id 363532cd54f9a016f0a1a7a11ac02c78
+07/06/2023 14:40:23:306 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20363532cd54f9a016f0a1a7a11ac02c78
+07/06/2023 14:40:23:605 PM - Host Id: a6f122612caba94c6299e7dfcdf16f98
+07/06/2023 14:40:23:611 PM - Operating System: SuSE Linux
+07/06/2023 14:40:23:616 PM - Host Name: 10.1.35.91-Harveste_1
+07/06/2023 14:40:23:623 PM - Initiator List: 363532cd54f9a016f0a1a7a11ac02c78 38602b01ccd640bbb47c1dfa58f52859
+07/06/2023 14:40:23:628 PM - Getting host detail from initiator Id 38602b01ccd640bbb47c1dfa58f52859
+07/06/2023 14:40:23:632 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%2038602b01ccd640bbb47c1dfa58f52859
+07/06/2023 14:40:24:332 PM - Host Id: a6f122612caba94c6299e7dfcdf16f98
+07/06/2023 14:40:24:338 PM - Operating System: SuSE Linux
+07/06/2023 14:40:24:342 PM - Host Name: 10.1.35.91-Harveste_1
+07/06/2023 14:40:24:347 PM - Initiator List: 363532cd54f9a016f0a1a7a11ac02c78 38602b01ccd640bbb47c1dfa58f52859
+07/06/2023 14:40:24:351 PM - Getting host detail from initiator Id 4205353a91d8bd8df0b3a9db3a74a644
+07/06/2023 14:40:24:355 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%204205353a91d8bd8df0b3a9db3a74a644
+07/06/2023 14:40:24:664 PM - Host Id: 0e375182d7b5185dd06f2aa8ad6f7840
+07/06/2023 14:40:24:670 PM - Operating System: SuSE (10.x, 11.x, 12.x, 15.x)
+07/06/2023 14:40:24:674 PM - Host Name: 10.1.35.94-Harvester3
+07/06/2023 14:40:24:680 PM - Initiator List: 206c3e83e7adc8677c732a3614aa3b78 4205353a91d8bd8df0b3a9db3a74a644
+07/06/2023 14:40:24:685 PM - Getting host detail from initiator Id 63a75fad20d24b008c963be8f51145b1
+07/06/2023 14:40:24:688 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%2063a75fad20d24b008c963be8f51145b1
+07/06/2023 14:40:25:166 PM - Host Id: ea08483db007ac70625100674c21729d
+07/06/2023 14:40:25:172 PM - Operating System: SuSE (10.x, 11.x, 12.x, 15.x)
+07/06/2023 14:40:25:178 PM - Host Name: 10.1.35.94-Harvester4
+07/06/2023 14:40:25:182 PM - Initiator List: 63a75fad20d24b008c963be8f51145b1 ffa6fa05635b23b97be9d0bef5253111
+07/06/2023 14:40:25:186 PM - Getting host detail from initiator Id 63c2f2a9c0ca359e499c11e42f1b95fc
+07/06/2023 14:40:25:191 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%2063c2f2a9c0ca359e499c11e42f1b95fc
+07/06/2023 14:40:25:722 PM - Host Id: ec470b7f3a961ccd1b029579fb63d28a
+07/06/2023 14:40:25:727 PM - Operating System: SuSE (10.x, 11.x, 12.x, 15.x)
+07/06/2023 14:40:25:731 PM - Host Name: AA-SUO04CTCSUSE-122
+07/06/2023 14:40:25:735 PM - Initiator List: 63c2f2a9c0ca359e499c11e42f1b95fc eb19f890cfebc499242f1b708c6210f7
+07/06/2023 14:40:25:740 PM - Getting host detail from initiator Id 882a0ddd0cae583ca15b2097b001a8c5
+07/06/2023 14:40:25:744 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20882a0ddd0cae583ca15b2097b001a8c5
+07/06/2023 14:40:26:068 PM - Host Id: a6cc3f287c0582c60452483124ae1494
+07/06/2023 14:40:26:073 PM - Operating System: VMware (ESXi)
+07/06/2023 14:40:26:077 PM - Host Name: AA-SUO04CTCESX2-128
+07/06/2023 14:40:26:082 PM - Initiator List: 882a0ddd0cae583ca15b2097b001a8c5 b3969ffa4e1f7f2cba8cf07c185b0de2
+07/06/2023 14:40:26:087 PM - Getting host detail from initiator Id 883a9f4dec35ecbbc26a15d65c6b1bd2
+07/06/2023 14:40:26:092 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20883a9f4dec35ecbbc26a15d65c6b1bd2
+07/06/2023 14:40:26:399 PM - Host Id: 0e8d38b180c7f875709773d2f08f22ec
+07/06/2023 14:40:26:404 PM - Operating System: VMware (ESXi)
+07/06/2023 14:40:26:409 PM - Host Name: 10.1.80.12-G5HE35DL380
+07/06/2023 14:40:26:413 PM - Initiator List: 883a9f4dec35ecbbc26a15d65c6b1bd2 c841443cbb89631c7439198d5dc52499
+07/06/2023 14:40:26:418 PM - Getting host detail from initiator Id 91a60f68d86f517182081069cba7c032
+07/06/2023 14:40:26:422 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%2091a60f68d86f517182081069cba7c032
+07/06/2023 14:40:26:889 PM - Host Id: ebf99fe29ea3508e5c35d56338ad7a0b
+07/06/2023 14:40:26:902 PM - Operating System: VMware (ESXi)
+07/06/2023 14:40:26:908 PM - Host Name: 10.1.80.11-G5HE05DL380
+07/06/2023 14:40:26:914 PM - Initiator List: 0e5788fbfee6ef2b20909bf42c5cf6ef 91a60f68d86f517182081069cba7c032
+07/06/2023 14:40:26:919 PM - Getting host detail from initiator Id 9538b4d2734ffd88f711866a51715956
+07/06/2023 14:40:26:924 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%209538b4d2734ffd88f711866a51715956
+07/06/2023 14:40:27:301 PM - Host Id: 60444512f18a7d9978a2f2e636205724
+07/06/2023 14:40:27:304 PM - Operating System: SuSE (10.x, 11.x, 12.x, 15.x)
+07/06/2023 14:40:27:308 PM - Host Name: AA-SUO04CTCSUSE-121
+07/06/2023 14:40:27:311 PM - Initiator List: 1db061913e8f78ab17f9d805fa3cb6cc 9538b4d2734ffd88f711866a51715956
+07/06/2023 14:40:27:315 PM - Getting host detail from initiator Id 9d6049e89ccfab6ccdeef71bd9c1337d
+07/06/2023 14:40:27:320 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%209d6049e89ccfab6ccdeef71bd9c1337d
+07/06/2023 14:40:27:662 PM - Host Id: de29dd0902369d535163dd3ee5b9b65a
+07/06/2023 14:40:27:676 PM - Operating System: VMware (ESXi)
+07/06/2023 14:40:27:685 PM - Host Name: AA-SUO04CTCESX2-127
+07/06/2023 14:40:27:693 PM - Initiator List: 28bd5bd8fb5dd08f025dad738620978c 9d6049e89ccfab6ccdeef71bd9c1337d
+07/06/2023 14:40:27:699 PM - Getting host detail from initiator Id b3969ffa4e1f7f2cba8cf07c185b0de2
+07/06/2023 14:40:27:706 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20b3969ffa4e1f7f2cba8cf07c185b0de2
+07/06/2023 14:40:27:980 PM - Host Id: a6cc3f287c0582c60452483124ae1494
+07/06/2023 14:40:27:987 PM - Operating System: VMware (ESXi)
+07/06/2023 14:40:27:994 PM - Host Name: AA-SUO04CTCESX2-128
+07/06/2023 14:40:27:999 PM - Initiator List: 882a0ddd0cae583ca15b2097b001a8c5 b3969ffa4e1f7f2cba8cf07c185b0de2
+07/06/2023 14:40:28:003 PM - Getting host detail from initiator Id c841443cbb89631c7439198d5dc52499
+07/06/2023 14:40:28:006 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20c841443cbb89631c7439198d5dc52499
+07/06/2023 14:40:28:618 PM - Host Id: 0e8d38b180c7f875709773d2f08f22ec
+07/06/2023 14:40:28:621 PM - Operating System: VMware (ESXi)
+07/06/2023 14:40:28:627 PM - Host Name: 10.1.80.12-G5HE35DL380
+07/06/2023 14:40:28:632 PM - Initiator List: 883a9f4dec35ecbbc26a15d65c6b1bd2 c841443cbb89631c7439198d5dc52499
+07/06/2023 14:40:28:638 PM - Getting host detail from initiator Id eb19f890cfebc499242f1b708c6210f7
+07/06/2023 14:40:28:643 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20eb19f890cfebc499242f1b708c6210f7
+07/06/2023 14:40:29:118 PM - Host Id: ec470b7f3a961ccd1b029579fb63d28a
+07/06/2023 14:40:29:123 PM - Operating System: SuSE (10.x, 11.x, 12.x, 15.x)
+07/06/2023 14:40:29:128 PM - Host Name: AA-SUO04CTCSUSE-122
+07/06/2023 14:40:29:132 PM - Initiator List: 63c2f2a9c0ca359e499c11e42f1b95fc eb19f890cfebc499242f1b708c6210f7
+07/06/2023 14:40:29:135 PM - Getting host detail from initiator Id ffa6fa05635b23b97be9d0bef5253111
+07/06/2023 14:40:29:139 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators?filter=initiatorId%20eq%20ffa6fa05635b23b97be9d0bef5253111
+07/06/2023 14:40:29:485 PM - Host Id: ea08483db007ac70625100674c21729d
+07/06/2023 14:40:29:488 PM - Operating System: SuSE (10.x, 11.x, 12.x, 15.x)
+07/06/2023 14:40:29:493 PM - Host Name: 10.1.35.94-Harvester4
+07/06/2023 14:40:29:497 PM - Initiator List: 63a75fad20d24b008c963be8f51145b1 ffa6fa05635b23b97be9d0bef5253111
+07/06/2023 14:40:46:696 PM - Waiting for edit host operations to complete...
+07/06/2023 14:42:27:847 PM - Getting host detail
+07/06/2023 14:42:27:853 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+07/06/2023 14:42:28:769 PM - Host Name: 10.1.35.94-Harvester3
+07/06/2023 14:42:28:792 PM - No Host Initiators with -DSSC in hostName found on the array!!
+07/06/2023 14:42:28:803 PM - Host Name: 10.1.80.12-G5HE35DL380
+07/06/2023 14:42:28:811 PM - No Host Initiators with -DSSC in hostName found on the array!!
+07/06/2023 14:42:28:819 PM - Host Name: SUO04CTCSTOWIN-DSSC
+07/06/2023 14:42:28:827 PM - Host Name: 10.1.36.103-Container-ESX3-DSSC
+07/06/2023 14:42:28:834 PM - Host Name: 10.1.36.102-Container-ESX2-DSSC
+07/06/2023 14:42:28:841 PM - Host Name: 10.1.35.106-Container-ESX5-DSSC
+07/06/2023 14:42:28:847 PM - Host Name: suo04ctcplay1-DSSC
+07/06/2023 14:42:28:853 PM - Host Name: suo04ctcplay4-DSSC
+07/06/2023 14:42:28:862 PM - Host Name: 10.1.35.106-Container-ESX6-DSSC
+07/06/2023 14:42:28:866 PM - Host Name: suo04ctcplay2-DSSC
+07/06/2023 14:42:28:873 PM - Host Name: AA-SUO04CTCSUSE-121
+07/06/2023 14:42:28:877 PM - Host Name: SYH5HE01B6
+07/06/2023 14:42:28:880 PM - Host Name: SYH5HE01B5
+07/06/2023 14:42:28:883 PM - Host Name: SUO04CTCESX3001-DSSC
+07/06/2023 14:42:28:887 PM - Host Name: AA-SUO04CTCESX2-128
+07/06/2023 14:42:28:893 PM - Host Name: 10.1.35.91-Harveste_1
+07/06/2023 14:42:28:897 PM - Host Name: suo04ctcplay3-DSSC
+07/06/2023 14:42:28:901 PM - Host Name: 10.1.36.101-Container-ESX1-DSSC
+07/06/2023 14:42:28:905 PM - Host Name: AA-SUO04CTCESX2-129
+07/06/2023 14:42:28:908 PM - Host Name: SUO04CTCESX3002-DSSC
+07/06/2023 14:42:28:917 PM - Host Name: 10.1.36.104-Contain_1838E07EDD1-DSSC
+07/06/2023 14:42:28:922 PM - Host Name: Martin-Test-Host
+07/06/2023 14:42:28:927 PM - Host Name: AA-SUO04CTCESX2-127
+07/06/2023 14:42:28:931 PM - Host Name: SYH5HE01B11
+07/06/2023 14:42:28:935 PM - Host Name: 10.1.35.94-Harvester4
+07/06/2023 14:42:28:940 PM - Host Name: 10.1.80.11-G5HE05DL380
+07/06/2023 14:42:28:943 PM - Host Name: AA-SUO04CTCSUSE-122
+07/06/2023 14:43:11:747 PM - No of Hosts which needs to be Updated Back to original HostName is 13
+07/06/2023 14:44:00:037 PM - Editing host detail of host Id 160931ed806d4791a017de8842181de8
+07/06/2023 14:44:34:286 PM - Updating the host name to UO04CTCSTOWIN with URL host-initiators/160931ed806d4791a017de8842181de8
+07/06/2023 14:44:58:283 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/160931ed806d4791a017de8842181de8
+07/06/2023 14:44:58:289 PM - Payload Body: {
+  "name": "UO04CTCSTOWIN"
+}
+07/06/2023 14:45:57:870 PM -  Response: @{taskUri=619b8378-0533-4e6b-b4d8-e593d40c7b83; status=SUBMITTED; message=}
+07/06/2023 14:46:09:549 PM - Task Id of the edit host operaton is 619b8378-0533-4e6b-b4d8-e593d40c7b83
+07/06/2023 14:46:17:711 PM - Getting task status of task 619b8378-0533-4e6b-b4d8-e593d40c7b83 and waiting for task to complete
+07/06/2023 14:46:22:719 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/619b8378-0533-4e6b-b4d8-e593d40c7b83
+07/06/2023 14:46:23:254 PM - The task status is RUNNING
+07/06/2023 14:46:28:262 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/619b8378-0533-4e6b-b4d8-e593d40c7b83
+07/06/2023 14:46:28:675 PM - The task status is RUNNING
+07/06/2023 14:46:33:680 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/619b8378-0533-4e6b-b4d8-e593d40c7b83
+07/06/2023 14:46:33:809 PM - The task status is RUNNING
+07/06/2023 14:46:38:822 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/619b8378-0533-4e6b-b4d8-e593d40c7b83
+07/06/2023 14:46:39:335 PM - The task status is RUNNING
+07/06/2023 14:46:44:346 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/619b8378-0533-4e6b-b4d8-e593d40c7b83
+07/06/2023 14:46:44:743 PM - The task status is RUNNING
+07/06/2023 14:52:56:613 PM - Editing host detail of host Id 222c72fcfda249f18e647fb825b8f50d
+07/06/2023 14:52:56:618 PM - Updating the host name to 10.1.36.103-Container-ESX3 with URL host-initiators/222c72fcfda249f18e647fb825b8f50d
+07/06/2023 14:52:56:622 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/222c72fcfda249f18e647fb825b8f50d
+07/06/2023 14:52:56:631 PM - Payload Body: {
+  "name": "10.1.36.103-Container-ESX3"
+}
+07/06/2023 14:52:57:781 PM -  Response: @{taskUri=16362788-0d6a-450e-93b1-ab341966f197; status=SUBMITTED; message=}
+07/06/2023 14:52:57:785 PM - Task Id of the edit host operaton is 16362788-0d6a-450e-93b1-ab341966f197
+07/06/2023 14:52:57:790 PM - Getting task status of task 16362788-0d6a-450e-93b1-ab341966f197 and waiting for task to complete
+07/06/2023 14:53:02:798 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/16362788-0d6a-450e-93b1-ab341966f197
+07/06/2023 14:53:02:972 PM - The task status is RUNNING
+07/06/2023 14:53:07:978 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/16362788-0d6a-450e-93b1-ab341966f197
+07/06/2023 14:53:08:208 PM - The task status is RUNNING
+07/06/2023 14:53:13:223 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/16362788-0d6a-450e-93b1-ab341966f197
+07/06/2023 14:53:13:393 PM - The task status is RUNNING
+07/06/2023 14:53:18:398 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/16362788-0d6a-450e-93b1-ab341966f197
+07/06/2023 14:53:18:848 PM - The task status is RUNNING
+07/06/2023 14:53:23:858 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/16362788-0d6a-450e-93b1-ab341966f197
+07/06/2023 14:53:24:045 PM - The task status is RUNNING
+07/06/2023 14:56:02:931 PM - Editing host detail of host Id 250c4f953cff4df7a95f369a403048e2
+07/06/2023 14:56:02:937 PM - Updating the host name to 10.1.36.102-Container-ESX2 with URL host-initiators/250c4f953cff4df7a95f369a403048e2
+07/06/2023 14:56:02:943 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/250c4f953cff4df7a95f369a403048e2
+07/06/2023 14:56:02:948 PM - Payload Body: {
+  "name": "10.1.36.102-Container-ESX2"
+}
+07/06/2023 14:56:06:761 PM -  Response: @{taskUri=845385a7-3ac2-40a9-b2e3-f2cf8c7dbc64; status=SUBMITTED; message=}
+07/06/2023 14:56:06:765 PM - Task Id of the edit host operaton is 845385a7-3ac2-40a9-b2e3-f2cf8c7dbc64
+07/06/2023 14:56:06:772 PM - Getting task status of task 845385a7-3ac2-40a9-b2e3-f2cf8c7dbc64 and waiting for task to complete
+07/06/2023 14:56:11:785 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/845385a7-3ac2-40a9-b2e3-f2cf8c7dbc64
+07/06/2023 14:56:11:951 PM - The task status is RUNNING
+07/06/2023 14:56:16:959 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/845385a7-3ac2-40a9-b2e3-f2cf8c7dbc64
+07/06/2023 14:56:17:163 PM - The task status is RUNNING
+07/06/2023 14:56:22:170 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/845385a7-3ac2-40a9-b2e3-f2cf8c7dbc64
+07/06/2023 14:56:22:333 PM - The task status is RUNNING
+07/06/2023 14:56:27:338 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/845385a7-3ac2-40a9-b2e3-f2cf8c7dbc64
+07/06/2023 14:56:27:493 PM - The task status is RUNNING
+07/06/2023 14:56:32:499 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/845385a7-3ac2-40a9-b2e3-f2cf8c7dbc64
+07/06/2023 14:56:32:785 PM - The task status is RUNNING
+07/06/2023 14:58:01:306 PM - Editing host detail of host Id 4d8f5c5046114d63983c1cccaab58713
+07/06/2023 14:58:01:317 PM - Updating the host name to 10.1.35.106-Container-ESX5 with URL host-initiators/4d8f5c5046114d63983c1cccaab58713
+07/06/2023 14:58:01:323 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/4d8f5c5046114d63983c1cccaab58713
+07/06/2023 14:58:01:333 PM - Payload Body: {
+  "name": "10.1.35.106-Container-ESX5"
+}
+07/06/2023 14:58:02:658 PM -  Response: @{taskUri=4ee5fa81-d2d4-4cf7-bbe8-33e8782a7070; status=SUBMITTED; message=}
+07/06/2023 14:58:02:664 PM - Task Id of the edit host operaton is 4ee5fa81-d2d4-4cf7-bbe8-33e8782a7070
+07/06/2023 14:58:02:670 PM - Getting task status of task 4ee5fa81-d2d4-4cf7-bbe8-33e8782a7070 and waiting for task to complete
+07/06/2023 14:58:07:675 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/4ee5fa81-d2d4-4cf7-bbe8-33e8782a7070
+07/06/2023 14:58:08:124 PM - The task status is RUNNING
+07/06/2023 14:58:13:166 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/4ee5fa81-d2d4-4cf7-bbe8-33e8782a7070
+07/06/2023 14:58:13:315 PM - The task status is RUNNING
+07/06/2023 14:58:18:321 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/4ee5fa81-d2d4-4cf7-bbe8-33e8782a7070
+07/06/2023 14:58:18:706 PM - The task status is RUNNING
+07/06/2023 14:58:23:726 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/4ee5fa81-d2d4-4cf7-bbe8-33e8782a7070
+07/06/2023 14:58:23:926 PM - The task status is RUNNING
+07/06/2023 14:58:28:932 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/4ee5fa81-d2d4-4cf7-bbe8-33e8782a7070
+07/06/2023 14:58:29:100 PM - The task status is RUNNING
+07/06/2023 14:58:29:119 PM - Editing host detail of host Id 4e7a716fc27b4774911050ae51da9f8b
+07/06/2023 14:58:29:130 PM - Updating the host name to suo04ctcplay1 with URL host-initiators/4e7a716fc27b4774911050ae51da9f8b
+07/06/2023 14:58:29:149 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/4e7a716fc27b4774911050ae51da9f8b
+07/06/2023 14:58:29:165 PM - Payload Body: {
+  "name": "suo04ctcplay1"
+}
+07/06/2023 14:58:30:508 PM -  Response: @{taskUri=b46aa6fc-c4b2-4593-a48d-0c8cfdc38bb4; status=SUBMITTED; message=}
+07/06/2023 14:58:30:512 PM - Task Id of the edit host operaton is b46aa6fc-c4b2-4593-a48d-0c8cfdc38bb4
+07/06/2023 14:58:30:518 PM - Getting task status of task b46aa6fc-c4b2-4593-a48d-0c8cfdc38bb4 and waiting for task to complete
+07/06/2023 14:58:35:528 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/b46aa6fc-c4b2-4593-a48d-0c8cfdc38bb4
+07/06/2023 14:58:35:676 PM - The task status is RUNNING
+07/06/2023 14:58:40:682 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/b46aa6fc-c4b2-4593-a48d-0c8cfdc38bb4
+07/06/2023 14:58:40:860 PM - The task status is RUNNING
+07/06/2023 14:58:45:867 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/b46aa6fc-c4b2-4593-a48d-0c8cfdc38bb4
+07/06/2023 14:58:46:110 PM - The task status is RUNNING
+07/06/2023 14:58:51:123 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/b46aa6fc-c4b2-4593-a48d-0c8cfdc38bb4
+07/06/2023 14:58:51:285 PM - The task status is RUNNING
+07/06/2023 14:58:56:293 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/b46aa6fc-c4b2-4593-a48d-0c8cfdc38bb4
+07/06/2023 14:58:56:421 PM - The task status is RUNNING
+07/06/2023 14:58:56:429 PM - Editing host detail of host Id 53e5bdda45c6402c974b5ec6cd5d5948
+07/06/2023 14:58:56:434 PM - Updating the host name to suo04ctcplay4 with URL host-initiators/53e5bdda45c6402c974b5ec6cd5d5948
+07/06/2023 14:58:56:443 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/53e5bdda45c6402c974b5ec6cd5d5948
+07/06/2023 14:58:56:448 PM - Payload Body: {
+  "name": "suo04ctcplay4"
+}
+07/06/2023 14:58:58:313 PM -  Response: @{taskUri=ef684a20-df2a-4054-9b1b-1c2e90924fa8; status=SUBMITTED; message=}
+07/06/2023 14:58:58:317 PM - Task Id of the edit host operaton is ef684a20-df2a-4054-9b1b-1c2e90924fa8
+07/06/2023 14:58:58:322 PM - Getting task status of task ef684a20-df2a-4054-9b1b-1c2e90924fa8 and waiting for task to complete
+07/06/2023 14:59:03:328 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/ef684a20-df2a-4054-9b1b-1c2e90924fa8
+07/06/2023 14:59:04:020 PM - The task status is RUNNING
+07/06/2023 14:59:09:032 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/ef684a20-df2a-4054-9b1b-1c2e90924fa8
+07/06/2023 14:59:09:204 PM - The task status is RUNNING
+07/06/2023 14:59:14:208 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/ef684a20-df2a-4054-9b1b-1c2e90924fa8
+07/06/2023 14:59:14:330 PM - The task status is RUNNING
+07/06/2023 14:59:19:337 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/ef684a20-df2a-4054-9b1b-1c2e90924fa8
+07/06/2023 14:59:19:507 PM - The task status is RUNNING
+07/06/2023 14:59:24:512 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/ef684a20-df2a-4054-9b1b-1c2e90924fa8
+07/06/2023 14:59:24:632 PM - The task status is RUNNING
+07/06/2023 14:59:24:636 PM - Editing host detail of host Id 5968cc4fe72f4067b9605522628b13e0
+07/06/2023 14:59:24:640 PM - Updating the host name to 10.1.35.106-Container-ESX6 with URL host-initiators/5968cc4fe72f4067b9605522628b13e0
+07/06/2023 14:59:24:645 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/5968cc4fe72f4067b9605522628b13e0
+07/06/2023 14:59:24:650 PM - Payload Body: {
+  "name": "10.1.35.106-Container-ESX6"
+}
+07/06/2023 14:59:26:307 PM -  Response: @{taskUri=ca3d72f3-7111-44b6-b313-f1e7c26d4be9; status=SUBMITTED; message=}
+07/06/2023 14:59:26:314 PM - Task Id of the edit host operaton is ca3d72f3-7111-44b6-b313-f1e7c26d4be9
+07/06/2023 14:59:26:325 PM - Getting task status of task ca3d72f3-7111-44b6-b313-f1e7c26d4be9 and waiting for task to complete
+07/06/2023 14:59:31:333 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/ca3d72f3-7111-44b6-b313-f1e7c26d4be9
+07/06/2023 14:59:31:461 PM - The task status is RUNNING
+07/06/2023 14:59:36:465 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/ca3d72f3-7111-44b6-b313-f1e7c26d4be9
+07/06/2023 14:59:36:745 PM - The task status is RUNNING
+07/06/2023 14:59:41:749 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/ca3d72f3-7111-44b6-b313-f1e7c26d4be9
+07/06/2023 14:59:41:892 PM - The task status is RUNNING
+07/06/2023 14:59:46:897 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/ca3d72f3-7111-44b6-b313-f1e7c26d4be9
+07/06/2023 14:59:47:051 PM - The task status is RUNNING
+07/06/2023 14:59:52:059 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/ca3d72f3-7111-44b6-b313-f1e7c26d4be9
+07/06/2023 14:59:52:200 PM - The task status is RUNNING
+07/06/2023 14:59:52:204 PM - Editing host detail of host Id 5bbf236662f24aa4b1342c5a2fb2cf4b
+07/06/2023 14:59:52:208 PM - Updating the host name to suo04ctcplay2 with URL host-initiators/5bbf236662f24aa4b1342c5a2fb2cf4b
+07/06/2023 14:59:52:212 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/5bbf236662f24aa4b1342c5a2fb2cf4b
+07/06/2023 14:59:52:216 PM - Payload Body: {
+  "name": "suo04ctcplay2"
+}
+07/06/2023 14:59:53:046 PM -  Response: @{taskUri=a2326667-e5a5-4882-906d-cb7f8f8dd6e5; status=SUBMITTED; message=}
+07/06/2023 14:59:53:051 PM - Task Id of the edit host operaton is a2326667-e5a5-4882-906d-cb7f8f8dd6e5
+07/06/2023 14:59:53:055 PM - Getting task status of task a2326667-e5a5-4882-906d-cb7f8f8dd6e5 and waiting for task to complete
+07/06/2023 14:59:58:060 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/a2326667-e5a5-4882-906d-cb7f8f8dd6e5
+07/06/2023 14:59:58:234 PM - The task status is RUNNING
+07/06/2023 15:00:03:238 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/a2326667-e5a5-4882-906d-cb7f8f8dd6e5
+07/06/2023 15:00:03:610 PM - The task status is RUNNING
+07/06/2023 15:00:08:617 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/a2326667-e5a5-4882-906d-cb7f8f8dd6e5
+07/06/2023 15:00:08:780 PM - The task status is RUNNING
+07/06/2023 15:00:13:785 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/a2326667-e5a5-4882-906d-cb7f8f8dd6e5
+07/06/2023 15:00:13:974 PM - The task status is RUNNING
+07/06/2023 15:00:18:986 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/a2326667-e5a5-4882-906d-cb7f8f8dd6e5
+07/06/2023 15:00:19:172 PM - The task status is RUNNING
+07/06/2023 15:00:19:178 PM - Editing host detail of host Id 94a602e99a3944d5bcc8f3415f5a3831
+07/06/2023 15:00:19:184 PM - Updating the host name to UO04CTCESX3001 with URL host-initiators/94a602e99a3944d5bcc8f3415f5a3831
+07/06/2023 15:00:19:190 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/94a602e99a3944d5bcc8f3415f5a3831
+07/06/2023 15:00:19:194 PM - Payload Body: {
+  "name": "UO04CTCESX3001"
+}
+07/06/2023 15:00:20:242 PM -  Response: @{taskUri=003966bb-4b23-4971-b237-dfb24c962a69; status=SUBMITTED; message=}
+07/06/2023 15:00:20:249 PM - Task Id of the edit host operaton is 003966bb-4b23-4971-b237-dfb24c962a69
+07/06/2023 15:00:20:255 PM - Getting task status of task 003966bb-4b23-4971-b237-dfb24c962a69 and waiting for task to complete
+07/06/2023 15:00:25:264 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/003966bb-4b23-4971-b237-dfb24c962a69
+07/06/2023 15:00:25:411 PM - The task status is RUNNING
+07/06/2023 15:00:30:416 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/003966bb-4b23-4971-b237-dfb24c962a69
+07/06/2023 15:00:30:580 PM - The task status is RUNNING
+07/06/2023 15:00:35:586 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/003966bb-4b23-4971-b237-dfb24c962a69
+07/06/2023 15:00:35:704 PM - The task status is RUNNING
+07/06/2023 15:00:40:711 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/003966bb-4b23-4971-b237-dfb24c962a69
+07/06/2023 15:00:40:864 PM - The task status is RUNNING
+07/06/2023 15:00:45:868 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/003966bb-4b23-4971-b237-dfb24c962a69
+07/06/2023 15:00:46:028 PM - The task status is RUNNING
+07/06/2023 15:00:46:033 PM - Editing host detail of host Id acdec326e8964334971d75a455a94528
+07/06/2023 15:00:46:037 PM - Updating the host name to suo04ctcplay3 with URL host-initiators/acdec326e8964334971d75a455a94528
+07/06/2023 15:00:46:040 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/acdec326e8964334971d75a455a94528
+07/06/2023 15:00:46:044 PM - Payload Body: {
+  "name": "suo04ctcplay3"
+}
+07/06/2023 15:00:46:999 PM -  Response: @{taskUri=066107a2-ac33-4997-8d85-39c96cc53b53; status=SUBMITTED; message=}
+07/06/2023 15:00:47:005 PM - Task Id of the edit host operaton is 066107a2-ac33-4997-8d85-39c96cc53b53
+07/06/2023 15:00:47:012 PM - Getting task status of task 066107a2-ac33-4997-8d85-39c96cc53b53 and waiting for task to complete
+07/06/2023 15:00:52:017 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/066107a2-ac33-4997-8d85-39c96cc53b53
+07/06/2023 15:00:53:055 PM - The task status is RUNNING
+07/06/2023 15:00:58:068 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/066107a2-ac33-4997-8d85-39c96cc53b53
+07/06/2023 15:00:58:254 PM - The task status is RUNNING
+07/06/2023 15:01:03:262 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/066107a2-ac33-4997-8d85-39c96cc53b53
+07/06/2023 15:01:03:408 PM - The task status is RUNNING
+07/06/2023 15:01:08:413 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/066107a2-ac33-4997-8d85-39c96cc53b53
+07/06/2023 15:01:08:619 PM - The task status is RUNNING
+07/06/2023 15:01:13:624 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/066107a2-ac33-4997-8d85-39c96cc53b53
+07/06/2023 15:01:13:905 PM - The task status is RUNNING
+07/06/2023 15:01:13:910 PM - Editing host detail of host Id b74369d1e0f7472dae92bff580578420
+07/06/2023 15:01:13:914 PM - Updating the host name to 10.1.36.101-Container-ESX1 with URL host-initiators/b74369d1e0f7472dae92bff580578420
+07/06/2023 15:01:13:919 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/b74369d1e0f7472dae92bff580578420
+07/06/2023 15:01:13:924 PM - Payload Body: {
+  "name": "10.1.36.101-Container-ESX1"
+}
+07/06/2023 15:01:14:637 PM -  Response: @{taskUri=93dbfbf4-c65d-43a7-8bdd-c957ebd64202; status=SUBMITTED; message=}
+07/06/2023 15:01:14:642 PM - Task Id of the edit host operaton is 93dbfbf4-c65d-43a7-8bdd-c957ebd64202
+07/06/2023 15:01:14:648 PM - Getting task status of task 93dbfbf4-c65d-43a7-8bdd-c957ebd64202 and waiting for task to complete
+07/06/2023 15:01:19:654 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/93dbfbf4-c65d-43a7-8bdd-c957ebd64202
+07/06/2023 15:01:19:799 PM - The task status is RUNNING
+07/06/2023 15:01:24:803 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/93dbfbf4-c65d-43a7-8bdd-c957ebd64202
+07/06/2023 15:01:24:963 PM - The task status is RUNNING
+07/06/2023 15:01:29:985 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/93dbfbf4-c65d-43a7-8bdd-c957ebd64202
+07/06/2023 15:01:30:196 PM - The task status is RUNNING
+07/06/2023 15:01:35:201 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/93dbfbf4-c65d-43a7-8bdd-c957ebd64202
+07/06/2023 15:01:35:365 PM - The task status is RUNNING
+07/06/2023 15:01:40:370 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/93dbfbf4-c65d-43a7-8bdd-c957ebd64202
+07/06/2023 15:01:40:525 PM - The task status is RUNNING
+07/06/2023 15:01:40:529 PM - Editing host detail of host Id be1354e5c60b44d8b99979b8198d5546
+07/06/2023 15:01:40:536 PM - Updating the host name to UO04CTCESX3002 with URL host-initiators/be1354e5c60b44d8b99979b8198d5546
+07/06/2023 15:01:40:540 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/be1354e5c60b44d8b99979b8198d5546
+07/06/2023 15:01:40:545 PM - Payload Body: {
+  "name": "UO04CTCESX3002"
+}
+07/06/2023 15:01:41:561 PM -  Response: @{taskUri=4e1032a6-05b6-486b-95dc-8058e32dca97; status=SUBMITTED; message=}
+07/06/2023 15:01:41:569 PM - Task Id of the edit host operaton is 4e1032a6-05b6-486b-95dc-8058e32dca97
+07/06/2023 15:01:41:578 PM - Getting task status of task 4e1032a6-05b6-486b-95dc-8058e32dca97 and waiting for task to complete
+07/06/2023 15:01:46:587 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/4e1032a6-05b6-486b-95dc-8058e32dca97
+07/06/2023 15:01:46:748 PM - The task status is RUNNING
+07/06/2023 15:01:51:754 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/4e1032a6-05b6-486b-95dc-8058e32dca97
+07/06/2023 15:01:52:188 PM - The task status is RUNNING
+07/06/2023 15:01:57:198 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/4e1032a6-05b6-486b-95dc-8058e32dca97
+07/06/2023 15:01:57:321 PM - The task status is RUNNING
+07/06/2023 15:02:02:328 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/4e1032a6-05b6-486b-95dc-8058e32dca97
+07/06/2023 15:02:02:478 PM - The task status is RUNNING
+07/06/2023 15:02:07:483 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/4e1032a6-05b6-486b-95dc-8058e32dca97
+07/06/2023 15:02:07:648 PM - The task status is RUNNING
+07/06/2023 15:02:07:653 PM - Editing host detail of host Id cf2670c4e4fe4004bd82855f08d833b2
+07/06/2023 15:02:07:658 PM - Updating the host name to 10.1.36.104-Contain_1838E07EDD1 with URL host-initiators/cf2670c4e4fe4004bd82855f08d833b2
+07/06/2023 15:02:07:664 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/cf2670c4e4fe4004bd82855f08d833b2
+07/06/2023 15:02:07:669 PM - Payload Body: {
+  "name": "10.1.36.104-Contain_1838E07EDD1"
+}
+07/06/2023 15:02:08:126 PM - StatusCode:
+07/06/2023 15:02:08:131 PM - StatusDescription:
+07/06/2023 15:02:08:137 PM -  Response: 
+07/06/2023 15:02:08:144 PM - host 10.1.36.104-Contain_1838E07EDD1-DSSC Could not be updated
+07/06/2023 15:02:08:149 PM - Task for all the Hosts which has HostName -DSSC is submitted successfully
+07/06/2023 15:02:08:154 PM - Submitted requests to migrate DSCC hosts successfully. Verify if the hosts are created from DSCC UI
