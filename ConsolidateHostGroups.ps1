@@ -77,16 +77,16 @@ $hglist += $Response[0]
 for($i=1; $i -lt $Response.Count; $i++){
     $new = $true
     for($j=0; $j -lt $hglist.Count; $j++){
-        if($hglist[$j].name -eq $Response[$i].name){
+        if($hglist[$j].name -eq $Response[$i].name){ # Host Group with the same name exists!
             $new = $false
             $x=$j
             $j = $hglist.Count
         }
     }
-    if($new){
+    if($new){  # add the HostGroup $Response[$i] to the list of hostgroups that need to be created
         $hglist += $Response[$i]
-    } else { # consolidate the entries
-        for($k=0; $k -lt $Response[$i].hosts.Count; $k++){
+    } else { # A host group with the same name already exist in the consolidated list. 
+        for($k=0; $k -lt $Response[$i].hosts.Count; $k++){ # Check for new host ids that are not yet listed in this host group entry
             $new = $true
             for($l=0; $l -lt $hglist[$x].hosts.Count; $l++){
                 if($Response[$i].hosts[$k].id -eq $hglist[$x].hosts[$l].id){ 
@@ -94,25 +94,25 @@ for($i=1; $i -lt $Response.Count; $i++){
                     $l = $hglist[$x].hosts.Count
                 }
             }
-            if($new){$hglist[$x].hosts += $Response[$i].hosts[$k] }
+            if($new){$hglist[$x].hosts += $Response[$i].hosts[$k] } # if the host id is not yet in the list, add it to the list
         }
     }
 }
 
 # use the consolidated Host Group list to create user created host groups
 
-$userHG = Get-DSCCHostGroup | Where-Object{$_.userCreated -eq $true}
+$userHG = Get-DSCCHostGroup | Where-Object{$_.userCreated -eq $true} # get the current list of user created host groups
 
-for($i =0; $i -lt $hglist.Count; $i++){
-    $name = $hglist[$i].name
-    $comment = $hglist[$i].comment
+for($i =0; $i -lt $hglist.Count; $i++){                 # work on the consolidated list of the system generated host groups
+    $name = $hglist[$i].name                            # host group name
+    $comment = $hglist[$i].comment                      # host group comment
     $hostIds = @()
-    for($j =0; $j -lt $hglist[$i].hosts.Count; $j++){
+    for($j =0; $j -lt $hglist[$i].hosts.Count; $j++){   # create the list of host ids, that belong to this host group  
         $hostIds += $hglist[$i].hosts[$j].id
     }
-    Write-Host ($name+":"+$comment+":"+$hostIDs)
-    # Check if the user created host group already exists
-    $hgExist=$false
+    #Write-Host ("Generate user created hostgroup:comment:hostIds - "+$name+":"+$comment+":"+$hostIDs)
+    
+    $hgExist=$false                                     # Check if a user created host group with the same name already exists
     for($j=0;$j -lt $userHG.Count; $j++){
         if($userHG[$j].name -eq $name){
             $hgExist = $true
@@ -121,11 +121,11 @@ for($i =0; $i -lt $hglist.Count; $i++){
         }
     }
 
-    if($hgExist){
+    if($hgExist){                                       # if a user generated host group already exist, then only add the host ids
         write-Host ("Edit existing host Group: " + $name)
         $Response = Set-DSCCHostGroup -hostGroupID $hgID -updatedHosts $hostIds 
         write-Host $Response
-    } else {
+    } else {                                            # create a new host group
        Write-Host ("Create new Host Group: "+$name) 
        $Response = New-DSCCHostGroup -DeviceType1 -name $name -hostIds $hostIds -comment $comment -userCreated $true
        write-Host $Response
