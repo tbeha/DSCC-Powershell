@@ -1,0 +1,63 @@
+14/06/2023 13:28:43:457 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+14/06/2023 13:28:44:413 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+14/06/2023 13:28:45:027 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+14/06/2023 13:28:45:579 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+14/06/2023 13:28:45:917 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+14/06/2023 13:28:46:433 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+14/06/2023 13:58:41:924 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+14/06/2023 13:58:42:960 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+14/06/2023 13:58:43:618 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+14/06/2023 13:58:44:227 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+14/06/2023 13:58:44:577 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+14/06/2023 13:58:45:236 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+14/06/2023 13:59:29:120 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+14/06/2023 13:59:29:125 PM - Payload Body: {
+  "name": "su04ctcplay",
+  "hostIds": [
+    "4e7a716fc27b4774911050ae51da9f8b",
+    "53e5bdda45c6402c974b5ec6cd5d5948",
+    "5bbf236662f24aa4b1342c5a2fb2cf4b",
+    "acdec326e8964334971d75a455a94528"
+  ],
+  "userCreated": true
+}
+14/06/2023 14:00:37:632 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+14/06/2023 14:00:37:634 PM - Payload Body: {
+  "name": "EsxHost-suo04ctcesx3002.demo.local",
+  "hostIds": [
+    "be1354e5c60b44d8b99979b8198d5546"
+  ],
+  "userCreated": true
+}
+14/06/2023 14:00:39:121 PM - StatusCode:
+14/06/2023 14:00:39:122 PM - StatusDescription:
+14/06/2023 14:01:33:005 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+14/06/2023 14:01:33:007 PM - Payload Body: {
+  "name": "martin-test-2",
+  "hostIds": [
+    "94a602e99a3944d5bcc8f3415f5a3831"
+  ],
+  "userCreated": true
+}
+14/06/2023 14:01:57:793 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+14/06/2023 14:01:57:796 PM - Payload Body: {
+  "name": "ESXPP",
+  "hostIds": [
+    "94a602e99a3944d5bcc8f3415f5a3831",
+    "be1354e5c60b44d8b99979b8198d5546"
+  ],
+  "userCreated": true
+}
+14/06/2023 14:02:54:806 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+14/06/2023 14:02:54:808 PM - Payload Body: {
+  "name": "EsxHost-suo04ctcesx3001.demo.local",
+  "hostIds": [
+    "94a602e99a3944d5bcc8f3415f5a3831"
+  ],
+  "userCreated": true
+}
+14/06/2023 14:02:55:207 PM - StatusCode:
+14/06/2023 14:02:55:210 PM - StatusDescription:
+14/06/2023 14:03:06:633 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+14/06/2023 14:03:07:421 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+14/06/2023 14:03:07:960 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
