@@ -1,2 +1,17 @@
 f6b1593e566a4d70a10c9be2a85ae333	dsccapx01 - dscc-api-01
 e494f5b5d42d4401bc065ab277177dff	dsccapx02 - dscc-api-02
+
+$MyUri "https://eu1.data.cloud.hpe.com/api/v1/host-initiator/f6b1593e566a4d70a10c9be2a85ae333"
+$MyBody {
+  "name": "dscc-api-01"
+}
+
+Response: StatusCode: 503, ReasonPhrase: 'Service Unavailable', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  Date: Thu, 15 Jun 2023 15:40:15 GMT
+  Server: istio-envoy
+  Connection: close
+  Content-Length: 0
+}, Trailing Headers:
+{
+}

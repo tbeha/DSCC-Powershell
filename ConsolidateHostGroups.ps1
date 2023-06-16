@@ -1,20 +1,12 @@
 
-
-$Client_ID = 'caba96ba-52c9-49e5-8ae7-eec301e3000a'  
-$Client_Secret = '6a4525e2cd3111edaced4a452722384f' 
-
 <#
 
-Powershell Toolkit test program
-
-Check the Invoke-ConvertHost Routine.
-
-Invoke-ConvertHost is located in the scripts/HostUtilities.ps1 
+Consolidate multiple system generated Host Group entries into single user generated host groups
 
 #>
 
-#$Client_ID = Read-Host "Enter the DSCC Client ID: " 
-#$Client_Secret = Read-Host "Enter the DSCC Client Secret: " 
+$Client_ID = Read-Host "Enter the DSCC Client ID: " 
+$Client_Secret = Read-Host "Enter the DSCC Client Secret: " 
 
 Import-Module .\HPEDSCC.psd1 -SkipEditionCheck
 
@@ -132,6 +124,6 @@ for($i =0; $i -lt $hglist.Count; $i++){                 # work on the consolidat
     }
 
 }
-
+# Check wether there are still system generated host groups.
 $Response = Get-DSCCHostGroup | Where-Object{$_.userCreated -eq $false}
 write-Host $Response.Count
