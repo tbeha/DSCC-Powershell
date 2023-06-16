@@ -2,3 +2,5 @@ test.ps1
 HelperNotes.txt
 HostMigrationStatus.xlsx
 HostTest.csv
+hostids.txt
+DSCC-Powershell.code-workspace
