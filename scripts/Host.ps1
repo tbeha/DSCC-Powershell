@@ -334,7 +334,7 @@ param(  [Parameter(Mandatory)]  [string]    $hostID,
                                 [switch]    $WhatIf
     )
 process
-    {   $MyAdd = 'host-initiator/' + $hostID
+    {   $MyAdd = 'host-initiators/' + $hostID
                                         $MyBody += @{} 
         if ($name)                  {   $MyBody += @{ name = $name                              }  }
         if ($updatedInitiators)     {   $MyBody += @{ updatedInitiators  = $updatedInitiators   }  }

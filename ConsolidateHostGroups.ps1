@@ -59,7 +59,6 @@ process
 
 Connect-DSCC -Client_Id $Client_ID -Client_Secret $Client_Secret -GreenlakeType EU #-Verbose -AutoRenew
 
-#$Response = Invoke-ConvertHost
 # Get the list of system created host groups
 $Response = Get-DSCCHostGroup | Where-Object{$_.userCreated -eq $false}
 
@@ -124,6 +123,7 @@ for($i =0; $i -lt $hglist.Count; $i++){                 # work on the consolidat
     }
 
 }
+
 # Check wether there are still system generated host groups.
 $Response = Get-DSCCHostGroup | Where-Object{$_.userCreated -eq $false}
 write-Host $Response.Count

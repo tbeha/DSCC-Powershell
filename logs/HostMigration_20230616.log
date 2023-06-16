@@ -1,0 +1,13 @@
+16/06/2023 08:48:22:515 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+16/06/2023 08:50:43:808 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator/f6b1593e566a4d70a10c9be2a85ae333
+16/06/2023 08:51:00:201 AM - Payload Body: {
+  "name": "dscc-api-01"
+}
+16/06/2023 08:52:32:462 AM - StatusCode:
+16/06/2023 08:52:41:265 AM - StatusDescription:
+16/06/2023 09:07:30:429 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+16/06/2023 09:17:56:652 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+16/06/2023 09:18:56:173 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/f6b1593e566a4d70a10c9be2a85ae333
+16/06/2023 09:18:56:176 AM - Payload Body: {
+  "name": "dscc-api-01"
+}
