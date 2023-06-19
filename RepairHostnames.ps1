@@ -12,9 +12,11 @@ $Client_ID = Read-Host "Enter the DSCC Client ID: "
 $Client_Secret = Read-Host "Enter the DSCC Client Secret: " 
 $Host_List = Read-Host "Enter the filename of the Hostlist: "  # ./HostTest.csv
 #>
-$Client_ID = ""
-$Client_Secret = ""
-$Host_List = '.\HostMigrationStatus.csv'
+
+$Client_ID = ''  
+$Client_Secret = ''
+
+$Host_List = '.\HostTest.csv'
 
 Import-Module .\HPEDSCC.psd1 -SkipEditionCheck
 

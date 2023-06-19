@@ -1,0 +1,152 @@
+
+NAME
+    Get-DSCCHostGroup
+    
+SYNOPSIS
+    Returns the HPE DSSC DOM Host Group Collection
+    
+    
+SYNTAX
+    Get-DSCCHostGroup [[-SystemId] <String>] [[-WhatIf] <Boolean>] [<CommonParameters>]
+    
+    
+DESCRIPTION
+    Returns the HPE Data Services Cloud Console Data Operations Manager Host Groups Collections;
+    
+
+PARAMETERS
+    -SystemId <String>
+        This will limit the output to only a single SystemId, this parameter is only valid for Device-Type2. 
+        With this parameter not set, the command will return ALL host groups.
+        
+        Required?                    false
+        Position?                    1
+        Default value                
+        Accept pipeline input?       true (ByPropertyName)
+        Accept wildcard characters?  false
+        
+    -WhatIf <Boolean>
+        The WhatIf directive will show you the RAW RestAPI call that would be made to DSCC instead of actually sending the request.
+        This option is very helpful when trying to understand the inner workings of the native RestAPI calls that DSCC uses.
+        
+        Required?                    false
+        Position?                    2
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+INPUTS
+    
+OUTPUTS
+    
+    -------------------------- EXAMPLE 1 --------------------------
+    
+    PS:>Get-DSCCHostGroup
+    
+    id                               name           type                 hosts              systems
+    --                               ----           ----                 -----              -------
+    e987ef683c27403e96caa51816ddc72c TestHostGroup1 host-initiator-group TestHostInitiator1 {0006b878a5a008ec63000000000000000000000001, 2M202205GF}
+    e987ef683c27403e9afaa51816ddc72c TestHostGroup2 host-initiator-group TestHostInitiator1 {0006b878a5a009def3000000000000000000000001, 2M202205GF}
+    e987ef683c274cfed6caa51816ddc72c TestHostGroup3 host-initiator-group TestHostInitiator1 {0006b878cded08ec63000000000000000000000001, 2M202205VV}
+    
+    
+    
+    
+    -------------------------- EXAMPLE 2 --------------------------
+    
+    PS:>Get-DSCCHostServiceHostGroup | convertto-json
+    
+    [       {   "associatedLinks":      [   {   "resourceUri": "string",
+                                                "type": "string"
+                                            }   ],
+                "associatedSystems":    [   "string"    
+                                        ],
+                "comment": "host-group-comment",
+                "consoleUri": "/data-ops-manager/host-initiator-groups/a8c087fa6e95dd22cdf402c64e4bbe61",
+                "customerId": "string",
+                "editStatus": "Delete_Failed",
+                "generation": 0,
+                "host":     [   {   "id": "6848ef683c27403e96caa51816ddc72c",
+                                    "ipAddress": "15.212.100.100",
+                                    "name": "host1"
+                                }
+                            ],
+                "id": "e987ef683c27403e96caa51816ddc72c",
+                "name": "host-group1",
+                "requestUri": "/api/v1/host-initiator-groups/1",
+                "systems":  [   "string"
+                            ],
+                "type": "string",
+                "userCreated": true
+            }
+    
+            {   "associatedLinks":      [   {   "resourceUri": "string",
+                                                "type": "string"
+                                            }   ],
+                "associatedSystems":    [   "string"    
+                                        ],
+                "comment": "host-group-comment",
+                "consoleUri": "/data-ops-manager/host-initiator-groups/a8c087fa6e95dd22cdf402c64e4bbe62",
+                "customerId": "string",
+                "editStatus": "Delete_Failed",
+                "generation": 0,
+                "host":     [   {   "id": "6848ef683c27403e96caa51816ddc72d",
+                                    "ipAddress": "15.212.100.102",
+                                    "name": "host2"
+                                }
+                            ],
+                "id": "e987ef683c27403e96caa51816ddc72d",
+                "name": "host-group1",
+                "requestUri": "/api/v1/host-initiator-groups/2",
+                "systems":  [   "string"
+                            ],
+                "type": "string",
+                "userCreated": true
+            }
+    ]
+    
+    
+    
+    
+    -------------------------- EXAMPLE 3 --------------------------
+    
+    PS:>Get-DSCCHostGroup | where { $_.id -like 'e987ef683c27403e96caa51816ddc72c' }
+    
+    id                               name           type                 hosts              systems
+    --                               ----           ----                 -----              -------
+    e987ef683c27403e96caa51816ddc72c TestHostGroup1 host-initiator-group TestHostInitiator1 {0006b878a5a008ec63000000000000000000000001, 2M202205GF}
+    
+    
+    
+    
+    -------------------------- EXAMPLE 4 --------------------------
+    
+    PS:>Get-DSCCHostServiceHostGroup -Whatif
+    WARNING: You have selected the What-IF option, so the call will note be made to the array,
+    instead you will see a preview of the RestAPI call
+    
+    The URI for this call will be
+        https://scalpha-app.qa.cds.hpe.com/api/v1/host-initiator-groups
+    The Method of this call will be
+        Get
+    The Header for this call will be :
+        {   "Authorization":  "Bearer eyJlvvD...qsbzuDCwEtWC-hem1BYx2Oz9IK0vh9itjsz-FwN3Um98AjSmKhDwZQ"
+        }
+    The Body of this call will be:
+        "No Body"
+    
+    
+    
+    
+    
+RELATED LINKS
+    The API call for this operation is file:///api/v1/host-initiator-groups 
+
+
+

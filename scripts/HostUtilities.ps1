@@ -579,7 +579,7 @@ Function WaitForTaskToComplete()
     process
     {
         Log-Message "Getting task status of task $taskId and waiting for task to complete"
-        $maxRetryCount = 5
+        $maxRetryCount = 12
         $retryCount = 0
         do {
            Start-Sleep 5 
