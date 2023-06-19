@@ -659,7 +659,7 @@ process
     }       
 } 
 
-Function Get-DSCCVolumePerf
+function Get-DSCCVolumePerf
 {
 <#
 .SYNOPSIS
@@ -700,3 +700,4 @@ process
             return ( Invoke-RepackageObjectWithType -RawObject $ReturnData -ObjectName "VolumePerf.Combined" )        
     }       
 }
+

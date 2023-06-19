@@ -1,15 +1,16 @@
 <#
 
-Powershell Toolkit test program
+RepairHostnames.ps1
 
-Check the Invoke-ConvertHost Routine.
+Fixes the hostnames as listed in the $Host_List
 
-Invoke-ConvertHost is located in the scripts/HostUtilities.ps1 
+param([string]$Client_Id, [string]$Client_Secret, [string]$Host_List='./HostTest.csv') 
 
 #>
 
 $Client_ID = Read-Host "Enter the DSCC Client ID: " 
 $Client_Secret = Read-Host "Enter the DSCC Client Secret: " 
+$Host_List = Read-Host "Enter the filename of the Hostlist: "  # ./HostTest.csv
 
 Import-Module .\HPEDSCC.psd1 -SkipEditionCheck
 
@@ -23,7 +24,7 @@ Connect-DSCC -Client_Id $Client_ID -Client_Secret $Client_Secret -GreenlakeType 
 # 3 - Success: 'Yes' or 'No'
 # 4 - Correct Hostname
 
-foreach($line in Get-Content .\HostTest.csv){
+foreach($line in Get-Content $Host_List){
 	$data = $line -split ','
 	if($data[3] -eq 'No'){
 		Write-Host ("Change Hostname from "+$data[2]+" to: "+$data[4] )
