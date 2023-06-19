@@ -40,14 +40,14 @@ Export-ModuleMember -Function                                                   
     Get-DSCCPoolVolume,
     Get-DSCCVolume,                 Remove-DSCCVolume,          Set-DSCCVolume,             New-DSCCVolume,     
     Get-DSCCVolumePerf,            
-    Get-DSCCSnapshot,               Remove-DSCCSnapshot,                                     New-DSCCSnapshot,
+    Get-DSCCSnapshot,               Remove-DSCCSnapshot,                                    New-DSCCSnapshot,
     Get-DSCCComponentPerfStats,
     Get-DSCCPort,
     Get-DSCCDisk,                 
     Get-DSCCShelf,                                                                                                  Invoke-DSCCShelfLocate,
     Get-DSCCCertificate,
     Find-DSCCDeviceTypeFromStorageSystemID,                                                                         Invoke-RepackageObjectWithType, 
-                                                                                                                    Invoke-DSCCAutoReconnect,
+    WaitForTaskToComplete,                                                                                          Invoke-DSCCAutoReconnect,
                                                                                                                     Invoke-ConvertHost
 
 update-formatdata -prepend $PSScriptRoot\HPEDSCC.Format.ps1xml

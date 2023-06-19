@@ -16,3 +16,363 @@
 19/06/2023 11:14:08:927 AM - Payload Body: {
   "name": "dscc-api-02"
 }
+19/06/2023 11:30:33:719 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+19/06/2023 11:33:32:754 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+19/06/2023 11:40:32:652 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+19/06/2023 11:43:14:167 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+19/06/2023 11:44:12:710 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/01e2048a41344d1289a4e73b0d4e823a
+19/06/2023 11:44:12:715 AM - Payload Body: {
+  "name": "DOP-ESX-IXN022"
+}
+19/06/2023 11:45:05:540 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/0269086f4acd4fb2a4178effd767eb2f
+19/06/2023 11:45:05:542 AM - Payload Body: {
+  "name": "DOP-ESX-IXN024"
+}
+19/06/2023 11:45:07:147 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/057ba0c33481419ebb3afd72c3c686ae
+19/06/2023 11:45:07:152 AM - Payload Body: {
+  "name": "DOP-ESX-IXN030"
+}
+19/06/2023 11:45:08:602 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/07ce5a2f7b3a4d79b47ca9a88f3cc13e
+19/06/2023 11:45:08:637 AM - Payload Body: {
+  "name": "DOP-ESX-IXN029"
+}
+19/06/2023 11:45:09:674 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/0a8ec86b6bda4a1aa83e1a6df9561198
+19/06/2023 11:45:09:681 AM - Payload Body: {
+  "name": "DOP-ESX-CYO011"
+}
+19/06/2023 11:45:10:534 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/0caa3dea4c3d4b36a3cc473c3221514a
+19/06/2023 11:45:10:543 AM - Payload Body: {
+  "name": "DOP-ESX-CYO017"
+}
+19/06/2023 11:45:11:369 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/0fb2c94d335d48a9b9feaed189c99641
+19/06/2023 11:45:11:376 AM - Payload Body: {
+  "name": "DOP-ESX-IXN038"
+}
+19/06/2023 11:45:12:420 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/1677d037a7c14a989ce92a5d9765f6fd
+19/06/2023 11:45:12:434 AM - Payload Body: {
+  "name": "SIN-ESX-CYO02"
+}
+19/06/2023 11:45:13:562 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/1d4b724399e348cdb663291249374541
+19/06/2023 11:45:13:567 AM - Payload Body: {
+  "name": "DOP-ESX-IXN039"
+}
+19/06/2023 11:45:14:779 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/1f0228c9f7974e8291483dae91eabff6
+19/06/2023 11:45:14:782 AM - Payload Body: {
+  "name": "DOP-ESX-CYO039"
+}
+19/06/2023 11:45:15:781 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/2d4213d326224aa78f93083befa73bcd
+19/06/2023 11:45:15:801 AM - Payload Body: {
+  "name": "DOP-ESX-IXN021"
+}
+19/06/2023 11:45:16:691 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/2fb4b60493544df884d77e3c3403cd96
+19/06/2023 11:45:16:695 AM - Payload Body: {
+  "name": "DOP-ESX-CYO038"
+}
+19/06/2023 11:45:17:787 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/346fb200855745b587998242e84298b3
+19/06/2023 11:45:17:791 AM - Payload Body: {
+  "name": "DOP-ESX-CYO010"
+}
+19/06/2023 11:45:18:705 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/35aab4bd1f914a01a26c7c64652e3af2
+19/06/2023 11:45:18:708 AM - Payload Body: {
+  "name": "DOP-ESX-IXN035"
+}
+19/06/2023 11:45:19:577 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/36f8488e8cd7427fa34c6ff6e7962ac3
+19/06/2023 11:45:19:580 AM - Payload Body: {
+  "name": "DOP-ESX-IXN018"
+}
+19/06/2023 11:45:20:546 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/3bbdffe626d14dd3994ee94ace6fba54
+19/06/2023 11:45:20:551 AM - Payload Body: {
+  "name": "DOP-ESX-IXN043"
+}
+19/06/2023 11:45:21:161 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/3d92a37d9e3249659a540043af141d9f
+19/06/2023 11:45:21:164 AM - Payload Body: {
+  "name": "DOP-ESX-CYO031"
+}
+19/06/2023 11:45:21:977 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/3f7f397e5f4449059efc9bb8f440ee8e
+19/06/2023 11:45:21:980 AM - Payload Body: {
+  "name": "DOP-ESX-IXN017"
+}
+19/06/2023 11:45:23:290 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/401022c2b12a4781ad3e984c2b4cf4d4
+19/06/2023 11:45:23:293 AM - Payload Body: {
+  "name": "DOP-ESX-CYO034"
+}
+19/06/2023 11:45:24:398 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/424603aa3b7c44fda7d22ad0c438465a
+19/06/2023 11:45:24:400 AM - Payload Body: {
+  "name": "DOP-ESX-CYO027"
+}
+19/06/2023 11:45:25:085 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/446a904518774b21b8f57d9afa04dfe9
+19/06/2023 11:45:25:090 AM - Payload Body: {
+  "name": "DOP-ESX-IXN037"
+}
+19/06/2023 11:45:25:818 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/47219363ddd1469a9c1059dc2fe90a18
+19/06/2023 11:45:25:823 AM - Payload Body: {
+  "name": "DOP-ESX-CYO026"
+}
+19/06/2023 11:45:26:968 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/47c8bdb90bf24f248c6b00d15c33e7d7
+19/06/2023 11:45:26:974 AM - Payload Body: {
+  "name": "DOP-ESX-IXN020"
+}
+19/06/2023 11:45:27:622 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/4c0edf055cd34123811cc999f0a1fe4f
+19/06/2023 11:45:27:624 AM - Payload Body: {
+  "name": "DOP-BCK-IXN001"
+}
+19/06/2023 11:45:28:275 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/4ed5481ed812449fb185e7ba0b83ea04
+19/06/2023 11:45:28:278 AM - Payload Body: {
+  "name": "DOP-ESX-CYO021"
+}
+19/06/2023 11:45:28:892 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/507c596527b846c2b18fc424e44efce0
+19/06/2023 11:45:28:899 AM - Payload Body: {
+  "name": "DOP-ESX-CYO019"
+}
+19/06/2023 11:45:29:803 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/5799a2e4249b4def9812399b94c759a1
+19/06/2023 11:45:29:811 AM - Payload Body: {
+  "name": "DOP-ESX-CYO029"
+}
+19/06/2023 11:45:30:709 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/58da1e5017c848a8b90efc4f0326abdb
+19/06/2023 11:45:30:715 AM - Payload Body: {
+  "name": "DLR-ESX-CYO02"
+}
+19/06/2023 11:45:31:602 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/5c351a50c7304c2eb95e06c05fea2237
+19/06/2023 11:45:31:606 AM - Payload Body: {
+  "name": "DOP-ESX-CYO023"
+}
+19/06/2023 11:45:32:773 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/5f0178680e6a4628b9d6945a90218aaa
+19/06/2023 11:45:32:780 AM - Payload Body: {
+  "name": "DOP-ESX-IXN041"
+}
+19/06/2023 11:45:33:488 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/5f36a2fce201481bb2aa7a35d345ef82
+19/06/2023 11:45:33:490 AM - Payload Body: {
+  "name": "DOP-ESX-IXN032"
+}
+19/06/2023 11:45:34:196 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/5f6c5dbc78c74bf18f0c674704d20299
+19/06/2023 11:45:34:206 AM - Payload Body: {
+  "name": "SIN-ESX-IXN02"
+}
+19/06/2023 11:45:34:927 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/60747bed93134cf989fdce19590d2645
+19/06/2023 11:45:34:930 AM - Payload Body: {
+  "name": "DOP-ESX-IXN015"
+}
+19/06/2023 11:45:35:719 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/65d1a2cb8a3a4a89b4b6193a78b9e290
+19/06/2023 11:45:35:722 AM - Payload Body: {
+  "name": "DOP-ESX-CYO004"
+}
+19/06/2023 11:45:36:338 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/691a32646fc045e19c2b32b480870c2e
+19/06/2023 11:45:36:355 AM - Payload Body: {
+  "name": "DOP-ESX-IXN012"
+}
+19/06/2023 11:45:37:213 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/699015530d85446b95d53ff1621ae29a
+19/06/2023 11:45:37:223 AM - Payload Body: {
+  "name": "DOP-ESX-CYO044"
+}
+19/06/2023 11:45:37:644 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/6e67faf667624388ac7b26f34961b50e
+19/06/2023 11:45:37:647 AM - Payload Body: {
+  "name": "DOP-ESX-CYO042"
+}
+19/06/2023 11:45:38:290 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/6f12f9e7905e493e9acd4c17c9517595
+19/06/2023 11:45:38:291 AM - Payload Body: {
+  "name": "DOP-ESX-IXN025"
+}
+19/06/2023 11:45:38:884 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/7205574b26f2441199df0f64b94791b2
+19/06/2023 11:45:38:886 AM - Payload Body: {
+  "name": "DOP-ESX-CYO016"
+}
+19/06/2023 11:45:39:573 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/7a96250c082d457481518b48a70c1420
+19/06/2023 11:45:39:575 AM - Payload Body: {
+  "name": "DOP-ESX-CYO037"
+}
+19/06/2023 11:45:40:114 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/7c5e3bc786b8402e8894e820a4e428b9
+19/06/2023 11:45:40:123 AM - Payload Body: {
+  "name": "DOP-ESX-CYO013"
+}
+19/06/2023 11:45:40:931 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/7d65b42111ef43a285c25abe6dcd65e2
+19/06/2023 11:45:40:935 AM - Payload Body: {
+  "name": "DOP-ESX-IXN002"
+}
+19/06/2023 11:45:41:682 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/805b42aa71804ad7824ddab56d4b6dcc
+19/06/2023 11:45:41:695 AM - Payload Body: {
+  "name": "DLR-ESX-IXN02"
+}
+19/06/2023 11:45:42:293 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/8250fd4cdc4546d4ac1acece4baca791
+19/06/2023 11:45:42:296 AM - Payload Body: {
+  "name": "DOP-ESX-CYO002"
+}
+19/06/2023 11:45:42:835 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/872326e091bc4f7da74ab2df6ef03387
+19/06/2023 11:45:42:838 AM - Payload Body: {
+  "name": "DOP-ESX-CYO003"
+}
+19/06/2023 11:45:43:615 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/8962ce55a5f64ffd8d008d06ac153d0c
+19/06/2023 11:45:43:623 AM - Payload Body: {
+  "name": "LAB-ESX-WORKLOAD"
+}
+19/06/2023 11:45:44:165 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/8bb23c3fd8944f559761269e4de0be30
+19/06/2023 11:45:44:167 AM - Payload Body: {
+  "name": "DOP-ESX-IXN023"
+}
+19/06/2023 11:45:44:828 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/8c76d94cba4b400d967d4b7be61ba45c
+19/06/2023 11:45:44:831 AM - Payload Body: {
+  "name": "SIN-ESX-IXN01"
+}
+19/06/2023 11:45:45:447 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/9300b9dbbb684868b53d65c8b9830c40
+19/06/2023 11:45:45:453 AM - Payload Body: {
+  "name": "DOP-ESX-IXN036"
+}
+19/06/2023 11:45:46:053 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/935be834d0d04cb4b97aaa03a075852d
+19/06/2023 11:45:46:057 AM - Payload Body: {
+  "name": "DOP-ESX-IXN004"
+}
+19/06/2023 11:45:46:870 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/95559862ee924074b7d1f86ca0f055d4
+19/06/2023 11:45:46:875 AM - Payload Body: {
+  "name": "DOP-ESX-IXN034"
+}
+19/06/2023 11:45:47:475 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/96699f92c7544b558ac418bf7fef407c
+19/06/2023 11:45:47:480 AM - Payload Body: {
+  "name": "DOP-ESX-IXN027"
+}
+19/06/2023 11:45:48:225 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/97e75f3c58fb41eab6833b30b6bef5d8
+19/06/2023 11:45:48:229 AM - Payload Body: {
+  "name": "DOP-ESX-IXN001"
+}
+19/06/2023 11:45:48:804 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/98265eb9ef6446d0a2477ed32ff1ef7d
+19/06/2023 11:45:48:806 AM - Payload Body: {
+  "name": "DummyHost"
+}
+19/06/2023 11:45:49:334 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/9c47cca5e9f84a2f8d1a76400bfd1cb5
+19/06/2023 11:45:49:339 AM - Payload Body: {
+  "name": "DOP-ESX-CYO018"
+}
+19/06/2023 11:45:50:129 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/9f8c57ec5965459792477e0263260d80
+19/06/2023 11:45:50:132 AM - Payload Body: {
+  "name": "DLR-ESX-IXN01"
+}
+19/06/2023 11:45:50:812 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/a200b0518a4c4849a32356750b6bbe44
+19/06/2023 11:45:50:814 AM - Payload Body: {
+  "name": "DOP-ESX-IXN026"
+}
+19/06/2023 11:45:51:434 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/a2c796c6b97d47a48c1c630450afd53f
+19/06/2023 11:45:51:437 AM - Payload Body: {
+  "name": "DOP-ESX-CYO024"
+}
+19/06/2023 11:45:52:096 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/a38c8db4a44547b58b7a06e0f652cff3
+19/06/2023 11:45:52:099 AM - Payload Body: {
+  "name": "DOP-ESX-IXN028"
+}
+19/06/2023 11:45:52:575 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/a39754812bfc4b3f9453bab3bc413661
+19/06/2023 11:45:52:578 AM - Payload Body: {
+  "name": "DOP-ESX-CYO036"
+}
+19/06/2023 11:45:53:189 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/a425f77ecdc84a25b96dab29f13a2e43
+19/06/2023 11:45:53:192 AM - Payload Body: {
+  "name": "DOP-ESX-CYO043"
+}
+19/06/2023 11:45:53:801 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/a5c4b129dc424fc6b76fd3ba8c89c240
+19/06/2023 11:45:53:804 AM - Payload Body: {
+  "name": "DOP-ESX-IXN033"
+}
+19/06/2023 11:45:54:526 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/a6513c3a9e4949d8bca46f6daf6fcfa6
+19/06/2023 11:45:54:531 AM - Payload Body: {
+  "name": "DOP-ESX-IXN031"
+}
+19/06/2023 11:45:55:090 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/ab5cbba52873482cba89f2d6e2a9d0a9
+19/06/2023 11:45:55:096 AM - Payload Body: {
+  "name": "DOP-ESX-CYO020"
+}
+19/06/2023 11:45:55:672 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/acde2563fceb4d17b45ae49b4c1b2146
+19/06/2023 11:45:55:675 AM - Payload Body: {
+  "name": "DOP-ESX-CYO012"
+}
+19/06/2023 11:45:56:349 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/ad8d8d9051a34da79758ca2a2c46e7b4
+19/06/2023 11:45:56:354 AM - Payload Body: {
+  "name": "DOP-ESX-IXN047"
+}
+19/06/2023 11:45:56:907 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/af727ef7da314d24a71448e713fc7d0f
+19/06/2023 11:45:56:910 AM - Payload Body: {
+  "name": "DOP-ESX-IXN009"
+}
+19/06/2023 11:45:57:658 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/b1056aa54641416392cb06e96cea97ce
+19/06/2023 11:45:57:662 AM - Payload Body: {
+  "name": "SIN-ESX-CYO01"
+}
+19/06/2023 11:45:58:359 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/b1f3b2d673414ecc8595ce70b9e54e7f
+19/06/2023 11:45:58:364 AM - Payload Body: {
+  "name": "DOP-ESX-CYO030"
+}
+19/06/2023 11:45:59:037 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/b7c4e8c3c35a4730a4e57437449a3be2
+19/06/2023 11:45:59:044 AM - Payload Body: {
+  "name": "DOP-ESX-CYO045"
+}
+19/06/2023 11:45:59:443 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/b88d5792b2874906847f7b068216d9d9
+19/06/2023 11:45:59:448 AM - Payload Body: {
+  "name": "DOP-ESX-CYO022"
+}
+19/06/2023 11:46:00:133 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/c119556872104bd4988ab8eacc059269
+19/06/2023 11:46:00:138 AM - Payload Body: {
+  "name": "DOP-ESX-CYO032"
+}
+19/06/2023 11:46:00:757 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/c7be8c3d5d574ba9a7234fc2f4b3123b
+19/06/2023 11:46:00:764 AM - Payload Body: {
+  "name": "DOP-ESX-IXN016"
+}
+19/06/2023 11:46:01:219 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/c7ceae5a5af84063b8857aecef521a13
+19/06/2023 11:46:01:222 AM - Payload Body: {
+  "name": "DOP-ESX-IXN010"
+}
+19/06/2023 11:46:01:918 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/c8b0044469bf405d8bd3a7a77e47c53e
+19/06/2023 11:46:01:921 AM - Payload Body: {
+  "name": "DOP-ESX-IXN019"
+}
+19/06/2023 11:46:02:564 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/cc51336fb3a64dc88382edd102a72990
+19/06/2023 11:46:02:570 AM - Payload Body: {
+  "name": "DLR-ESX-CYO01"
+}
+19/06/2023 11:46:03:358 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/cc8649a8007a49c5a41de73c8a9d536b
+19/06/2023 11:46:03:367 AM - Payload Body: {
+  "name": "DOP-ESX-IXN044"
+}
+19/06/2023 11:46:04:093 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/cdfbfafabcec4a479be9205188b0f3b3
+19/06/2023 11:46:04:098 AM - Payload Body: {
+  "name": "DOP-ESX-CYO028"
+}
+19/06/2023 11:46:04:816 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/d0821439acab433786a7106d1eb3c7b1
+19/06/2023 11:46:04:820 AM - Payload Body: {
+  "name": "DOP-ESX-CYO009"
+}
+19/06/2023 11:46:05:388 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/d12ec6d4977742b9826c2c64d5b2da4f
+19/06/2023 11:46:05:397 AM - Payload Body: {
+  "name": "DOP-ESX-IXN011"
+}
+19/06/2023 11:46:06:113 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/d831aaccc70c4935ab08523351338568
+19/06/2023 11:46:06:117 AM - Payload Body: {
+  "name": "DOP-ESX-CYO025"
+}
+19/06/2023 11:46:06:621 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/dcd3340a3ca74746bd727eb4063fbae9
+19/06/2023 11:46:06:626 AM - Payload Body: {
+  "name": "DOP-ESX-IXN042"
+}
+19/06/2023 11:46:07:216 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/e4299a3551af4f10a172e86784c0691d
+19/06/2023 11:46:07:221 AM - Payload Body: {
+  "name": "DOP-ESX-CYO035"
+}
+19/06/2023 11:46:07:835 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/e5d3b858087d4c92aec4fb72c30edaf0
+19/06/2023 11:46:07:840 AM - Payload Body: {
+  "name": "DOP-ESX-CYO033"
+}
+19/06/2023 11:46:08:528 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/e69afaa709714c12b7c4938b2caac49a
+19/06/2023 11:46:08:533 AM - Payload Body: {
+  "name": "DOP-ESX-IXN013"
+}
+19/06/2023 11:46:09:209 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/eb08c846bf064f35b63c97463ff764ac
+19/06/2023 11:46:09:212 AM - Payload Body: {
+  "name": "DOP-ESX-CYO015"
+}
+19/06/2023 11:46:09:761 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/ef2cb5d008c74090a13f2d5a7c057900
+19/06/2023 11:46:09:767 AM - Payload Body: {
+  "name": "DOP-ESX-CYO001"
+}
+19/06/2023 11:46:10:462 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/f47e443014d24613a25620673282b105
+19/06/2023 11:46:10:468 AM - Payload Body: {
+  "name": "DOP-ESX-CYO041"
+}
+19/06/2023 11:46:11:492 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators/fad63b6852aa43aba60cc845a3b6fcc1
+19/06/2023 11:46:11:498 AM - Payload Body: {
+  "name": "DOP-ESX-IXN003"
+}
