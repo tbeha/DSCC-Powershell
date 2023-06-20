@@ -1,0 +1,16 @@
+20/06/2023 10:40:45:969 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type1
+20/06/2023 10:40:52:528 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/CZ29420H95/volumes
+20/06/2023 10:43:09:083 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type1
+20/06/2023 10:43:10:225 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/CZ29420H95/volumes
+20/06/2023 11:40:41:165 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type1
+20/06/2023 11:40:43:509 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/CZ29420H95/volumes
+20/06/2023 11:41:07:074 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type1
+20/06/2023 11:41:07:987 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2
+20/06/2023 11:41:08:436 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type1
+20/06/2023 11:41:09:441 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/initiators
+20/06/2023 11:41:15:816 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type1
+20/06/2023 11:41:16:498 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/initiators
+20/06/2023 11:41:22:955 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type1
+20/06/2023 11:41:23:342 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+20/06/2023 11:41:23:890 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-initiators
+20/06/2023 11:41:24:196 AM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/initiators

@@ -1,0 +1,129 @@
+
+NAME
+    Remove-DSCCVolume
+    
+SYNOPSIS
+    Removes a Volume from a DSCC Storage System.
+    
+    
+SYNTAX
+    Remove-DSCCVolume [-SystemId] <String> [-VolumeId] <String> [-Cascade] [-unExport] [-force] [-WhatIf] [<CommonParameters>]
+    
+    
+DESCRIPTION
+    The command will remove a specific volume from a Storage System, but to run this command you will need to know the VolumeID 
+    and the StorageSystemID. This command includes parameters to both force the delete, as well as force a cascading delete that removes linked items.
+    
+
+PARAMETERS
+    -SystemId <String>
+        
+        Required?                    true
+        Position?                    1
+        Default value                
+        Accept pipeline input?       true (ByPropertyName)
+        Accept wildcard characters?  false
+        
+    -VolumeId <String>
+        A single Storage System Volume ID is specified and required.
+        
+        Required?                    true
+        Position?                    2
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -Cascade [<SwitchParameter>]
+        This option is only valid for devices that are of type Device-Type1 (Alletra9K, Primera, 3PAR) and will be ignored on Device-Type2 devices 
+        (Alletra6K and Nimble Storage). This option will remove both the Volume and the dependant snapshots all in a single command.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -unExport [<SwitchParameter>]
+        This option is only valid for devices that are of type Device-Type1 (Alletra9K, Primera, 3PAR) and will be ignored on Device-Type2 devices 
+        (Alletra6K and Nimble Storage). This option will remove both the volume as well as unexport the host and host-sets that this volume is mapped 
+        to.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -force [<SwitchParameter>]
+        The option will force the volume offline and remove it on a Device-type2 (Alletra 6K or Nimble Storage) type system. The default behaviour
+        without the force option being set to true is to only delete a volume that is already offline. If used with a Device-Type2 (Alletra9K, 
+        Primera, 3PAR) 
+        this field will be ignored.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -WhatIf [<SwitchParameter>]
+        The WhatIf directive will show you the RAW RestAPI call that would be made to DSCC instead of actually sending the request.
+        This option is very helpful when trying to understand the inner workings of the native RestAPI calls that DSCC uses.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+INPUTS
+    
+OUTPUTS
+    
+    -------------------------- EXAMPLE 1 --------------------------
+    
+    PS:>Get-DSCCStorageSystem | Remove-Volume -Volumeid 0b12343564567abcdef0234123 -force
+    
+    
+    
+    
+    
+    
+    -------------------------- EXAMPLE 2 --------------------------
+    
+    PS:>Get-DSCCStorageSystem | Remove-Volume -Volumeid 0b12343564567abcdef0234123 -force -whatif
+    
+    
+    
+    
+    
+    
+    -------------------------- EXAMPLE 3 --------------------------
+    
+    PS:>Remove-Volume -SystemId 040abe24534563245234243abef -Volumeid 0b12343564567abcdef0234123 -force
+    
+    
+    
+    
+    
+    
+    -------------------------- EXAMPLE 4 --------------------------
+    
+    PS:>Remove-Volume -SystemId MX1234ABDE -Volumeid 234Volref -Cascade -unExport
+    
+    
+    
+    
+    
+    
+    
+RELATED LINKS
+
+
+
