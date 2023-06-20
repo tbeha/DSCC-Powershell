@@ -137,12 +137,10 @@ function Unexport-DSCCVolume{
 	return Invoke-RestMethod -Uri $Uri -Method 'POST' -Body ($MyBody | ConvertTo-Json) -Headers $MyHeaders -ContentType 'application/json'
 }
 
-Connect-DSCC -Client_Id $Client_ID -Client_Secret $Client_Secret -GreenlakeType EU #-Verbose -AutoRenew
+$Client_ID = ''  
+$Client_Secret = ''
 
-# Get Host Group ID of the host you want to connect the volume
-#$HostGroup = Get-DSCCHostGroup |  Where-Object{$_.name -eq 'VDI'}
-#$HostGroupId = @($HostGroup.id)
-#Write-Log -message ('HostGroup: '+ $HotGroup.name + ' id: '+$HostGroup.id) -writeToConsole $true
+Connect-DSCC -Client_Id $Client_ID -Client_Secret $Client_Secret -GreenlakeType EU #-Verbose -AutoRenew
 
 # Create a new Host
 
