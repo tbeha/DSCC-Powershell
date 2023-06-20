@@ -122,8 +122,8 @@ $Response = Get-DSCCHostGroup | Where-Object{$_.userCreated -eq $false}
 
 # Consolidate the system generated HostGroup list by merging multiple entries of the same Host Group name into a single one
 $hglist=@()
-$hglist += $Response[0]
-for($i=1; $i -lt $Response.Count; $i++){
+#$hglist += $Response[0]
+for($i=0; $i -lt $Response.Count; $i++){
     $new = $true
     for($j=0; $j -lt $hglist.Count; $j++){
         if($hglist[$j].name -eq $Response[$i].name){ # Host Group with the same name exists!
@@ -210,8 +210,8 @@ for($i =0; $i -lt $hglist.Count; $i++){                 # work on the consolidat
             Write-Log -message ("     " +$oldHG.hosts[$j].name ) -writeToConsole $true
         }
         Write-Log -message "    New Hosts: " -writeToConsole $true
-        for($j=0; $j -lt $hostname.Count; $j++){
-            Write-Log -message ("     " + $hostname[$j])
+        for($j=0; $j -lt $hostNames.Count; $j++){
+            Write-Log -message ("     " + $hostNames[$j])
         }
         if(Get-ChoiceConsolidateHostGroups){ # ask wether the hosts should be consolidated into the single host group
             Write_log -message "  Consolidate the Existing and the new Hosts into the single Host Group" -writeToConsole $true
