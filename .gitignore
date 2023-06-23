@@ -4,3 +4,7 @@ HostMigrationStatus.xlsx
 HostTest.csv
 hostids.txt
 DSCC-Powershell.code-workspace
+logs/HostMigration_20230620.log
+logs/HostMigration_20230621.log
+logs/HostMigration_20230622.log
+logs/HostMigration_20230623.log
