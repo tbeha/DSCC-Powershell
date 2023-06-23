@@ -548,7 +548,9 @@ Param
     {
        Log-Message "Editing host detail of host Id $hostId"
        $MyAdd = 'host-initiators/' + $hostId
-       $newHostName = $hostName.Trim("-DSCC")
+
+       #$newHostName = $hostName.Trim("-DSCC")
+       $newHostName = $hostName.Substring(0,($hostName.Length -5))
        Log-Message "Updating the host name to $newHostName with URL $MyAdd"
        $MyBody = @{name=$newHostName}  
        $response = Invoke-DSCCrestmethod -UriAdd $MyAdd -method PUT -Body ( $MyBody | convertto-json ) -whatifBoolean $WhatIf

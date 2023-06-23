@@ -60,7 +60,6 @@ process
     }
 }
 
-
 function Get-ChoiceConsolidateHostGroups
 {
 
@@ -114,6 +113,26 @@ Function Write-Log()
     }
 }
 
+function Update-HostGroup{
+    Param   (
+        [Parameter(Mandatory)]  $HostGroupId,
+                                $HostsToUpdate,
+                                $HostsToCreate,
+                                $HostsToRemove,
+                                $ProximityValues,
+                                $Name
+    )
+    Process{
+        $Uri = $Base + '/api/v1/host-initiator-groups/'+$HostGroupId
+        $MyBody = @()
+        if($HostsToUpdate){ $MyBody += @{updatedHosts = $HostsToUpdate} }
+        if($HostsToRemove){ $MyBody += @{removedHosts = $HostsToRemove} }
+        if($HostsToCreate){ $MyBody += @{hostsToCreate = $HostsToCreate} }
+        if($ProximityValues){ $MyBody += @{hostProximityValues = $ProximityValues} }
+        if($Names){ $MyBody += @{name = $Name} }
+        return Invoke-RestMethod -Uri $Uri -Method "PUT" -Headers $MyHeaders -Body ($MyBody | ConvertTo-Json) -ContentType 'application/json'
+    }    
+}
 # Connect to the DSCC 
 Connect-DSCC -Client_Id $Client_ID -Client_Secret $Client_Secret -GreenlakeType EU #-Verbose -AutoRenew
 
@@ -137,11 +156,11 @@ for($i=0; $i -lt $Response.Count; $i++){
         Write-Log -message $message -writeToConsole $true
         $hosts = $Response[$i].hosts
         for($j=0; $j -lt $hosts.Count; $j++){
-            Write-Log -message ("  - "+ $hosts[$j].name) -writeToConsole $true 
+            Write-Log -message ("  - "+ $hosts[$j].name + "  " + $hosts[$j].id) -writeToConsole $true 
         }
         if(Get-ChoiceAddHostGroup($Response[$i].name)){ 
             $hglist += $Response[$i]
-            Write-Log -message "Added to ToDo-List" -writeToConsole $true
+            Write-Log -message ("Added to ToDo-List - HostGroupID: "+$Response[$i].id) -writeToConsole $true
         } else {
             Write-log -message "Skipped" -writeToConsole $true
         }
@@ -151,7 +170,7 @@ for($i=0; $i -lt $Response.Count; $i++){
         Write-Log -message ("Host Group: " + $Response[$i].name) -writeToConsole $true
         Write-Log -message ("  Existing Hosts: ") -writeToConsole $true
         for($l=0; $l -lt $hglist[$x].hosts.Count; $l++){
-            Write-Log -message ("    "+ $hglist[$x].hosts[$l].name) -writeToConsole $true
+            Write-Log -message ("    "+ $hglist[$x].hosts[$l].name + "  " + $hglist[$x].hosts[$l].id) -writeToConsole $true
         }
         Write-Log -message ("  New Hosts: ") -writeToConsole $true
         for($k=0; $k -lt $Response[$i].hosts.Count; $k++){ # Check for new host ids that are not yet listed in this host group entry
@@ -184,15 +203,18 @@ $userHG = Get-DSCCHostGroup | Where-Object{$_.userCreated -eq $true} # get the c
 
 for($i =0; $i -lt $hglist.Count; $i++){                 # work on the consolidated list of the system generated host groups
     $name = $hglist[$i].name                            # host group name
-    Write-Log -message ("  "+$name) -writeToConsole $true
+    Write-Log -message ("  "+ $name + "  " + $hglist[$i].id) -writeToConsole $true
+    Write-Log -message "     Hosts" -writeToConsole $true
     $comment = $hglist[$i].comment                      # host group comment
     $hostIds = @()
     $hostNames = @()
     for($j =0; $j -lt $hglist[$i].hosts.Count; $j++){   # create the list of host ids, that belong to this host group  
         $hostIds += $hglist[$i].hosts[$j].id
         $hostNames += $hglist[$i].hosts[$j].name
+        $message = "    " + $hglist[$i].hosts[$j].name + "  " + $hglist[$i].hosts[$j].id
+        Write-Log -message $message -writeToConsole $true
     }
-    
+        
     $hgExist=$false                                     # Check if a user created host group with the same name already exists
     for($j=0;$j -lt $userHG.Count; $j++){
         if($userHG[$j].name -eq $name){
@@ -204,18 +226,21 @@ for($i =0; $i -lt $hglist.Count; $i++){                 # work on the consolidat
 
     if($hgExist){                                       # if a user generated host group already exist, then only add the host ids
         Write-Log -message "  Found existing user created Host Group with the same name" -writeToConsole $true
-        $oldHG = Get-DSCCHostGroup -SystemId $hgID
+        #$oldHG = Get-DSCCHostGroup -SystemId $hgID
+        $oldHG = Get-DSCCHostGroup | Where-Object {$_.id -eq $hgID}
         Write-Log -message "    Existing Hosts: " -writeToConsole $true
         for($j=0; $j -lt $oldHG.hosts.Count;$j++){
             Write-Log -message ("     " +$oldHG.hosts[$j].name ) -writeToConsole $true
         }
         Write-Log -message "    New Hosts: " -writeToConsole $true
         for($j=0; $j -lt $hostNames.Count; $j++){
-            Write-Log -message ("     " + $hostNames[$j])
+            Write-Log -message ("     " + $hostNames[$j] + "  " + $hostIds[$j]) -writeToConsole $true
         }
         if(Get-ChoiceConsolidateHostGroups){ # ask wether the hosts should be consolidated into the single host group
-            Write_log -message "  Consolidate the Existing and the new Hosts into the single Host Group" -writeToConsole $true
-            $Response = Set-DSCCHostGroup -hostGroupID $hgID -updatedHosts $hostIds
+            Write-log -message "  Consolidate the Existing and the new Hosts into the single Host Group" -writeToConsole $true
+            $Response = Update-HostGroup -HostGroupId $hgID -HostsToUpdate $hostIds
+            #$Response = Set-DSCCHostGroup -hostGroupID $hgID -updatedHosts $hostIds
+            Write-log -message $Response -writeToConsole $true
             WaitForTaskToComplete($Response.taskUri)
             Write-Log -message "  Done" -writeToConsole $true
         }
