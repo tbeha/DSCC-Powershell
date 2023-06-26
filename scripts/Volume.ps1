@@ -178,7 +178,8 @@ process
         else 
             {   write-verbose "passed systemID = $SystemId"
                 if ( (Find-DSCCDeviceTypeFromStorageSystemID -SystemId $SystemId) )
-                        {   $MyAdd = 'storage-systems/' + $SystemId + '/volumes' 
+                        {   
+                            $MyAdd = 'storage-systems/' + $SystemId + '/volumes' 
                             $SysColOnly = invoke-DSCCrestmethod -UriAdd $MyAdd -method Get -whatifBoolean $WhatIf
                             return ( Invoke-RepackageObjectWithType -RawObject $SysColOnly -ObjectName "Volume.Combined" )
                         }
