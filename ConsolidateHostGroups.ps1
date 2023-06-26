@@ -240,8 +240,8 @@ for($i =0; $i -lt $hglist.Count; $i++){                 # work on the consolidat
         }
         if(Get-ChoiceConsolidateHostGroups){ # ask wether the hosts should be consolidated into the single host group
             Write-log -message "  Consolidate the Existing and the new Hosts into the single Host Group" -writeToConsole $true
-            $Response = Update-HostGroup -HostGroupId $hgID -HostsToUpdate $hostIds
-            #$Response = Set-DSCCHostGroup -hostGroupID $hgID -updatedHosts $hostIds
+            #$Response = Update-HostGroup -HostGroupId $hgID -HostsToUpdate $hostIds
+            $Response = Set-DSCCHostGroup -hostGroupID $hgID -updatedHosts $hostIds
             Write-log -message $Response -writeToConsole $true
             WaitForTaskToComplete($Response.taskUri)
             Write-Log -message "  Done" -writeToConsole $true
