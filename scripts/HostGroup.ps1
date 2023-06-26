@@ -407,7 +407,7 @@ process
                                     $MyBody += @{}
         if ($name)              {   $MyBody += @{ name          = $name}  }
         if ($updatedHosts)      {   $MyBody += @{ updatedHosts  = $updatedHosts }  }
-        if ($updatedHosts)      {   $MyBody += @{ HostsToCreate = $hostsToCreate }  }
+        if ($hostsToCreateHosts)      {   $MyBody += @{ HostsToCreate = $hostsToCreate }  }
         return ( Invoke-DSCCRestMethod -UriAdd $MyAdd -body ( $MyBody | ConvertTo-json ) -Method 'Put' -WhatIfBoolean $WhatIf )
     }       
 } 

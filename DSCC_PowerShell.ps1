@@ -231,7 +231,6 @@ $Response = DSCCVolumeExport -volumeId $Volume.id -HostGroupIds $HostGroup.id -A
 $Status = Wait-DSCCTaskCompletion -TaskId $Response.taskURI
 if($Debug){ $Status | Format-List }
 
-
 # The clean up
 
 $Volume = Get-DSCCVolume -SystemId $P650.id | Where-Object{$_.name -eq $volname}
@@ -241,7 +240,6 @@ $DSCCHost = Get-DSCCHost | Where-Object{$_.name -eq $name}
 $Response = DSCCVolumeUnexport -volumeId $Volume.id -HostGroupIds $HostGroup.id -ArrayUri $P650.resourceUri
 if($Response){$Status = Wait-DSCCTaskCompletion -TaskId $Response.taskURI}
 if($Debug){ $Status | Format-List }
-
 
 $Response = Remove-DSCCVolume -SystemId $P650.id -VolumeId $VolId -Force
 if($Response){$Status = Wait-DSCCTaskCompletion -TaskId $Response.taskURI}
