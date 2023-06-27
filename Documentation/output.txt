@@ -1,0 +1,122 @@
+
+Token_Creation                     Token_CreationEpoch Auto_Renew Access_Token
+--------------                     ------------------- ---------- ------------
+Tuesday, June 27, 2023 12:55:57 PM 1687870557.59788    False      eyJhbGciOiJSUzI1NiIsImtpZCI6ImhscU5ySGxEUEVfRlZDaEt2NmZvd2N0dkhSdyIsInBpLmF0bSI6ImRlejAifQ.eyJj…
+################ Get-DSCCHostGroup ###################################
+
+
+id                     : beb654c33741fbb60bc1c74c1eda4042
+wwn                    : 60002AC00000000000001C8A00024ADC
+name                   : syVDI-DS01
+healthState            : NORMAL
+sizeMiB                : 512000
+provisionedSizeMiB     : 512000
+productFamily          : deviceType1
+spaceWarning           : 0
+hostWrittenCapacityMiB : 218291
+thinSavings            : 2.3:1
+systemId               : CZ294112CB
+volumeType             : VVTYPE_BASE
+isInternal             : False
+subType                : PROVTYPE_THIN
+associatedLinks        : {@{type=storage-pools; resourceUri=/api/v1/storage-systems/CZ294112CB/storage-pools/c6e9f8d2b3c4965d15438cc3b8ad34cb}, @{type=storage-systems; resourceUri=/api/v1/storage-systems/CZ294112CB}}
+resourceUri            : /api/v1/storage-systems/device-type1/CZ294112CB/volumes/beb654c33741fbb60bc1c74c1eda4042
+usedSizeMiB            : 218291.125
+usedCapacityPercent    : 42.6349853515625
+initiators             : {}
+customerId             : b2a2026c37e911ecbaa6623168b2c81d
+generation             : 1687431326
+type                   : volume
+consoleUri             : /data-ops-manager/storage-systems/volumes/beb654c33741fbb60bc1c74c1eda4042
+volumeSetId            : 
+
+
+
+id                           : beb654c33741fbb60bc1c74c1eda4042
+systemId                     : CZ294112CB
+displayname                  : Virtual Volume syVDI-DS01
+domain                       : -
+name                         : syVDI-DS01
+healthState                  : 3
+usedCapacity                 : 42.6349853515625
+volumeId                     : 7306
+wwn                          : 60002AC00000000000001C8A00024ADC
+state                        : @{detailed=; overall=STATE_NORMAL}
+creationTime                 : @{ms=1643287705000; tz=Europe/Berlin}
+comment                      : 
+adminSpace                   : @{reservedMiB=512; rawReservedMiB=1536; usedMiB=218.453125; freeMiB=255.046875; grownMiB=0; reclaimedMiB=0; totalMiB=512}
+userSpace                    : @{reservedMiB=222080; rawReservedMiB=266495.322265625; usedMiB=218291.125; freeMiB=3788.875; grownMiB=362752; reclaimedMiB=151680; totalMiB=222080}
+snapshotSpace                : @{reservedMiB=1024; rawReservedMiB=1228.796875; usedMiB=0; freeMiB=1024; grownMiB=1024; reclaimedMiB=0; totalMiB=1024}
+totalReservedMiB             : 223104
+totalRawReservedMiB          : 267724.119140625
+usedSizeMiB                  : 218291.125
+sizeMiB                      : 512000
+totalSpaceMiB                : 223616
+hostWrittenToVirtualPercent  : 0.4263496
+userReservedToVirtualPercent : 0.43375
+userUsedToVirtualPercent     : 0.42634985
+snapshotUsedToVirtualPercent : 0.002
+adminAllocationSettings      : @{deviceType=DEVICE_TYPE_SSD; deviceSpeed=; RAIDType=RAID_ONE; HA=; requestedHA=; setSize=3 data; stepSize=32768; diskFilter=}
+userAllocationSettings       : @{deviceType=DEVICE_TYPE_SSD; deviceSpeed=; RAIDType=RAID_SIX; HA=; requestedHA=; setSize=10 data, 2 parity; stepSize=65536; diskFilter=}
+snapshotAllocationSettings   : @{deviceType=DEVICE_TYPE_SSD; deviceSpeed=; RAIDType=RAID_SIX; HA=; requestedHA=; setSize=10 data, 2 parity; stepSize=65536; diskFilter=}
+raid                         : RAID_SIX
+devType                      : DEVICE_TYPE_SSD
+sectorsPerTrack              : 304
+headsPerCylinder             : 8
+vlunSectorSize               : 512
+userAllocLimit               : 0
+userAllocWarning             : 0
+snapshotAllocLimit           : 0
+snapshotAllocWarning         : 0
+userCpgID                    : 0
+userCpgName                  : SSD_r6
+snapshotCpgID                : 0
+snapshotCpgName              : SSD_r6
+parentID                     : -2
+physParentID                 : -2
+copyOfID                     : -2
+roChildID                    : -2
+rwChildID                    : -2
+volumeType                   : VVTYPE_BASE
+provType                     : PROVTYPE_THIN
+fullyProvisioned             : False
+thinProvisioned              : True
+policy                       : @{staleSnapshot=True; oneHost=False; zeroDetect=True; system=False; noCache=False; fileService=False; zeroFill=False; hostDif3par=True; hostDifStd=False}
+physicalCopy                 : False
+readOnly                     : False
+ddcSize                      : 0
+ddsSize                      : 0
+dedupSavingsSize             : 0
+dedupWrittenSize             : 0
+started                      : True
+compressionPolicy            : No
+conversionType               : CONVERSIONTYPE_THIN
+dedup                        : No
+hostWrittenMiB               : 218291
+rcopyStatus                  : none
+hidden                       : False
+snapshotTdvvSize             : @{virtualSizeMiB=0; ddcSizeMiB=0; ddsSizeMiB=0; writtenSizeMiB=0}
+baseId                       : 7306
+sharedParentId               : -2
+compactEfficiency            : 2.34549159980737
+compressionEfficiency        : 0
+copiedMB                     : 0
+copiedPerc                   : 0
+efficiencyUpdateTime         : 
+unrefSpaceFreedTime          : 
+retentionTime                : 
+expirationTime               : 
+spaceCalculationTime         : @{ms=1684368608000; tz=Europe/Berlin}
+dataReduction                : DATA_REDUCTION_DISABLED
+thinSavings                  : 2.3:1
+snapShotTier                 : SSD  100 K  (CPG: SSD_r6)
+storageTier                  : SSD  100 K  (CPG: SSD_r6)
+associatedLinks              : {@{type=storage-pools; resourceUri=/api/v1/storage-systems/device-type1/CZ294112CB/storage-pools/c6e9f8d2b3c4965d15438cc3b8ad34cb}, @{type=systems; resourceUri=/api/v1/storage-systems/device-type1/CZ294112CB}}
+initiators                   : {@{id=92249be25f5b4e73aaba0d4867af8207; type=host-initiator; resourceUri=/api/v1/host-initiators/92249be25f5b4e73aaba0d4867af8207; deviceDiscoveredName=SYH5HE01B5}, @{id=6d195f6e6d4c45609cac006934b3df7f; type=host-initiator; resourceUri=/api/v1/host-initiators/6d195f6e6d4c45609cac006934b3df7f; deviceDiscoveredName=SYH5HE01B6}, @{id=e626159697ca4c45a2402313813abac7; type=host-initiator; resourceUri=/api/v1/host-initiators/e626159697ca4c45a2402313813abac7; deviceDiscoveredName=SYH5HE01B11}}
+customerId                   : b2a2026c37e911ecbaa6623168b2c81d
+generation                   : 1687431326
+type                         : volume
+consoleUri                   : /data-ops-manager/storage-systems/device-type1/CZ294112CB/volumes/beb654c33741fbb60bc1c74c1eda4042
+requestUri                   : https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type1/CZ294112CB/volumes/beb654c33741fbb60bc1c74c1eda4042
+
+

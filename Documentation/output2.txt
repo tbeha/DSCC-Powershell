@@ -1,0 +1,150 @@
+
+Token_Creation                     Token_CreationEpoch Auto_Renew Access_Token
+--------------                     ------------------- ---------- ------------
+Tuesday, June 27, 2023 10:15:58 AM 1687860958.84905    False      eyJhbGciOiJSUzI1NiIsImtpZCI6ImhscU5ySGxEUEVfRlZDaEt2NmZvd2N0dkhSdyIsInBpLmF0bSI6ImRlejAifQ.eyJjbGllb…
+################ Get-DSCCHostGroup ###################################
+
+
+id                : 30111afebeb649379e8e7aa7b4603794
+name              : VDI
+comment           : 
+userCreated       : True
+customerId        : b2a2026c37e911ecbaa6623168b2c81d
+type              : host-initiator-group
+generation        : 1686708286
+consoleUri        : /data-ops-manager/host-initiator-groups/30111afebeb649379e8e7aa7b4603794
+hosts             : {@{id=6d195f6e6d4c45609cac006934b3df7f; name=SYH5HE01B6; ipAddress=10.1.20.12; systems=System.Object[]; userCreated=True; initiators=System.Object[]; markedForDelete=False}, @{id=92249be25f5b4e73aaba0d4867af8207; name=SYH5HE01B5; ipAddress=10.1.20.11; systems=System.Object[]; userCreated=True; initiators=System.Object[]; markedForDelete=False}, @{id=e626159697ca4c45a2402313813abac7; name=SYH5HE01B11; ipAddress=10.1.20.13; systems=System.Object[]; userCreated=True; initiators=System.Object[]; markedForDelete=False}}
+systems           : {00444f5e31fd5cb296000000000000000000000001, CZ294112CB}
+associatedSystems : {CZ294112CB}
+markedForDelete   : False
+editStatus        : Not_Applicable
+associatedLinks   : {@{type=hosts; resourceUri=/api/v1/host-initiators?filter=hostGroupId in (30111afebeb649379e8e7aa7b4603794)}, @{type=mapped-device-host-group; resourceUri=/api/v1/storage-systems/device-type1/CZ294112CB/host-sets?filter=uid in ( b4476729cc0ddd13caf9bc6d1cd57108 )}}
+
+
+################ Get-DSCCHostGroup - Associated Links ###################################
+
+id                : 6d195f6e6d4c45609cac006934b3df7f
+name              : SYH5HE01B6
+ipAddress         : 10.1.20.12
+fqdn              : syh5he01b6.demo.local
+operatingSystem   : VMware (ESXi)
+systems           : {00444f5e31fd5cb296000000000000000000000001, CZ294112CB}
+associatedSystems : {00444f5e31fd5cb296000000000000000000000001, CZ294112CB}
+userCreated       : True
+hostGroups        : {@{id=30111afebeb649379e8e7aa7b4603794; name=VDI; userCreated=True; systems=System.Object[]; markedForDelete=False}, @{id=a829053d2cb37f0575b1156ce0a81cc4; name=DSCCAPItest; userCreated=False; systems=System.Object[]; markedForDelete=False}}
+comment           : DSCC API Created - Thomas Beha
+protocol          : FC
+customerId        : b2a2026c37e911ecbaa6623168b2c81d
+type              : host-initiator
+generation        : 1683880477
+consoleUri        : /data-ops-manager/host-initiators/6d195f6e6d4c45609cac006934b3df7f
+initiators        : {@{id=18b16d3a6bd34ee0a5b494ee35ed7380; ipAddress=10.1.20.12; address=10:00:be:d8:0d:50:00:62; name=syh5he01b6p2; protocol=FC; systems=System.Object[]}, @{id=aeaa12cebe824cb19903856b6e95fdc4; ipAddress=10.1.20.12; address=10:00:be:d8:0d:50:00:60; name=syh5he0b6p1; protocol=FC; systems=System.Object[]}}
+location          : CTC BBN
+persona           : VMware
+subnet            : 255.255.255.0
+markedForDelete   : False
+editStatus        : Not_Applicable
+associatedLinks   : {@{type=initiators; resourceUri=/api/v1/initiators?filter=hostId in (6d195f6e6d4c45609cac006934b3df7f)}, @{type=host-groups; resourceUri=/api/v1/host-initiator-groups?filter=hostId in (6d195f6e6d4c45609cac006934b3df7f)}, @{type=mapped-device-host; resourceUri=/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups?filter=sc_HostId eq 6d195f6e6d4c45609cac006934b3df7f}, @{type=mapped-device-host; resourceUri=/api/v1/storage-systems/device-type1/CZ294112CB/hosts?filter=uid in ( 6dd796744c4bffb3d57c237508c07e37 )}}
+model             : SY480Gen10
+contact           : thomas.beha@hpe.com
+
+id                : 92249be25f5b4e73aaba0d4867af8207
+name              : SYH5HE01B5
+ipAddress         : 10.1.20.11
+fqdn              : syh5he01b5.demo.local
+operatingSystem   : VMware (ESXi)
+systems           : {00444f5e31fd5cb296000000000000000000000001, CZ294112CB}
+associatedSystems : {00444f5e31fd5cb296000000000000000000000001, CZ294112CB}
+userCreated       : True
+hostGroups        : {@{id=30111afebeb649379e8e7aa7b4603794; name=VDI; userCreated=True; systems=System.Object[]; markedForDelete=False}, @{id=a829053d2cb37f0575b1156ce0a81cc4; name=DSCCAPItest; userCreated=False; systems=System.Object[]; markedForDelete=False}}
+comment           : DSCC API Created - Thomas Beha
+protocol          : FC
+customerId        : b2a2026c37e911ecbaa6623168b2c81d
+type              : host-initiator
+generation        : 1683872209
+consoleUri        : /data-ops-manager/host-initiators/92249be25f5b4e73aaba0d4867af8207
+initiators        : {@{id=488d651ed372436e851d844057eaf44c; ipAddress=10.1.20.11; address=10:00:be:d8:0d:50:00:48; name=syh5he0b5p1; protocol=FC; systems=System.Object[]}, @{id=4fa5e24fc743484499ab480c9bd1a547; ipAddress=10.1.20.11; address=10:00:be:d8:0d:50:00:4a; name=syh5he01b5p2; protocol=FC; systems=System.Object[]}}
+location          : CTC BBN
+persona           : VMware
+subnet            : 255.255.255.0
+markedForDelete   : False
+editStatus        : Not_Applicable
+associatedLinks   : {@{type=initiators; resourceUri=/api/v1/initiators?filter=hostId in (92249be25f5b4e73aaba0d4867af8207)}, @{type=host-groups; resourceUri=/api/v1/host-initiator-groups?filter=hostId in (92249be25f5b4e73aaba0d4867af8207)}, @{type=mapped-device-host; resourceUri=/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups?filter=sc_HostId eq 92249be25f5b4e73aaba0d4867af8207}, @{type=mapped-device-host; resourceUri=/api/v1/storage-systems/device-type1/CZ294112CB/hosts?filter=uid in ( 1f0c141dd927f65a60cced3ab050e5fb )}}
+model             : SY480Gen10
+contact           : thomas.beha@hpe.com
+
+id                : e626159697ca4c45a2402313813abac7
+name              : SYH5HE01B11
+ipAddress         : 10.1.20.13
+fqdn              : syh5he01b11.demo.local
+operatingSystem   : VMware (ESXi)
+systems           : {00444f5e31fd5cb296000000000000000000000001, CZ294112CB}
+associatedSystems : {00444f5e31fd5cb296000000000000000000000001, CZ294112CB}
+userCreated       : True
+hostGroups        : {@{id=30111afebeb649379e8e7aa7b4603794; name=VDI; userCreated=True; systems=System.Object[]; markedForDelete=False}, @{id=a829053d2cb37f0575b1156ce0a81cc4; name=DSCCAPItest; userCreated=False; systems=System.Object[]; markedForDelete=False}}
+comment           : DSCC API Created - Thomas Beha
+protocol          : FC
+customerId        : b2a2026c37e911ecbaa6623168b2c81d
+type              : host-initiator
+generation        : 1683883739
+consoleUri        : /data-ops-manager/host-initiators/e626159697ca4c45a2402313813abac7
+initiators        : {@{id=be5debe981da4dd68ff9e3aec938f93d; ipAddress=10.1.20.13; address=10:00:be:d8:0d:50:00:66; name=syh5he01b11p2; protocol=FC; systems=System.Object[]}, @{id=cd88fa0d62174f17a33e3b8e12677afd; ipAddress=10.1.20.13; address=10:00:be:d8:0d:50:00:64; name=syh5he0b11p1; protocol=FC; systems=System.Object[]}}
+location          : CTC BBN
+persona           : VMware
+subnet            : 255.255.255.0
+markedForDelete   : False
+editStatus        : Not_Applicable
+associatedLinks   : {@{type=initiators; resourceUri=/api/v1/initiators?filter=hostId in (e626159697ca4c45a2402313813abac7)}, @{type=host-groups; resourceUri=/api/v1/host-initiator-groups?filter=hostId in (e626159697ca4c45a2402313813abac7)}, @{type=mapped-device-host; resourceUri=/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups?filter=sc_HostId eq e626159697ca4c45a2402313813abac7}, @{type=mapped-device-host; resourceUri=/api/v1/storage-systems/device-type1/CZ294112CB/hosts?filter=uid in ( 343fae7e95a4993828e0f9377649fc6e )}}
+model             : SY480Gen10
+contact           : thomas.beha@hpe.com
+
+
+
+comment         : 
+displayname     : Host Set VDI
+domain          : -
+hostsetId       : 170
+members         : {SYH5HE01B11, SYH5HE01B5, SYH5HE01B6}
+name            : VDI
+systemWWN       : 2FF70002AC024ADC
+id              : b4476729cc0ddd13caf9bc6d1cd57108
+uuid            : 2e2ff4e1-1755-4816-aed3-524bc6c72882
+generation      : 1683821336
+systemUid       : CZ294112CB
+uri             : /api/v3/hostsets/b4476729cc0ddd13caf9bc6d1cd57108
+resourceUri     : /api/v1/storage-systems/device-type1/CZ294112CB/host-sets/b4476729cc0ddd13caf9bc6d1cd57108
+sc_HostGroupId  : 
+associatedLinks : {@{type=systems; resourceUri=/api/v1/storage-systems/device-type1/CZ294112CB}}
+
+
+################ Get-DSCCHostGroup - Hosts ###################################
+
+id              : 6d195f6e6d4c45609cac006934b3df7f
+name            : SYH5HE01B6
+ipAddress       : 10.1.20.12
+systems         : {00444f5e31fd5cb296000000000000000000000001, CZ294112CB}
+userCreated     : True
+initiators      : {@{id=18b16d3a6bd34ee0a5b494ee35ed7380; ipAddress=10.1.20.12; address=10:00:be:d8:0d:50:00:62; name=syh5he01b6p2; protocol=FC; systems=System.Object[]}, @{id=aeaa12cebe824cb19903856b6e95fdc4; ipAddress=10.1.20.12; address=10:00:be:d8:0d:50:00:60; name=syh5he0b6p1; protocol=FC; systems=System.Object[]}}
+markedForDelete : False
+
+
+
+id              : 92249be25f5b4e73aaba0d4867af8207
+name            : SYH5HE01B5
+ipAddress       : 10.1.20.11
+systems         : {00444f5e31fd5cb296000000000000000000000001, CZ294112CB}
+userCreated     : True
+initiators      : {@{id=488d651ed372436e851d844057eaf44c; ipAddress=10.1.20.11; address=10:00:be:d8:0d:50:00:48; name=syh5he0b5p1; protocol=FC; systems=System.Object[]}, @{id=4fa5e24fc743484499ab480c9bd1a547; ipAddress=10.1.20.11; address=10:00:be:d8:0d:50:00:4a; name=syh5he01b5p2; protocol=FC; systems=System.Object[]}}
+markedForDelete : False
+
+
+
+id              : e626159697ca4c45a2402313813abac7
+name            : SYH5HE01B11
+ipAddress       : 10.1.20.13
+systems         : {00444f5e31fd5cb296000000000000000000000001, CZ294112CB}
+userCreated     : True
+initiators      : {@{id=be5debe981da4dd68ff9e3aec938f93d; ipAddress=10.1.20.13; address=10:00:be:d8:0d:50:00:66; name=syh5he01b11p2; protocol=FC; systems=System.Object[]}, @{id=cd88fa0d62174f17a33e3b8e12677afd; ipAddress=10.1.20.13; address=10:00:be:d8:0d:50:00:64; name=syh5he0b11p1; protocol=FC; systems=System.Object[]}}
+markedForDelete : False
+
+
