@@ -9,8 +9,8 @@ $Client_ID = Read-Host "Enter the DSCC Client ID: "
 $Client_Secret = Read-Host "Enter the DSCC Client Secret: " 
 #>
 
-$Client_ID = 'caba96ba-52c9-49e5-8ae7-eec301e3000a'  
-$Client_Secret = '6a4525e2cd3111edaced4a452722384f'
+$Client_ID = ''  
+$Client_Secret = ''
 
 Import-Module .\HPEDSCC.psd1 -SkipEditionCheck
 
@@ -137,8 +137,9 @@ function Update-HostGroup{
 Connect-DSCC -Client_Id $Client_ID -Client_Secret $Client_Secret -GreenlakeType EU #-Verbose -AutoRenew
 
 # Get the list of system created host groups
-$Response = (Get-DSCCHostGroup | Where-Object{$_.userCreated -eq $false}) | Sort-Object -Property @{Expression = "Name"; Descending = $false}
-
+#$Response = (Get-DSCCHostGroup | Where-Object{$_.userCreated -eq $false}) | Sort-Object -Property @{Expression = "Name"; Descending = $false}
+$HostGroupName = ""
+$Response = (Get-DSCCHostGroup | Where-Object{$_.userCreated -eq $false}) | Where-Object {$_name -eq $HostGroupName}
 # Consolidate the system generated HostGroup list by merging multiple entries of the same Host Group name into a single one
 $hglist=@()
 #$hglist += $Response[0]
