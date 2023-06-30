@@ -150,7 +150,8 @@ process
         write-Verbose "MyInitiatorId = $MyInitiatorId"
         if ( $MyInitiatorId )
                 {   $MySystemId = ($MyInitiator).Systems
-                    if ( (Find-DSCCDeviceTypeFromStorageSystemID -SystemId $MySystemId) -like 'device-type2' ) 
+                    $DeviceType = Find-DSCCDeviceTypeFromStorageSystemID -SystemId $MySystemId
+                    if ( $DeviceType -like 'device-type2' ) 
                             {   # If its a Nimble, then the Initiator is located in a different place on the Array instead of DSCC
                                 write-Verbose "Type2 System Detected"
                                 $MyAdd = 'storage-systems/device-type2/'+$MySystemId+'/host-initiators/'+$MyInitiatorId

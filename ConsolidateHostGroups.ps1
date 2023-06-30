@@ -139,6 +139,7 @@ Connect-DSCC -Client_Id $Client_ID -Client_Secret $Client_Secret -GreenlakeType 
 # Get the list of system created host groups
 $Response = (Get-DSCCHostGroup | Where-Object{$_.userCreated -eq $false}) | Sort-Object -Property @{Expression = "Name"; Descending = $false}
 
+
 # Consolidate the system generated HostGroup list by merging multiple entries of the same Host Group name into a single one
 $hglist=@()
 #$hglist += $Response[0]

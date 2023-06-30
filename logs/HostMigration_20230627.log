@@ -1,0 +1,212 @@
+27/06/2023 16:13:24:886 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 16:13:26:532 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+27/06/2023 16:13:27:162 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+27/06/2023 16:13:27:451 PM - Found new system generated Host Group: DSCCAPI02
+27/06/2023 16:13:27:459 PM -   - DSCCtesthost1  175cecbc99ce4c44aeacba1449f28935
+27/06/2023 16:13:27:463 PM -   - DSCCtesthost2  260146f4a2704ae18316152ec3b159cb
+27/06/2023 16:13:33:215 PM - Added to ToDo-List - HostGroupID: 90da580e07a6f515b4d37ce10f1fb649
+27/06/2023 16:13:33:218 PM - Check for userCreated Host Groups
+27/06/2023 16:13:33:228 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 16:13:33:847 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+27/06/2023 16:13:34:359 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+27/06/2023 16:13:34:715 PM -   DSCCAPI02  90da580e07a6f515b4d37ce10f1fb649
+27/06/2023 16:13:34:720 PM -      Hosts
+27/06/2023 16:13:34:727 PM -     DSCCtesthost1  175cecbc99ce4c44aeacba1449f28935
+27/06/2023 16:13:34:733 PM -     DSCCtesthost2  260146f4a2704ae18316152ec3b159cb
+27/06/2023 16:13:34:737 PM -   Found existing user created Host Group with the same name
+27/06/2023 16:13:34:742 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 16:13:35:247 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+27/06/2023 16:13:35:723 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+27/06/2023 16:13:36:225 PM -     Existing Hosts: 
+27/06/2023 16:13:36:229 PM -      DSCCtesthost1
+27/06/2023 16:13:36:232 PM -     New Hosts: 
+27/06/2023 16:13:36:235 PM -      DSCCtesthost1  175cecbc99ce4c44aeacba1449f28935
+27/06/2023 16:13:36:238 PM -      DSCCtesthost2  260146f4a2704ae18316152ec3b159cb
+27/06/2023 16:13:41:904 PM -   Consolidate the Existing and the new Hosts into the single Host Group
+27/06/2023 16:13:41:918 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups/230c52752e344d33b342969da5bb33a4
+27/06/2023 16:13:41:923 PM - Payload Body: {
+  "updatedHosts": [
+    "175cecbc99ce4c44aeacba1449f28935",
+    "260146f4a2704ae18316152ec3b159cb"
+  ]
+}
+27/06/2023 16:13:43:936 PM - @{taskUri=ef7a93c6-553e-4355-bc29-89dbb32bded2; status=SUBMITTED; message=}
+27/06/2023 16:13:43:953 PM - Getting task status of task ef7a93c6-553e-4355-bc29-89dbb32bded2 and waiting for task to complete
+27/06/2023 16:13:48:965 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/ef7a93c6-553e-4355-bc29-89dbb32bded2
+27/06/2023 16:13:49:115 PM - The task status is RUNNING
+27/06/2023 16:13:54:121 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/ef7a93c6-553e-4355-bc29-89dbb32bded2
+27/06/2023 16:13:54:263 PM - The task status is RUNNING
+27/06/2023 16:13:59:272 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/ef7a93c6-553e-4355-bc29-89dbb32bded2
+27/06/2023 16:13:59:442 PM - The task status is RUNNING
+27/06/2023 16:14:04:450 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/ef7a93c6-553e-4355-bc29-89dbb32bded2
+27/06/2023 16:14:04:737 PM - The task status is RUNNING
+27/06/2023 16:14:09:757 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/ef7a93c6-553e-4355-bc29-89dbb32bded2
+27/06/2023 16:14:09:914 PM - The task status is RUNNING
+27/06/2023 16:14:14:924 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/ef7a93c6-553e-4355-bc29-89dbb32bded2
+27/06/2023 16:14:15:067 PM - The task status is FAILED
+27/06/2023 16:14:15:069 PM -   Done
+27/06/2023 16:49:50:687 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 16:49:51:727 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+27/06/2023 16:49:52:430 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+27/06/2023 16:50:37:598 PM - Delete Host Group: DSCCAPI02
+27/06/2023 16:50:41:392 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 16:50:42:430 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+27/06/2023 16:50:42:931 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+27/06/2023 16:50:46:088 PM - Delete Host Group: DSCCAPItest
+27/06/2023 16:50:51:302 PM - Delete Hosts
+27/06/2023 16:55:02:662 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 16:55:03:762 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+27/06/2023 16:55:04:598 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+27/06/2023 16:55:05:198 PM - Delete Host Group: DSCCAPI02
+27/06/2023 16:55:05:202 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 16:55:05:586 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+27/06/2023 16:55:06:356 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+27/06/2023 16:55:06:744 PM - Delete Host Group: DSCCAPItest
+27/06/2023 16:55:06:751 PM - Delete Hosts
+27/06/2023 16:57:01:075 PM - Delete HostGroups
+27/06/2023 16:57:01:107 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 16:57:01:699 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+27/06/2023 16:57:02:630 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+27/06/2023 16:57:02:967 PM - DSCCAPI02
+27/06/2023 16:57:02:969 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 16:57:03:549 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+27/06/2023 16:57:04:001 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+27/06/2023 16:57:04:343 PM - DSCCAPItest
+27/06/2023 16:57:04:346 PM - Delete Hosts
+27/06/2023 16:57:14:795 PM - Delete Initiators
+27/06/2023 16:57:14:800 PM - Host Path 1000BED80D5001CA (--)
+27/06/2023 16:57:17:699 PM - Delete Initiators
+27/06/2023 16:57:17:704 PM - Host Path 1000BED80D5001CC (--)
+27/06/2023 16:57:22:999 PM - Delete Initiators
+27/06/2023 16:57:23:003 PM - Host Path 1000BED80D5001CA (--)
+27/06/2023 16:57:24:947 PM - Delete Initiators
+27/06/2023 16:57:24:952 PM - Host Path 1000BED80D5001CC (--)
+27/06/2023 16:57:26:209 PM - Skipped Host: SYH5HE01B6
+27/06/2023 16:57:27:121 PM - Skipped Host: SYH5HE01B5
+27/06/2023 16:57:29:192 PM - Skipped Host: SYH5HE01B11
+27/06/2023 17:00:02:486 PM - Delete HostGroups
+27/06/2023 17:00:02:524 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 17:00:03:301 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+27/06/2023 17:00:04:154 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+27/06/2023 17:00:04:581 PM - DSCCAPI02
+27/06/2023 17:00:04:585 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 17:00:05:198 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+27/06/2023 17:00:06:125 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+27/06/2023 17:00:06:459 PM - DSCCAPItest
+27/06/2023 17:02:11:774 PM - Delete HostGroups
+27/06/2023 17:02:11:799 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 17:02:13:165 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+27/06/2023 17:02:13:623 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+27/06/2023 17:02:13:913 PM - DSCCAPI02
+27/06/2023 17:02:13:916 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 17:02:14:219 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+27/06/2023 17:02:15:048 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+27/06/2023 17:02:15:390 PM - DSCCAPItest
+27/06/2023 17:02:29:112 PM - Delete Hosts
+27/06/2023 17:02:36:446 PM - Delete Initiators
+27/06/2023 17:02:36:453 PM - Host Path 1000BED80D5001CA (--)
+27/06/2023 17:02:38:026 PM - Delete Initiators
+27/06/2023 17:02:38:063 PM - Host Path 1000BED80D5001CC (--)
+27/06/2023 17:02:41:300 PM - Skipped Host: SYH5HE01B11
+27/06/2023 17:02:42:184 PM - Skipped Host: SYH5HE01B5
+27/06/2023 17:02:42:976 PM - Skipped Host: SYH5HE01B6
+27/06/2023 17:04:59:514 PM - Delete HostGroups
+27/06/2023 17:04:59:550 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 17:05:00:173 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+27/06/2023 17:05:00:767 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+27/06/2023 17:05:01:379 PM - DSCCAPI02
+27/06/2023 17:05:35:849 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups/230c52752e344d33b342969da5bb33a4
+27/06/2023 17:05:36:782 PM - StatusCode:
+27/06/2023 17:05:36:786 PM - StatusDescription:
+27/06/2023 17:06:19:866 PM - Delete HostGroups
+27/06/2023 17:06:19:891 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 17:06:24:240 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+27/06/2023 17:06:24:792 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+27/06/2023 17:06:25:361 PM - DSCCAPI02
+27/06/2023 17:07:03:432 PM - Delete HostGroups
+27/06/2023 17:07:03:456 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 17:07:03:828 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+27/06/2023 17:07:04:627 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+27/06/2023 17:07:04:927 PM - DSCCAPI02
+27/06/2023 17:07:49:143 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups/230c52752e344d33b342969da5bb33a4?force=true
+27/06/2023 17:07:59:061 PM - Getting task status of task 4a683b64-320d-43b1-88a7-60ddd9782754 and waiting for task to complete
+27/06/2023 17:08:04:070 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/4a683b64-320d-43b1-88a7-60ddd9782754
+27/06/2023 17:08:04:253 PM - The task status is RUNNING
+27/06/2023 17:08:09:269 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/4a683b64-320d-43b1-88a7-60ddd9782754
+27/06/2023 17:08:09:440 PM - The task status is RUNNING
+27/06/2023 17:08:14:457 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/4a683b64-320d-43b1-88a7-60ddd9782754
+27/06/2023 17:08:14:613 PM - The task status is RUNNING
+27/06/2023 17:08:19:616 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/4a683b64-320d-43b1-88a7-60ddd9782754
+27/06/2023 17:08:19:796 PM - The task status is RUNNING
+27/06/2023 17:08:24:819 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/4a683b64-320d-43b1-88a7-60ddd9782754
+27/06/2023 17:08:24:987 PM - The task status is RUNNING
+27/06/2023 17:08:30:001 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/4a683b64-320d-43b1-88a7-60ddd9782754
+27/06/2023 17:08:30:163 PM - The task status is SUCCEEDED
+27/06/2023 17:08:33:766 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 17:08:34:290 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-groups
+27/06/2023 17:08:34:811 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups
+27/06/2023 17:08:38:622 PM - DSCCAPItest
+27/06/2023 17:08:42:368 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiator-groups/f6c16a2263d246618d12ae15ee8efc2c?force=true
+27/06/2023 17:08:51:767 PM - Getting task status of task a98cf46b-3e2c-41a2-9f37-eac2c270cb58 and waiting for task to complete
+27/06/2023 17:08:56:777 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/a98cf46b-3e2c-41a2-9f37-eac2c270cb58
+27/06/2023 17:08:57:300 PM - The task status is RUNNING
+27/06/2023 17:09:02:314 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/a98cf46b-3e2c-41a2-9f37-eac2c270cb58
+27/06/2023 17:09:02:486 PM - The task status is RUNNING
+27/06/2023 17:09:07:504 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/a98cf46b-3e2c-41a2-9f37-eac2c270cb58
+27/06/2023 17:09:07:668 PM - The task status is RUNNING
+27/06/2023 17:09:12:684 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/a98cf46b-3e2c-41a2-9f37-eac2c270cb58
+27/06/2023 17:09:12:876 PM - The task status is RUNNING
+27/06/2023 17:09:17:895 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/a98cf46b-3e2c-41a2-9f37-eac2c270cb58
+27/06/2023 17:09:18:073 PM - The task status is RUNNING
+27/06/2023 17:09:23:092 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/tasks/a98cf46b-3e2c-41a2-9f37-eac2c270cb58
+27/06/2023 17:09:23:277 PM - The task status is SUCCEEDED
+27/06/2023 17:09:38:924 PM - Delete Hosts
+27/06/2023 17:09:52:652 PM - Delete Initiators
+27/06/2023 17:09:52:656 PM - Host Path 1000BED80D5001CA (--)
+27/06/2023 17:09:56:737 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type1
+27/06/2023 17:09:57:608 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2
+27/06/2023 17:09:58:332 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type1
+27/06/2023 17:09:58:906 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/initiators
+27/06/2023 17:10:07:720 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type1
+27/06/2023 17:10:08:563 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/initiators
+27/06/2023 17:10:16:237 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type1
+27/06/2023 17:10:16:699 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 17:10:17:073 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-initiators
+27/06/2023 17:10:17:423 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/initiators
+27/06/2023 17:11:16:092 PM - Delete Initiators
+27/06/2023 17:11:16:097 PM - Host Path 1000BED80D5001CC (--)
+27/06/2023 17:12:26:255 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type1
+27/06/2023 17:12:27:070 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2
+27/06/2023 17:12:27:699 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type1
+27/06/2023 17:12:28:767 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/initiators
+27/06/2023 17:12:34:746 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type1
+27/06/2023 17:12:35:136 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/initiators
+27/06/2023 17:12:41:199 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type1
+27/06/2023 17:12:41:696 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 17:12:42:033 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-initiators
+27/06/2023 17:12:42:329 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/initiators
+27/06/2023 17:24:55:728 PM - Delete Hosts
+27/06/2023 17:24:55:740 PM - Delete Initiators
+27/06/2023 17:24:55:744 PM - Delete Initiators
+27/06/2023 17:25:24:455 PM - Delete Hosts
+27/06/2023 17:26:49:011 PM - Delete Hosts
+27/06/2023 17:26:55:242 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+27/06/2023 17:27:07:632 PM - Delete Initiators
+27/06/2023 17:27:29:981 PM - Host Path 1000BED80D5001CA (--)
+27/06/2023 17:27:37:300 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type1
+27/06/2023 17:27:38:743 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2
+27/06/2023 17:27:39:344 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type1
+27/06/2023 17:27:40:055 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/initiators
+27/06/2023 17:27:45:970 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type1
+27/06/2023 17:27:46:847 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/initiators
+27/06/2023 17:27:56:820 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type1
+27/06/2023 17:27:57:388 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/Device-Type2
+27/06/2023 17:27:57:731 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/storage-systems/device-type2/00444f5e31fd5cb296000000000000000000000001/host-initiators
+27/06/2023 17:27:58:020 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/initiators
+27/06/2023 17:48:06:856 PM - Delete Hosts
+27/06/2023 17:48:06:878 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+27/06/2023 17:49:17:297 PM - Delete Initiators
+27/06/2023 17:49:42:812 PM - Delete Hosts
+27/06/2023 17:49:42:834 PM - DSCC REST URI: https://eu1.data.cloud.hpe.com/api/v1/host-initiators
+27/06/2023 17:49:55:693 PM - Delete Initiators
+27/06/2023 17:49:55:698 PM - Host Path 1000BED80D5001CA (--)
