@@ -1,11 +1,4 @@
-$Client_ID = ''  
-$Client_Secret = ''
-
-$systemid =@{
-	'p630' = 'CZ29420H95';
-	'p650' = 'CZ294112CB';
-	'a6030' = '00444f5e31fd5cb296000000000000000000000001'
-}
+# Get Host Group Exports List
 
 function Write-Log()
 {
@@ -57,9 +50,13 @@ function Get-DSCCAllVolumes($resourceUri){
 }
 
 Import-Module .\HPEDSCC.psd1 -SkipEditionCheck #-Verbose
-Connect-DSCC -Client_Id $Client_ID -Client_Secret $Client_Secret -GreenlakeType EU #-Verbose -AutoRenew
 
-$HostGroupName = 'VDI' #Read-Host "Enter the Hostgroup Name: "
+[xml]$xml = Get-Content -Path ./dscc.xml
+$Client_ID = $xml.DSCC.ClientID 
+$Client_Secret = $xml.DSCC.ClientSecret
+$HostGroupName = $xml.DSCC.HostGroup 
+
+Connect-DSCC -Client_Id $Client_ID -Client_Secret $Client_Secret -GreenlakeType EU #-Verbose -AutoRenew
 
 $HostGroup = Get-DSCCHostGroup | Where-Object {$_.name -eq $HostGroupName}
 $Initiators = @()
