@@ -13,8 +13,9 @@ $Client_Secret = Read-Host "Enter the DSCC Client Secret: "
 $Host_List = Read-Host "Enter the filename of the Hostlist: "  # ./HostTest.csv
 #>
 
-$Client_ID = ''  
-$Client_Secret = ''
+[xml]$xml = Get-Content -Path ./dscc.xml
+$Client_ID = $xml.DSCC.ClientID 
+$Client_Secret = $xml.DSCC.ClientSecret
 
 $Host_List = '.\HostTest.csv'
 

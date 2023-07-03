@@ -25,10 +25,13 @@ Datagroup requested the following daily Tasks for their automation:
 
 Import-Module .\HPEDSCC.psd1 -SkipEditionCheck
 
+[xml]$xml = Get-Content -Path ./dscc.xml
+$Client_ID = $xml.DSCC.ClientID 
+$Client_Secret = $xml.DSCC.ClientSecret
 $systemid =@{
-	'p630' = 'CZ29420H95';
-	'p650' = 'CZ294112CB';
-	'a6030' = '00444f5e31fd5cb296000000000000000000000001'
+	'p630' = $xml.DSCC.SystemId.p630;
+	'p650' = $xml.DSCC.SystemId.p650;
+	'a6030' = $xml.DSCC.SystemId.a6030
 }
 
 Function Write-Log()
@@ -137,8 +140,6 @@ function Unexport-DSCCVolume{
 	return Invoke-RestMethod -Uri $Uri -Method 'POST' -Body ($MyBody | ConvertTo-Json) -Headers $MyHeaders -ContentType 'application/json'
 }
 
-$Client_ID = ''  
-$Client_Secret = ''
 
 Connect-DSCC -Client_Id $Client_ID -Client_Secret $Client_Secret -GreenlakeType EU #-Verbose -AutoRenew
 
