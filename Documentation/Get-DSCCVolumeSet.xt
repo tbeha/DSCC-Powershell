@@ -1,0 +1,109 @@
+
+NAME
+    Get-DSCCVolumeSet
+    
+SYNOPSIS
+    Returns the HPE DSSC Volume Set also known as the Volume Collection or Application Set
+    
+    
+SYNTAX
+    Get-DSCCVolumeSet [-SystemId] <String> [[-VolumeSetId] <String>] [-WhatIf] [<CommonParameters>]
+    
+    
+DESCRIPTION
+    Returns the HPE Data DSSC Volume Set also known as the Volume Collection or Application Set
+    
+
+PARAMETERS
+    -SystemId <String>
+        If a single Host Group ID is specified the output will be limited to that single record.
+        
+        Required?                    true
+        Position?                    1
+        Default value                
+        Accept pipeline input?       true (ByPropertyName)
+        Accept wildcard characters?  false
+        
+    -VolumeSetId <String>
+        If a single Volume Set also known as the Volume Collection or Application Set  is specified the output will be limited to that single record.
+        
+        Required?                    false
+        Position?                    2
+        Default value                
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    -WhatIf [<SwitchParameter>]
+        The WhatIf directive will show you the RAW RestAPI call that would be made to DSCC instead of actually sending the request.
+        This option is very helpful when trying to understand the inner workings of the native RestAPI calls that DSCC uses.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
+    
+INPUTS
+    
+OUTPUTS
+    
+    -------------------------- EXAMPLE 1 --------------------------
+    
+    PS:>Get-DSCCVolumeSet -SystemId 'MXN5442108'
+    
+    appSetType           id                               systemId   displayname domain appSetId name                        comment members                  kvPairsPresent
+    ----------           --                               --------   ----------- ------ -------- ----                        ------- -------                  --------------
+    Other                e20a01e1501ee881f524fd4849fb93fd MXN5442108 unknown     -             9 vvset_TestVolJPN01                  {}                                 True
+    Microsoft SQL Server 4855490935ab5da04adcb7e77916daa7 MXN5442108 unknown     -            36 PROVVOLSETPRIMFC1639032805          {}                                 True
+    Microsoft SQL Server a9207cb0fe766da3051e967b475df2ca MXN5442108 unknown     -            28 PROVVOLSETPRIMFC12345               {}                                 True
+    Microsoft SQL Server bd5e6135b59db8b40ecf5754efcdc920 MXN5442108 unknown     -            12 vvset_Volume02                      {}                                 True
+    Other                888365c15a2911b55781a06e9e49ba14 MXN5442108 unknown     -            10 vvset_TestVolJPN02                  {}                                 True
+    Microsoft SQL Server f71a080a9828d59c2afb75c4697b81ae MXN5442108 unknown     -            14 vvset_jpnvol01                      {}                                 True
+    
+    
+    
+    
+    -------------------------- EXAMPLE 2 --------------------------
+    
+    PS:>Get-DSCCVolumeSet -SystemId 'MXN5442108' -VolumeSetId 'e20a01e1501ee881f524fd4849fb93fd'
+    
+    appSetType id                               systemId   displayname domain appSetId name               comment members kvPairsPresent
+    ---------- --                               --------   ----------- ------ -------- ----               ------- ------- --------------
+    Other      e20a01e1501ee881f524fd4849fb93fd MXN5442108 unknown     -             9 vvset_TestVolJPN01         {}                True
+    
+    
+    
+    
+    -------------------------- EXAMPLE 3 --------------------------
+    
+    PS:>Get-DSCCVolumeSet -SystemId 'MXN5442108' -VolumeSetId 'e20a01e1501ee881f524fd4849fb93fd' -WhatIf
+    
+    WARNING: You have selected the What-IF option, so the call will note be made to the array,
+    instead you will see a preview of the RestAPI call
+    The URI for this call will be
+    https://scint-app.qa.cds.hpe.com/api/v1/storage-systems/device-type1/MXN5442108/applicationsets/e20a01e1501ee881f524fd4849fb93fd
+    The Method of this call will be
+        Get
+    The Header for this call will be :
+        {   "Authorization":  "Bearer eyJhbGciOiJSg3fQ.heb7m-censored-InAMGIZd-bQ8r39kfoT1-ihAl_3BYsc0torNMWQnjuBVm5OQ"
+        }
+    The Body of this call will be:
+        "No Body"
+    
+    WARNING: Null value sent to create object type.
+    
+    
+    
+    
+    
+RELATED LINKS
+    The API call for this operation is file:///api/v1/storage-systems/{systemid}/device-type1/appplicationsets
+    The API call for this operation is file:///api/v1/storage-systems/{systemid}/device-type1/volume-collections 
+
+
