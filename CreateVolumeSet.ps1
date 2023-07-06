@@ -93,12 +93,6 @@ foreach($sys in (Select-Xml -Xml $xml -XPath /DSCC/SystemIds | Select-Object -Ex
 	$SystemIds = $SystemIds + @{$sys.Name = $sys.Id}
 }
 # Read the VolumeSets Information 
-$VolumeSetName = $xml.DSCC.VolumeSet.Name
-$VolumeSetSystem = $xml.DSCC.VolumeSet.System
-$AppSetType = $xml.DSCC.VolumeSet.AppSetType
-if($AppSetType -eq 'CUSTOM'){ $customAppType = $xml.DSCC.VolumeSet.customAppType }
-$AppSetBU = $xml.DSCC.VolumeSet.AppSetBU 
-$Comment = $xml.DSCC.VolumeSet.Comment
 $Volumes = @()
 $Members = @()
 foreach($vol in (Select-Xml $xml -XPath /DSCC/VolumeSet | Select-Object -ExpandProperty Node).Volume){
@@ -115,40 +109,41 @@ Connect-DSCC -Client_Id $Client_ID -Client_Secret $Client_Secret -GreenlakeType 
 
 Write-Log -message "DSCC Connection established " -writeToConsole $true
 Write-Log -message "Check whether the volumes exist " -writeToConsole $true
-
+$sysID = $SystemIds[$xml.DSCC.VolumeSet.System]
 foreach($vol in $Volumes){
 	Write-Log -message ($vol.Name+" :: "+$vol.size) -writeToConsole $true
-	$Response = Get-DSCCVolume -SystemId $SystemIds[$VolumeSetSystem] | Where-Object {$_.name -eq $vol.Name}
+	$Response = Get-DSCCVolume -SystemId $sysID | Where-Object {$_.name -eq $vol.Name}
 	if($Response){
 		Write-Log -message ($Response) -writeToConsole $true
 	} else {
 		Write-Log ("Volume not found - Create the Volume " + $vol.Name) -writeToConsole $true
-		$Response = New-DSCCVolume -SystemId $SystemIds[$VolumeSetSystem] -DeviceType1 -name $vol.Name -sizeMib $vol.Size -userCpg 'SSD_r6' -snapCpg 'SSD_r6' -comments "DSCC Rest API Test - Thomas Beha" -count 1 -dataReduction $true
+		$Response = New-DSCCVolume -SystemId $sysId -DeviceType1 -name $vol.Name -sizeMib $vol.Size -userCpg 'SSD_r6' -snapCpg 'SSD_r6' -comments "DSCC Rest API Test - Thomas Beha" -count 1 -dataReduction $true
 		WaitForTaskToComplete($Response.taskUri)
 		Write-Log -message ('New DSCC Volume ' +$vol.name +' created') -writeToConsole $true
-		$Response = Get-DSCCVolume -SystemId $SystemIds[$VolumeSetSystem] | Where-Object {$_.name -eq $vol.Name}
-		Write-Log -message ($Response) -writeToConsole $true
+		$Response = Get-DSCCVolume -SystemId $sysID | Where-Object {$_.name -eq $vol.Name}
+		Write-Log -message ($Response.name + " " +$Response.id) -writeToConsole $true
 	}
 }
 
 # Create the volumeset/appset
 
-Write-Log -message ("Create Appset " + $VolumeSetName) -writeToConsole $true
+Write-Log -message ("Create Appset " + $xml.DSCC.VolumeSet.Name) -writeToConsole $true
 if($Members){
    $Members | Format-Table
 }
 if($xml.DSCC.VolumeSet.AppSetType -eq 'CUSTOM'){
-    $Response = New-DSCCAppSet -SystemId $SystemIds[$xml.DSCC.VolumeSet.System] -appSetName $xml.DSCC.VolumeSet.Name `
+    $Response = New-DSCCAppSet -SystemId $sysID -appSetName $xml.DSCC.VolumeSet.Name `
       -appSetType 'CUSTOM' -customAppType $xml.DSCC.VolumeSet.customAppType -appSetBusinessUnit $xml.DSCC.VolumeSet.AppSetBU`
        -appSetComments $xml.DSCC.VolumeSet.Comment -appSetImportance $xml.DSCC.VolumeSet.AppSetImportance -Members $Members
 
 } else {
-    $Response = New-DSCCAppSet -SystemId $SystemIds[$xml.DSCC.VolumeSet.System] -appSetName $xml.DSCC.VolumeSet.Name `
+    $Response = New-DSCCAppSet -SystemId $sysID -appSetName $xml.DSCC.VolumeSet.Name `
       -appSetType $xml.DSCC.VolumeSet.AppSetType -appSetBusinessUnit $xml.DSCC.VolumeSet.AppSetBU`
        -appSetComments $xml.DSCC.VolumeSet.Comment -appSetImportance $xml.DSCC.VolumeSet.AppSetImportance -Members $Members
 }    
+Write-Log -message $Response -writeToConsole $true
 WaitForTaskToComplete($Response.taskUri)
-Write-Log -message ('New DSCC VolumeSet ' + $VolumeSetName + ' created.' ) -writeToConsole $true
+Write-Log -message ('New DSCC VolumeSet ' + $xml.DSCC.VolumeSet.Name + ' created.' ) -writeToConsole $true
 
-$Response = Get-DSCCVolumeSet -SystemId $SystemIds[$VolumeSetSystem] | Where-Object {$_.name -eq $VolumeSetName}
-Write-Log -message ($Response) -writeToConsole $true
+$Response = Get-DSCCVolumeSet -SystemId $sysID | Where-Object {$_.name -eq $xml.DSCC.VolumeSet.Name}
+Write-Log -message ($Response.Name + " " + $Response.id) -writeToConsole $true

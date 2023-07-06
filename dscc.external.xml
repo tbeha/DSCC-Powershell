@@ -9,13 +9,13 @@
 	</SystemIds>
 	<HostGroup>VDI</HostGroup>
 	<VolumeSet>
-		<Name>DSCC-API-AppSeT-0</Name>
+		<Name>DSCC-API-AppSet-0</Name>
 		<System>p630</System>
 		<AppSetImportance>MEDIUM</AppSetImportance>
 		<AppSetType>CUSTOM</AppSetType>
 		<CustomAppType>VMware ESXi</CustomAppType>
 		<AppSetBU>HPE</AppSetBU>
-		<Comment>DSCC API Testing Thomas Beha</Comment>
+		<Comment>DSCC API Testing</Comment>
 		<Volume Name='DSCC-API-Vol01' Size='20'/>
 		<Volume Name='DSCC-API-Vol02' Size='25'/>
 	</VolumeSet>
