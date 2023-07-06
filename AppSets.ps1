@@ -79,6 +79,51 @@ Function New-DSCCAppSet($SystemId,$appSetName,$appSetType,$appSetBusinessUnit,$a
    }  
 }
 
+Function Set-DSCCAppSet($SystemId, $appSetId, $appSetName,$appSetType,$appSetBusinessUnit,$appSetComments,$customAppType,$AddMembers, $RemoveMembers) {
+    <#
+    
+    #>
+
+    $system = Get-DSCCStorageSystem -SystemId $SystemId
+	$systemUri = $system.resourceUri
+	$Uri = $Base + $systemUri + '/applicationsets/' + $appSetId
+
+	$MyBody = @{}
+	if($appSetName)	        { $MyBody = $MyBody + @{'appSetName'   = $appSetName} }
+	if($appSetType)	        { $MyBody = $MyBody + @{'appSetType' = $appSetType} }
+	if($appSetBusinessUnit)	{ $MyBody = $MyBody + @{'appSetBusinessUnit'  = $appSetBusinessUnit} }
+	if($appSetComments)	    { $MyBody = $MyBody + @{'appSetComments'  = $appSetComments} }
+    if($customAppType)      { $MyBody = $MyBody + @{'customAppType' = $customAppType}}
+    if($AddMembers)         { $MyBody = $MyBody + @{'addMembers' = $AddMembers}}
+	if($RemoveMembers)		{ $MyBody = $MyBody + @{'removeMembers' = $RemoveMembers}}
+
+    try{
+    	return Invoke-RestMethod -Uri $Uri -Method 'PUT' -Body ($MyBody | ConvertTo-Json) -Headers $MyHeaders -ContentType 'application/json'  
+    }
+    catch{   ThrowHTTPError -ErrorResponse $_ 
+        # Note that value__ is not a typo.
+       Write-Log -message ("StatusCode:" + $_.Exception.Response.StatusCode.value__) 
+       Write-Log -message ("StatusDescription:" + $_.Exception.Response.StatusDescription)
+       return
+   }  
+}
+
+FUnction Delete-DSCCAppSet($SystemId, $appSetId){
+
+    $system = Get-DSCCStorageSystem -SystemId $SystemId
+	$systemUri = $system.resourceUri
+	$Uri = $Base + $systemUri + '/applicationsets/' + $appSetId
+
+    try{
+    	return Invoke-RestMethod -Uri $Uri -Method 'DELETE'  -Headers $MyHeaders -ContentType 'application/json'  
+    }
+    catch{   ThrowHTTPError -ErrorResponse $_ 
+        # Note that value__ is not a typo.
+       Write-Log -message ("StatusCode:" + $_.Exception.Response.StatusCode.value__) 
+       Write-Log -message ("StatusDescription:" + $_.Exception.Response.StatusDescription)
+       return
+   }      
+}
 
 Write-Log -message "Create Volumeset / Appset example " -writeToConsole $true
 Write-Log -message "Read the inputfile: ./dscc.xml " -writeToConsole $true
@@ -94,18 +139,15 @@ foreach($sys in (Select-Xml -Xml $xml -XPath /DSCC/SystemIds | Select-Object -Ex
 }
 # Read the VolumeSets Information 
 $Volumes = @()
-$Members = @()
+$VolumeNames = @()
 foreach($vol in (Select-Xml $xml -XPath /DSCC/VolumeSet | Select-Object -ExpandProperty Node).Volume){
 	$size = [int]$vol.size * 1024
 	$Volumes = $volumes +@(@{name=$vol.Name;size= [string]$size})
-    $Members = $Members + $vol.Name
+    $VolumeNames = $VolumeNames + $vol.Name
 }
 
 # Check if the volumes already exist and create the volumes if the do not exist
 Connect-DSCC -Client_Id $Client_ID -Client_Secret $Client_Secret -GreenlakeType EU #-Verbose -AutoRenew
-
-#$Response = Get-DSCCVolumeSet -SystemId $SystemIds[$VolumeSetSystem] | Where-Object {$_.name -eq 'DSCC-API-AppSet-1'}
-#$Response | Format-List
 
 Write-Log -message "DSCC Connection established " -writeToConsole $true
 Write-Log -message "Check whether the volumes exist " -writeToConsole $true
@@ -127,10 +169,13 @@ foreach($vol in $Volumes){
 
 # Create the volumeset/appset
 
+$Members = @()
+$Members = $Members + $VolumeNames[0]
 Write-Log -message ("Create Appset " + $xml.DSCC.VolumeSet.Name) -writeToConsole $true
 if($Members){
    $Members | Format-Table
 }
+
 if($xml.DSCC.VolumeSet.AppSetType -eq 'CUSTOM'){
     $Response = New-DSCCAppSet -SystemId $sysID -appSetName $xml.DSCC.VolumeSet.Name `
       -appSetType 'CUSTOM' -customAppType $xml.DSCC.VolumeSet.customAppType -appSetBusinessUnit $xml.DSCC.VolumeSet.AppSetBU`
@@ -146,4 +191,24 @@ WaitForTaskToComplete($Response.taskUri)
 Write-Log -message ('New DSCC VolumeSet ' + $xml.DSCC.VolumeSet.Name + ' created.' ) -writeToConsole $true
 
 $Response = Get-DSCCVolumeSet -SystemId $sysID | Where-Object {$_.name -eq $xml.DSCC.VolumeSet.Name}
-Write-Log -message ($Response.Name + " " + $Response.id) -writeToConsole $true
+$AppSetId = $Response.Id
+Write-Log -message ($Response.appSetName + " " + $AppSet.id) -writeToConsole $true
+
+# Add a second member to the AppSet
+
+$AddMembers = @()
+$AddMembers = $AddMembers + $VolumeNames[1]
+$Response = Set-DSCCAppSet -SystemId $sysID -appSetId $AppSetId -AddMembers $AddMembers
+Write-Log -message $Response -writeToConsole $true
+WaitForTaskToComplete($Response.taskUri)
+Write-Log 'AppSet Edited' -writeToConsole $true
+
+# Delete AppSet
+
+$Response = Delete-DSCCAppSet -SystemId $sysID -appSetId $AppSetId
+Write-Log -message $Response -writeToConsole $true
+WaitForTaskToComplete($Response.taskUri)
+Write-Log 'AppSet Deleted' -writeToConsole $true
+
+
+
