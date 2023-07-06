@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DSCC>
+	<ClientId></ClientId>
+	<ClientSecret></ClientSecret>
+	<SystemIds>
+		<System Name='p630' Id='' />
+		<System Name='p650' Id='' />
+		<System Name='a6030' Id='' />
+	</SystemIds>
+	<HostGroup>VDI</HostGroup>
+	<VolumeSet>
+		<Name>DSCC-API-AppSeT-0</Name>
+		<System>p630</System>
+		<AppSetImportance>MEDIUM</AppSetImportance>
+		<AppSetType>CUSTOM</AppSetType>
+		<CustomAppType>VMware ESXi</CustomAppType>
+		<AppSetBU>HPE</AppSetBU>
+		<Comment>DSCC API Testing Thomas Beha</Comment>
+		<Volume Name='DSCC-API-Vol01' Size='20'/>
+		<Volume Name='DSCC-API-Vol02' Size='25'/>
+	</VolumeSet>
+</DSCC>
