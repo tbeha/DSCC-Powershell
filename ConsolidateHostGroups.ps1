@@ -2,15 +2,11 @@
 <#
 
 Consolidate multiple system generated Host Group entries into single user generated host groups
-
+#>
 
 
 $Client_ID = Read-Host "Enter the DSCC Client ID: " 
 $Client_Secret = Read-Host "Enter the DSCC Client Secret: " 
-#>
-
-$Client_ID = 'caba96ba-52c9-49e5-8ae7-eec301e3000a'  
-$Client_Secret = '6a4525e2cd3111edaced4a452722384f'
 
 Import-Module .\HPEDSCC.psd1 -SkipEditionCheck
 
