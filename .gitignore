@@ -9,3 +9,5 @@ logs/HostMigration_20230621.log
 logs/HostMigration_20230622.log
 logs/HostMigration_20230623.log
 dscc.xml
+dsccHG.xml
+tmp.xml
