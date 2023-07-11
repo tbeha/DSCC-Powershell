@@ -113,7 +113,6 @@ foreach($sys in (Select-Xml -Xml $xml -XPath /DSCC/SystemIds | Select-Object -Ex
 	$SystemIds = $SystemIds + @{$sys.Name = $sys.Id}
 }
 
-
 # Connect to the DSCC
 
 Connect-DSCC -Client_Id $Client_ID -Client_Secret $Client_Secret -GreenlakeType EU #-Verbose -AutoRenew
@@ -140,6 +139,7 @@ $vdi | Format-Table
 # Move $host2 from Disk Group DSCC-HG1 to Host Group VDI and back
 
 $hostsToMove = @($host2.id)
+ 
 $Response = Set-DSCCHG -HostGroupId $dscc_hg1.id -HostsToRemove $hostsToMove
 $Response | Format-Table
 WaitForTaskToComplete($Response.taskUri)
